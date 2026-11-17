@@ -23,13 +23,13 @@ $code_text = __( 'This is a sample shortcode, using the <code>[sample]</code> ta
 $code_tag = "[sample wrap_text='yes' text_class='sample-paragraph' text_weight='600']{$code_text}[/sample]";
 
 printf(
-	__( '<p>Filtered content for archived %s #%s</p>', 'sitecore' ),
+	__( '<p>Filtered content for archived %s #%s</p>', 'totem' ),
 	$name,
 	get_the_ID()
 );
 
 printf(
-	__( '<p>The template for this notice is in the %s plugin.</p>', 'sitecore' ),
+	__( '<p>The template for this notice is in the %s plugin.</p>', 'totem' ),
 	TMG_NAME
 );
 

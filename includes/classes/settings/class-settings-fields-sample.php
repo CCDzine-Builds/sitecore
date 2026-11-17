@@ -29,63 +29,63 @@ class Settings_Fields_Sample extends Settings_Fields {
 		$fields = [
 			[
 				'id'       => 'sample_field_one',
-				'title'    => __( 'Sample Field #1', 'sitecore' ),
+				'title'    => __( 'Sample Field #1', 'totem' ),
 				'callback' => [ $this, 'sample_field_one_callback' ],
 				'page'     => 'general',
 				'section'  => 'tmg-settings-section-sample',
 				'type'     => 'checkbox',
 				'args'     => [
-					'description' => __( 'Sample field one description.', 'sitecore' ),
+					'description' => __( 'Sample field one description.', 'totem' ),
 					'class'       => 'sample-field'
 				]
 			],
 			[
 				'id'       => 'sample_field_two',
-				'title'    => __( 'Sample Field #2', 'sitecore' ),
+				'title'    => __( 'Sample Field #2', 'totem' ),
 				'callback' => [ $this, 'sample_field_two_callback' ],
 				'page'     => 'general',
 				'section'  => 'tmg-settings-section-sample',
 				'type'     => 'radio',
 				'args'     => [
-					'description' => __( 'Sample field two description.', 'sitecore' ),
+					'description' => __( 'Sample field two description.', 'totem' ),
 					'class'       => 'sample-field'
 				]
 			],
 			[
 				'id'       => 'sample_field_three',
-				'title'    => __( 'Sample Field #3', 'sitecore' ),
+				'title'    => __( 'Sample Field #3', 'totem' ),
 				'callback' => [ $this, 'sample_field_three_callback' ],
 				'page'     => 'general',
 				'section'  => 'tmg-settings-section-sample',
 				'type'     => 'select',
 				'args'     => [
-					'description' => __( 'Sample field three description.', 'sitecore' ),
+					'description' => __( 'Sample field three description.', 'totem' ),
 					'label_for'   => 'sample_field_three',
 					'class'       => 'sample-field'
 				]
 			],
 			[
 				'id'       => 'sample_field_four',
-				'title'    => __( 'Sample Field #4', 'sitecore' ),
+				'title'    => __( 'Sample Field #4', 'totem' ),
 				'callback' => [ $this, 'sample_field_four_callback' ],
 				'page'     => 'general',
 				'section'  => 'tmg-settings-section-sample',
 				'type'     => 'text',
 				'args'     => [
-					'description' => __( 'Sample field four description.', 'sitecore' ),
+					'description' => __( 'Sample field four description.', 'totem' ),
 					'label_for'   => 'sample_field_four',
 					'class'       => 'sample-field'
 				]
 			],
 			[
 				'id'       => 'sample_field_five',
-				'title'    => __( 'Sample Field #5', 'sitecore' ),
+				'title'    => __( 'Sample Field #5', 'totem' ),
 				'callback' => [ $this, 'sample_field_five_callback' ],
 				'page'     => 'general',
 				'section'  => 'tmg-settings-section-sample',
 				'type'     => 'textarea',
 				'args'     => [
-					'description' => __( 'Sample field five description.', 'sitecore' ),
+					'description' => __( 'Sample field five description.', 'totem' ),
 					'label_for'   => 'sample_field_five',
 					'class'       => 'sample-field'
 				]
@@ -244,7 +244,7 @@ class Settings_Fields_Sample extends Settings_Fields {
 			$field_id . '_a',
 			$field_id,
 			checked( 'a', $option, false ),
-			__( 'Option A', 'sitecore' )
+			__( 'Option A', 'totem' )
 		);
 		$html .= '</label><br />';
 		$html .= sprintf(
@@ -256,7 +256,7 @@ class Settings_Fields_Sample extends Settings_Fields {
 			$field_id . '_b',
 			$field_id,
 			checked( 'b', $option, false ),
-			__( 'Option B', 'sitecore' )
+			__( 'Option B', 'totem' )
 		);
 		$html .= '</label>';
 		$html .= sprintf(
@@ -294,17 +294,17 @@ class Settings_Fields_Sample extends Settings_Fields {
 		);
 		$html .= sprintf(
 			'<option value="">%s</option>',
-			__( 'Choose your option&hellip;', 'sitecore' )
+			__( 'Choose your option&hellip;', 'totem' )
 		);
 		$html .= sprintf(
 			'<option value="one" %s>%s</option>',
 			selected( $option, 'one', false ),
-			__( 'Option One', 'sitecore' )
+			__( 'Option One', 'totem' )
 		);
 		$html .= sprintf(
 			'<option value="two" %s>%s</option>',
 			selected( $option, 'two', false ),
-			__( 'Option Two', 'sitecore' )
+			__( 'Option Two', 'totem' )
 		);
 		$html .= '</select>';
 		$html .= sprintf(
@@ -340,7 +340,7 @@ class Settings_Fields_Sample extends Settings_Fields {
 			$field_id,
 			$field_id,
 			$option,
-			__( 'Enter text&hellip;', 'sitecore' )
+			__( 'Enter text&hellip;', 'totem' )
 		);
 		$html .= sprintf(
 			'<p class="description">%s</p>',

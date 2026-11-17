@@ -24,7 +24,7 @@ class Settings_Sections_Admin extends Settings_Sections {
 		$sections = [
 			[
 				'id'       => 'tmg-settings-section-admin-menu',
-				'title'    => __( 'Menu Settings', 'sitecore' ),
+				'title'    => __( 'Menu Settings', 'totem' ),
 				'callback' => '',
 				'page'     => 'options-admin',
 				'args'     => [
@@ -35,7 +35,7 @@ class Settings_Sections_Admin extends Settings_Sections {
 			],
 			[
 				'id'       => 'tmg-settings-section-admin-dashboard',
-				'title'    => __( 'Dashboard Settings', 'sitecore' ),
+				'title'    => __( 'Dashboard Settings', 'totem' ),
 				'callback' => '',
 				'page'     => 'options-admin',
 				'args'     => [
@@ -46,7 +46,7 @@ class Settings_Sections_Admin extends Settings_Sections {
 			],
 			[
 				'id'       => 'tmg-settings-section-admin-forms',
-				'title'    => __( 'Form Settings', 'sitecore' ),
+				'title'    => __( 'Form Settings', 'totem' ),
 				'callback' => '',
 				'page'     => 'options-admin',
 				'args'     => [
@@ -57,7 +57,7 @@ class Settings_Sections_Admin extends Settings_Sections {
 			],
 			[
 				'id'       => 'tmg-settings-section-admin-toolbar',
-				'title'    => __( 'Toolbar Settings', 'sitecore' ),
+				'title'    => __( 'Toolbar Settings', 'totem' ),
 				'callback' => '',
 				'page'     => 'options-admin',
 				'args'     => [
@@ -68,7 +68,7 @@ class Settings_Sections_Admin extends Settings_Sections {
 			],
 			[
 				'id'       => 'tmg-settings-section-admin-header',
-				'title'    => __( 'Header Settings', 'sitecore' ),
+				'title'    => __( 'Header Settings', 'totem' ),
 				'callback' => '',
 				'page'     => 'options-admin',
 				'args'     => [
@@ -79,7 +79,7 @@ class Settings_Sections_Admin extends Settings_Sections {
 			],
 			[
 				'id'       => 'tmg-settings-section-admin-users',
-				'title'    => __( 'User Settings', 'sitecore' ),
+				'title'    => __( 'User Settings', 'totem' ),
 				'callback' => '',
 				'page'     => 'options-admin',
 				'args'     => [

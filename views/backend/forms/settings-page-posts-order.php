@@ -34,17 +34,17 @@ if ( isset( $options['tags'] ) ) {
     $get_taxes = [];
 } ?>
 <div class="wrap">
-    <h1><?php _e( 'Posts & Taxonomies Sort Orders', 'sitecore' ); ?></h1>
-    <p class="description"><?php _e( 'Add drag & drop sort order functionality to post types and taxonomies.', 'sitecore' ); ?></p>
+    <h1><?php _e( 'Posts & Taxonomies Sort Orders', 'totem' ); ?></h1>
+    <p class="description"><?php _e( 'Add drag & drop sort order functionality to post types and taxonomies.', 'totem' ); ?></p>
     <hr />
-    <p><?php _e( 'When posts and taxonomies are selected for custom sort order functionality, the table rows on their respective admin management screen can be dragged up or down.', 'sitecore' ); ?></p>
-    <p><?php _e( 'The order you set on the admin management screens will automatically set the order of the posts in the blog index pages and in archive pages.', 'sitecore' ); ?></p>
+    <p><?php _e( 'When posts and taxonomies are selected for custom sort order functionality, the table rows on their respective admin management screen can be dragged up or down.', 'totem' ); ?></p>
+    <p><?php _e( 'The order you set on the admin management screens will automatically set the order of the posts in the blog index pages and in archive pages.', 'totem' ); ?></p>
     <?php if ( isset( $_GET['msg'] ) ) : ?>
         <div id="message" class="notice notice-success is-dismissible">
             <?php if ( $_GET['msg'] == 'updated' ) {
                 echo sprintf(
                     '<p>%1s</p>',
-                    __( 'Settings saved.', 'sitecore' )
+                    __( 'Settings saved.', 'totem' )
                 );
             } ?>
         </div>
@@ -55,9 +55,9 @@ if ( isset( $options['tags'] ) ) {
             <table class="form-table">
                 <tbody>
                     <tr valign="top">
-                        <th scope="row"><?php _e( 'Check to Sort Post Types', 'sitecore' ) ?></th>
+                        <th scope="row"><?php _e( 'Check to Sort Post Types', 'totem' ) ?></th>
                         <td>
-                            <label><input type="checkbox" id="tmg_order_check_all_post_types"> <?php _e( 'Check All', 'sitecore' ) ?></label><br>
+                            <label><input type="checkbox" id="tmg_order_check_all_post_types"> <?php _e( 'Check All', 'totem' ) ?></label><br>
                             <?php
                             // Get all registered public post types.
                             $post_types = get_post_types(
@@ -92,9 +92,9 @@ if ( isset( $options['tags'] ) ) {
             <table class="form-table">
                 <tbody>
                     <tr valign="top">
-                        <th scope="row"><?php _e( 'Check to Sort Taxonomies', 'sitecore' ) ?></th>
+                        <th scope="row"><?php _e( 'Check to Sort Taxonomies', 'totem' ) ?></th>
                         <td>
-                            <label><input type="checkbox" id="tmg_order_check_all_taxonomies"> <?php _e( 'Check All', 'sitecore' ) ?></label><br>
+                            <label><input type="checkbox" id="tmg_order_check_all_taxonomies"> <?php _e( 'Check All', 'totem' ) ?></label><br>
                             <?php
                             // Get all registered public taxonomies.
                             $taxonomies = get_taxonomies(
@@ -124,7 +124,7 @@ if ( isset( $options['tags'] ) ) {
             </table>
         </div>
         <p class="submit">
-            <input type="submit" class="button-primary" name="tmg_posts_order_submit" value="<?php _e( 'Save Changes', 'sitecore' ); ?>">
+            <input type="submit" class="button-primary" name="tmg_posts_order_submit" value="<?php _e( 'Save Changes', 'totem' ); ?>">
         </p>
     </form>
 </div>

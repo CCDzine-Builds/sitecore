@@ -208,7 +208,7 @@ function archive_descriptions( $description ) {
 	) {
 		return sprintf(
 			'<p>%s</p>',
-			__( 'This is a filtered sample description for the default post type.', 'sitecore' )
+			__( 'This is a filtered sample description for the default post type.', 'totem' )
 		);
 
 	// Sample post type description.
@@ -218,7 +218,7 @@ function archive_descriptions( $description ) {
 	) {
 		return sprintf(
 			'<p>%s</p>',
-			__( 'This is a filtered description for the sample post type.', 'sitecore' )
+			__( 'This is a filtered description for the sample post type.', 'totem' )
 		);
 	}
 	return $description;

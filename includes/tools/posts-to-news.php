@@ -92,27 +92,27 @@ function news_posts_labels() {
 		'menu_name'             => ucwords( menu_name() ),
 		'singular_name'         => ucwords( singular() ),
 		'all_items'             => ucwords( plural() ),
-		'add_new'               => __( 'Add News', 'sitecore' ),
-		'add_new_item'          => __( 'Add ' . ucwords( singular() ), 'sitecore' ),
-		'edit_item'             => __( 'Edit ' . ucwords( singular() ), 'sitecore' ),
-		'new_item'              => __( 'New ' . ucwords( singular() ), 'sitecore' ),
-		'view_item'             => __( 'View ' . ucwords( singular() ), 'sitecore' ),
-		'view_items'            => __( 'View ' . ucwords( plural() ), 'sitecore' ),
-		'search_items'          => __( 'Search ' . ucwords( plural() ), 'sitecore' ),
-		'not_found'             => __( 'No ' . ucwords( plural() ) . ' Found', 'sitecore' ),
-		'not_found_in_trash'    => __( 'No ' . ucwords( plural() ) . ' Found in Trash', 'sitecore' ),
-		'parent_item_colon'     => __( 'Parent ' . ucwords( singular() ), 'sitecore' ),
-		'featured_image'        => __( 'Featured image for this ' . strtolower( singular() ), 'sitecore' ),
-		'set_featured_image'    => __( 'Set featured image for this ' . strtolower( singular() ), 'sitecore' ),
-		'remove_featured_image' => __( 'Remove featured image for this ' . strtolower( singular() ), 'sitecore' ),
-		'use_featured_image'    => __( 'Use as featured image for this ' . strtolower( singular() ), 'sitecore' ),
-		'archives'              => __( ucwords( singular() ) . ' archives', 'sitecore' ),
-		'insert_into_item'      => __( 'Insert into ' . ucwords( singular() ), 'sitecore' ),
-		'uploaded_to_this_item' => __( 'Uploaded to this ' . ucwords( singular() ), 'sitecore' ),
-		'filter_items_list'     => __( 'Filter ' . ucwords( plural() ), 'sitecore' ),
-		'items_list_navigation' => __( ucwords( plural() ) . ' list navigation', 'sitecore' ),
-		'items_list'            => __( ucwords( plural() ) . ' List', 'sitecore' ),
-		'attributes'            => __( ucwords( singular() ) . ' Attributes', 'sitecore' )
+		'add_new'               => __( 'Add News', 'totem' ),
+		'add_new_item'          => __( 'Add ' . ucwords( singular() ), 'totem' ),
+		'edit_item'             => __( 'Edit ' . ucwords( singular() ), 'totem' ),
+		'new_item'              => __( 'New ' . ucwords( singular() ), 'totem' ),
+		'view_item'             => __( 'View ' . ucwords( singular() ), 'totem' ),
+		'view_items'            => __( 'View ' . ucwords( plural() ), 'totem' ),
+		'search_items'          => __( 'Search ' . ucwords( plural() ), 'totem' ),
+		'not_found'             => __( 'No ' . ucwords( plural() ) . ' Found', 'totem' ),
+		'not_found_in_trash'    => __( 'No ' . ucwords( plural() ) . ' Found in Trash', 'totem' ),
+		'parent_item_colon'     => __( 'Parent ' . ucwords( singular() ), 'totem' ),
+		'featured_image'        => __( 'Featured image for this ' . strtolower( singular() ), 'totem' ),
+		'set_featured_image'    => __( 'Set featured image for this ' . strtolower( singular() ), 'totem' ),
+		'remove_featured_image' => __( 'Remove featured image for this ' . strtolower( singular() ), 'totem' ),
+		'use_featured_image'    => __( 'Use as featured image for this ' . strtolower( singular() ), 'totem' ),
+		'archives'              => __( ucwords( singular() ) . ' archives', 'totem' ),
+		'insert_into_item'      => __( 'Insert into ' . ucwords( singular() ), 'totem' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this ' . ucwords( singular() ), 'totem' ),
+		'filter_items_list'     => __( 'Filter ' . ucwords( plural() ), 'totem' ),
+		'items_list_navigation' => __( ucwords( plural() ) . ' list navigation', 'totem' ),
+		'items_list'            => __( ucwords( plural() ) . ' List', 'totem' ),
+		'attributes'            => __( ucwords( singular() ) . ' Attributes', 'totem' )
 	];
 	return apply_filters( 'tmg_news_posts_labels', $labels );
 }
@@ -175,8 +175,8 @@ function rewrite_taxonomy_labels() {
 	global $menu, $submenu;
 
 	if ( current_user_can( 'manage_categories' ) ) {
-		$submenu['edit.php'][15][0] = __( 'News Categories', 'sitecore' );
-		$submenu['edit.php'][16][0] = __( 'News Tags', 'sitecore' );
+		$submenu['edit.php'][15][0] = __( 'News Categories', 'totem' );
+		$submenu['edit.php'][16][0] = __( 'News Tags', 'totem' );
 	}
 }
 
@@ -187,7 +187,7 @@ function rewrite_taxonomy_labels() {
  * @return string Returns the menu name.
  */
 function menu_name() {
-	$menu_name = __( 'News', 'sitecore' );
+	$menu_name = __( 'News', 'totem' );
 	return apply_filters( 'tmg_news_posts_menu_name', $menu_name );
 }
 
@@ -198,7 +198,7 @@ function menu_name() {
  * @return string Returns the singular post name.
  */
 function singular() {
-	$singular = __( 'news post', 'sitecore' );
+	$singular = __( 'news post', 'totem' );
 	return apply_filters( 'tmg_news_posts_singular_name', $singular );
 }
 
@@ -209,7 +209,7 @@ function singular() {
  * @return string Returns the plural post name.
  */
 function plural() {
-	$plural = __( 'news posts', 'sitecore' );
+	$plural = __( 'news posts', 'totem' );
 	return apply_filters( 'tmg_news_posts_plural_name', $plural );
 }
 
@@ -281,7 +281,7 @@ function page_messages( $messages ) {
 	if ( isset( $_GET['revision'] ) ) {
 		$revision = sprintf(
 			__( '%1s %2s' ),
-			__( ucwords( singular() ) . ' restored to revision from', 'sitecore' ),
+			__( ucwords( singular() ) . ' restored to revision from', 'totem' ),
 			wp_post_revision_title( (int) $_GET['revision'], false )
 		);
 	} else {
@@ -291,42 +291,42 @@ function page_messages( $messages ) {
 	// Updated message.
 	$updated = sprintf(
 		__( '%1s <a href="%2s">%3s</a>' ),
-		__( ucwords( singular() ) . ' updated.', 'sitecore' ),
+		__( ucwords( singular() ) . ' updated.', 'totem' ),
 		esc_url( get_permalink( get_the_ID() ) ),
-		__( 'View News Post', 'sitecore' )
+		__( 'View News Post', 'totem' )
 	);
 
 	// Published message.
 	$published = sprintf(
 		__( '%1s <a href="%2s">%3s</a>' ),
-		__( ucwords( singular() ) . ' published.', 'sitecore' ),
+		__( ucwords( singular() ) . ' published.', 'totem' ),
 		esc_url( get_permalink( get_the_ID() ) ),
-		__( 'View News Post', 'sitecore' )
+		__( 'View News Post', 'totem' )
 	);
 
 	// Submitted message.
 	$submitted = sprintf(
 		__( '%1s <a target="_blank" href="%2s">%3s</a>' ),
-		__( ucwords( singular() ) . ' submitted.', 'sitecore' ),
+		__( ucwords( singular() ) . ' submitted.', 'totem' ),
 		esc_url( add_query_arg( 'preview', 'true', get_permalink( get_the_ID() ) ) ),
-		__( 'Preview News Post', 'sitecore' )
+		__( 'Preview News Post', 'totem' )
 	);
 
 	// Scheduled message.
 	$scheduled = sprintf(
 		__( '%1s <strong>%2s</strong>. <a target="_blank" href="%3s">%4s</a>' ),
-		__( ucwords( singular() ) . ' scheduled for:', 'sitecore' ),
+		__( ucwords( singular() ) . ' scheduled for:', 'totem' ),
 		date_i18n( __( 'M j, Y @ G:i' ), strtotime( get_the_date( (string) get_option( 'date_format' ), get_the_ID() ) ) ),
 		esc_url( get_permalink( get_the_ID() ) ),
-		__( 'Preview News Post', 'sitecore' )
+		__( 'Preview News Post', 'totem' )
 	);
 
 	// Draft updated message.
 	$draft = sprintf(
 		__( '%1s <a target="_blank" href="%2s">%3s</a>' ),
-		__( ucwords( singular() ) . ' draft updated.', 'sitecore' ),
+		__( ucwords( singular() ) . ' draft updated.', 'totem' ),
 		esc_url( add_query_arg( 'preview', 'true', get_permalink( get_the_ID() ) ) ),
-		__( 'Preview News Post', 'sitecore' )
+		__( 'Preview News Post', 'totem' )
 	);
 
 	// The array of messages for the Posts post type.
@@ -335,12 +335,12 @@ function page_messages( $messages ) {
 		// First is unused. Messages start at index 1.
 		0  => null,
 		1  => $updated,
-		2  => __( 'Custom field updated.', 'sitecore' ),
-		3  => __( 'Custom field deleted.', 'sitecore' ),
-		4  => __( ucwords( singular() ) . ' updated.', 'sitecore' ),
+		2  => __( 'Custom field updated.', 'totem' ),
+		3  => __( 'Custom field deleted.', 'totem' ),
+		4  => __( ucwords( singular() ) . ' updated.', 'totem' ),
 		5  => $revision,
 		6  => $published,
-		7  => __( ucwords( singular() ) . ' saved.', 'sitecore' ),
+		7  => __( ucwords( singular() ) . ' saved.', 'totem' ),
 		8  => $submitted,
 		9  => $scheduled,
 		10 => $draft

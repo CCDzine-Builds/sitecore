@@ -27,7 +27,7 @@ class Settings_Fields_Admin_Toolbar extends Settings_Fields {
 			[
 				'id'       => 'toolbar_remove_platform_link',
 				'title'    => sprintf(
-					__( '%s Link', 'sitecore' ),
+					__( '%s Link', 'totem' ),
 					platform_name()
 
 				),
@@ -37,7 +37,7 @@ class Settings_Fields_Admin_Toolbar extends Settings_Fields {
 				'type'     => 'checkbox',
 				'args'     => [
 					'description' => sprintf(
-						__( 'Check to remove the %s logo link.', 'sitecore' ),
+						__( 'Check to remove the %s logo link.', 'totem' ),
 						platform_name()
 					),
 					'class'       => 'admin-field'
@@ -45,13 +45,13 @@ class Settings_Fields_Admin_Toolbar extends Settings_Fields {
 			],
 			[
 				'id'       => 'disable_user_toolbar',
-				'title'    => __( 'Disable Toolbar', 'sitecore' ),
+				'title'    => __( 'Disable Toolbar', 'totem' ),
 				'callback' => [ $this, 'disable_user_toolbar_callback' ],
 				'page'     => 'options-admin',
 				'section'  => 'tmg-settings-section-admin-toolbar',
 				'type'     => 'checkbox',
 				'args'     => [
-					'description' => __( 'Check to add option for disabling the user toolbar on the front end.', 'sitecore' ),
+					'description' => __( 'Check to add option for disabling the user toolbar on the front end.', 'totem' ),
 					'class'       => 'admin-field'
 				]
 			]
@@ -163,7 +163,7 @@ class Settings_Fields_Admin_Toolbar extends Settings_Fields {
 			$fields[$order]['args']['description']
 		);
 		$html .= '</label></fieldset>';
-		$html .= __( '<p class="description">Adds a link under Users in the admin menu.</p>', 'sitecore' );
+		$html .= __( '<p class="description">Adds a link under Users in the admin menu.</p>', 'totem' );
 
 		echo $html;
 	}

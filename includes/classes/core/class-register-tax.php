@@ -160,7 +160,7 @@ class Register_Tax {
 	public function options() {
 
 		$options = [
-			'label'                 => __( ucwords( $this->tax_labels['plural'] ), 'sitecore' ),
+			'label'                 => __( ucwords( $this->tax_labels['plural'] ), 'totem' ),
 			'labels'                => $this->labels(),
 			'public'                => $this->tax_options['public'],
 			'hierarchical'          => $this->tax_options['hierarchical'],
@@ -193,28 +193,28 @@ class Register_Tax {
 	public function labels() {
 
 		$labels = [
-			'name'                       => __( ucwords( $this->tax_labels['plural'] ), 'sitecore' ),
-			'singular_name'              => __( ucwords( $this->tax_labels['singular'] ), 'sitecore' ),
-			'menu_name'                  => __( ucwords( $this->tax_labels['plural'] ), 'sitecore' ),
-			'all_items'                  => __( 'All ' . ucwords( $this->tax_labels['plural'] ), 'sitecore' ),
-			'edit_item'                  => __( 'Edit ' . ucwords( $this->tax_labels['singular'] ), 'sitecore' ),
-			'view_item'                  => __( 'View ' . ucwords( $this->tax_labels['singular'] ), 'sitecore' ),
-			'update_item'                => __( 'Update ' . ucwords( $this->tax_labels['singular'] ), 'sitecore' ),
-			'add_new_item'               => __( 'Add New ' . ucwords( $this->tax_labels['singular'] ), 'sitecore' ),
-			'new_item_name'              => __( 'New ' . ucwords( $this->tax_labels['singular'] ), 'sitecore' ),
-			'parent_item'                => __( 'Parent ' . ucwords( $this->tax_labels['singular'] ), 'sitecore' ),
-			'parent_item_colon'          => __( 'Parent ' . ucwords( $this->tax_labels['singular'] ), 'sitecore' ),
-			'popular_items'              => __( 'Popular ' . ucwords( $this->tax_labels['plural'] ), 'sitecore' ),
-			'separate_items_with_commas' => __( 'Separate ' . ucwords( $this->tax_labels['plural'] ) . ' with commas', 'sitecore' ),
-			'add_or_remove_items'        => __( 'Add or Remove ' . ucwords( $this->tax_labels['plural'] ), 'sitecore' ),
-			'choose_from_most_used'      => __( 'Choose from the most used ' . ucwords( $this->tax_labels['plural'] ), 'sitecore' ),
-			'not_found'                  => __( 'No ' . ucwords( $this->tax_labels['plural'] ) . ' Found', 'sitecore' ),
-			'no_terms'                   => __( 'No ' . ucwords( $this->tax_labels['plural'] ), 'sitecore' ),
-			'filter_by_item'             => __( 'Filter by ' . ucwords( $this->tax_labels['singular'] ), 'sitecore' ),
-			'items_list_navigation'      => __( ucwords( $this->tax_labels['plural'] ) . ' list navigation', 'sitecore' ),
-			'items_list'                 => __( ucwords( $this->tax_labels['plural'] ) . ' List', 'sitecore' ),
-			'most_used'                  => __( 'Most Used ' . ucwords( $this->tax_labels['plural'] ), 'sitecore' ),
-			'back_to_items'              => __( 'Back to ' . ucwords( $this->tax_labels['plural'] ), 'sitecore' )
+			'name'                       => __( ucwords( $this->tax_labels['plural'] ), 'totem' ),
+			'singular_name'              => __( ucwords( $this->tax_labels['singular'] ), 'totem' ),
+			'menu_name'                  => __( ucwords( $this->tax_labels['plural'] ), 'totem' ),
+			'all_items'                  => __( 'All ' . ucwords( $this->tax_labels['plural'] ), 'totem' ),
+			'edit_item'                  => __( 'Edit ' . ucwords( $this->tax_labels['singular'] ), 'totem' ),
+			'view_item'                  => __( 'View ' . ucwords( $this->tax_labels['singular'] ), 'totem' ),
+			'update_item'                => __( 'Update ' . ucwords( $this->tax_labels['singular'] ), 'totem' ),
+			'add_new_item'               => __( 'Add New ' . ucwords( $this->tax_labels['singular'] ), 'totem' ),
+			'new_item_name'              => __( 'New ' . ucwords( $this->tax_labels['singular'] ), 'totem' ),
+			'parent_item'                => __( 'Parent ' . ucwords( $this->tax_labels['singular'] ), 'totem' ),
+			'parent_item_colon'          => __( 'Parent ' . ucwords( $this->tax_labels['singular'] ), 'totem' ),
+			'popular_items'              => __( 'Popular ' . ucwords( $this->tax_labels['plural'] ), 'totem' ),
+			'separate_items_with_commas' => __( 'Separate ' . ucwords( $this->tax_labels['plural'] ) . ' with commas', 'totem' ),
+			'add_or_remove_items'        => __( 'Add or Remove ' . ucwords( $this->tax_labels['plural'] ), 'totem' ),
+			'choose_from_most_used'      => __( 'Choose from the most used ' . ucwords( $this->tax_labels['plural'] ), 'totem' ),
+			'not_found'                  => __( 'No ' . ucwords( $this->tax_labels['plural'] ) . ' Found', 'totem' ),
+			'no_terms'                   => __( 'No ' . ucwords( $this->tax_labels['plural'] ), 'totem' ),
+			'filter_by_item'             => __( 'Filter by ' . ucwords( $this->tax_labels['singular'] ), 'totem' ),
+			'items_list_navigation'      => __( ucwords( $this->tax_labels['plural'] ) . ' list navigation', 'totem' ),
+			'items_list'                 => __( ucwords( $this->tax_labels['plural'] ) . ' List', 'totem' ),
+			'most_used'                  => __( 'Most Used ' . ucwords( $this->tax_labels['plural'] ), 'totem' ),
+			'back_to_items'              => __( 'Back to ' . ucwords( $this->tax_labels['plural'] ), 'totem' )
 		];
 
 		// Filter for child classes to modify this array.

@@ -20,11 +20,11 @@ if ( isset( $_POST['createuser'] ) && isset( $_POST['tmg_multiple_roles'] ) ) {
 }
 
 ?>
-<h2><?php _e( 'Permissions', 'sitecore' ); ?></h2>
+<h2><?php _e( 'Permissions', 'totem' ); ?></h2>
 
 <table class="form-table">
 	<tr>
-		<th><?php _e( 'Roles', 'sitecore' ); ?></th>
+		<th><?php _e( 'Roles', 'totem' ); ?></th>
 		<td>
 			<?php foreach( $roles as $name => $label ) :
 				$input_uniq_id = uniqid(); ?>

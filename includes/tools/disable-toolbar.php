@@ -287,8 +287,8 @@ function admin_menu() {
 
 	add_submenu_page(
 		parent_page(),
-		__( 'Disable User Toolbar', 'sitecore' ),
-		__( 'Disable Toolbar', 'sitecore' ),
+		__( 'Disable User Toolbar', 'totem' ),
+		__( 'Disable Toolbar', 'totem' ),
 		'manage_options',
 		'disable_user_toolbar',
 		__NAMESPACE__ . '\settings_page',
@@ -306,8 +306,8 @@ function network_admin_menu() {
 
 	add_submenu_page(
 		parent_page(),
-		__( 'Disable User Toolbar', 'sitecore' ),
-		__( 'Disable Toolbar', 'sitecore' ),
+		__( 'Disable User Toolbar', 'totem' ),
+		__( 'Disable Toolbar', 'totem' ),
 		'manage_network_options',
 		'disable_user_toolbar',
 		__NAMESPACE__ . '\settings_page'
@@ -361,12 +361,12 @@ function settings_page() {
 	$settings    = get_settings();
 	$network     = is_multisite() && is_network_admin();
 	$action      = 'options.php';
-	$all_message = __( 'Disable the frontend toolbar for all users.', 'sitecore' );
+	$all_message = __( 'Disable the frontend toolbar for all users.', 'totem' );
 
 	if ( $network ) {
 		$settings    = get_site_settings();
 		$action      = 'edit.php?action=disable_user_toolbar';
-		$all_message = __( 'Disable the frontend toolbar for all users of all sites.', 'sitecore' );
+		$all_message = __( 'Disable the frontend toolbar for all users of all sites.', 'totem' );
 	}
 
 	global $wp_roles;
@@ -398,9 +398,9 @@ function settings_page() {
 	</style>
 	<div class="wrap disable-toolbar">
 
-		<h2><?php _e( 'Disable User Toolbar', 'sitecore' ); ?></h2>
+		<h2><?php _e( 'Disable User Toolbar', 'totem' ); ?></h2>
 
-		<p class="description"><?php _e( 'This plugin disables the user toolbar from the frontend only. It does not affect administration screens.', 'sitecore' ); ?></p>
+		<p class="description"><?php _e( 'This plugin disables the user toolbar from the frontend only. It does not affect administration screens.', 'totem' ); ?></p>
 
 		<form method="post" action="<?php echo esc_attr( $action ); ?>">
 			<?php
@@ -413,37 +413,37 @@ function settings_page() {
 			?>
 			<?php if ( $network ) : ?>
 			<hr />
-			<p><?php _e( 'These settings apply to all sites of the network and will override any single site settings.', 'sitecore' ); ?></p>
+			<p><?php _e( 'These settings apply to all sites of the network and will override any single site settings.', 'totem' ); ?></p>
 			<?php endif; ?>
 			<table class="form-table">
 				<tr valign="top">
 					<th scope="row">
 						<label for="disable_user_toolbar_disable_all">
-							<?php _e( 'Disable for All', 'sitecore' ); ?>
+							<?php _e( 'Disable for All', 'totem' ); ?>
 						</label>
 					</th>
 					<td>
 						<input type="checkbox" name="disable_user_toolbar_disable_all" id="disable_user_toolbar_disable_all" value="1"<?php checked( $settings['disable_all'] ); ?> /> <?php echo $all_message; ?>
 
 						<?php if ( $network ) : ?>
-						<p class="description"><?php _e( 'This also disables the toolbar settings page in single site admin.', 'sitecore' ); ?></p>
+						<p class="description"><?php _e( 'This also disables the toolbar settings page in single site admin.', 'totem' ); ?></p>
 						<?php endif; ?>
 					</td>
 				</tr>
 				<tr valign="top">
 					<th scope="row">
 						<label for="disable_user_toolbar_whitelist_roles">
-							<?php _e( 'Roles Inclusion', 'sitecore' ); ?>
+							<?php _e( 'Roles Inclusion', 'totem' ); ?>
 						</label>
 					</th>
 					<td>
-						<p><?php _e( 'ONLY show the user toolbar for users with these role(s).', 'sitecore' ); ?></p>
+						<p><?php _e( 'ONLY show the user toolbar for users with these role(s).', 'totem' ); ?></p>
 						<p>
 							<select name="disable_user_toolbar_whitelist_roles[]" id="disable_user_toolbar_whitelist_roles" size="9" multiple>
-								<optgroup label="<?php _e( 'Default', 'sitecore' ); ?>">
-									<option value=""><?php _e( 'Reset', 'sitecore' ); ?></option>
+								<optgroup label="<?php _e( 'Default', 'totem' ); ?>">
+									<option value=""><?php _e( 'Reset', 'totem' ); ?></option>
 								</optgroup>
-								<optgroup label="<?php _e( 'User Roles', 'sitecore' ); ?>">
+								<optgroup label="<?php _e( 'User Roles', 'totem' ); ?>">
 								<?php
 								$inclusion_list_roles = $settings['whitelist_roles'];
 
@@ -456,38 +456,38 @@ function settings_page() {
 								</optgroup>
 							</select>
 						</p>
-						<p class="description"><?php _e( 'CTRL/CMD + Click for multiple selections.', 'sitecore' ); ?></p>
+						<p class="description"><?php _e( 'CTRL/CMD + Click for multiple selections.', 'totem' ); ?></p>
 					</td>
 				</tr>
 				<tr valign="top">
 					<th scope="row">
 						<label for="disable_user_toolbar_whitelist_caps">
-							<?php _e( 'Capabilities Inclusion', 'sitecore' ); ?>
+							<?php _e( 'Capabilities Inclusion', 'totem' ); ?>
 						</label>
 					</th>
 					<td>
 						<?php
 						$inclusion_list_caps = implode( ',', $settings['whitelist_caps'] );
 						?>
-						<p><?php _e( 'ONLY show the user toolbar for users with these capabilities', 'sitecore' ); ?></p>
+						<p><?php _e( 'ONLY show the user toolbar for users with these capabilities', 'totem' ); ?></p>
 						<textarea rows="3" cols="50" name="disable_user_toolbar_whitelist_caps" id="disable_user_toolbar_whitelist_caps"><?php echo wp_strip_all_tags( $inclusion_list_caps ); ?></textarea>
-						<p class="description"><?php _e( 'Add capabilities as a comma-separated list.', 'sitecore' ); ?></p>
+						<p class="description"><?php _e( 'Add capabilities as a comma-separated list.', 'totem' ); ?></p>
 					</td>
 				</tr>
 				<tr valign="top">
 					<th scope="row">
 						<label for="disable_user_toolbar_blacklist_roles">
-							<?php _e( 'Roles Exclusion', 'sitecore' ); ?>
+							<?php _e( 'Roles Exclusion', 'totem' ); ?>
 						</label>
 					</th>
 					<td>
-						<p><?php _e( 'DO NOT show the user toolbar for users with these role(s).', 'sitecore' ); ?></p>
+						<p><?php _e( 'DO NOT show the user toolbar for users with these role(s).', 'totem' ); ?></p>
 						<p>
 							<select name="disable_user_toolbar_blacklist_roles[]" id="disable_user_toolbar_blacklist_roles" size="9" multiple>
-								<optgroup label="<?php _e( 'Default', 'sitecore' ); ?>">
-									<option value=""><?php _e( 'Reset', 'sitecore' ); ?></option>
+								<optgroup label="<?php _e( 'Default', 'totem' ); ?>">
+									<option value=""><?php _e( 'Reset', 'totem' ); ?></option>
 								</optgroup>
-								<optgroup label="<?php _e( 'User Roles', 'sitecore' ); ?>">
+								<optgroup label="<?php _e( 'User Roles', 'totem' ); ?>">
 								<?php
 								$exclusion_list_roles = $settings['blacklist_roles'];
 
@@ -500,28 +500,28 @@ function settings_page() {
 								</optgroup>
 							</select>
 						</p>
-						<p class="description"><?php _e( 'CTRL/CMD + Click for multiple selections.', 'sitecore' ); ?></p>
+						<p class="description"><?php _e( 'CTRL/CMD + Click for multiple selections.', 'totem' ); ?></p>
 					</td>
 				</tr>
 				<tr valign="top">
 					<th scope="row">
 						<label for="disable_user_toolbar_blacklist_caps">
-							<?php _e( 'Capabilities Exclusion', 'sitecore' ); ?>
+							<?php _e( 'Capabilities Exclusion', 'totem' ); ?>
 						</label>
 					</th>
 					<td>
 						<?php
 						$exclusion_list_caps = implode( ',', $settings['blacklist_caps'] );
 						?>
-						<p><?php _e( 'DO NOT show the user toolbar for users with these capabilities', 'sitecore' ); ?></p>
+						<p><?php _e( 'DO NOT show the user toolbar for users with these capabilities', 'totem' ); ?></p>
 						<textarea rows="3" cols="50" name="disable_user_toolbar_blacklist_caps" id="disable_user_toolbar_blacklist_caps"><?php echo wp_strip_all_tags( $exclusion_list_caps ); ?></textarea>
-						<p class="description"><?php _e( 'Add capabilities as a comma-separated list.', 'sitecore' ); ?></p>
+						<p class="description"><?php _e( 'Add capabilities as a comma-separated list.', 'totem' ); ?></p>
 					</td>
 				</tr>
 			</table>
-			<p class="description"><?php _e( 'Do not use exclusion list in combination with the inclusion list.<br />In all cases inclusion list overrides exclusion list', 'sitecore' ); ?></p>
+			<p class="description"><?php _e( 'Do not use exclusion list in combination with the inclusion list.<br />In all cases inclusion list overrides exclusion list', 'totem' ); ?></p>
 			<p>
-				<input type="submit" class="button-primary" value="<?php esc_attr_e( 'Save Changes', 'sitecore' ); ?>" />&nbsp;&nbsp;
+				<input type="submit" class="button-primary" value="<?php esc_attr_e( 'Save Changes', 'totem' ); ?>" />&nbsp;&nbsp;
 			</p>
 		</form>
 	</div>

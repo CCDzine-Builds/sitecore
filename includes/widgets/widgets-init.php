@@ -62,6 +62,6 @@ function classes() {
  * @return array
  */
 function widget_links_args( $args ) {
-	$args['title_li'] = __( 'Featured Links', 'sitecore' );
+	$args['title_li'] = __( 'Featured Links', 'totem' );
 	return apply_filters( 'tmg_widget_links_args', $args );
 }

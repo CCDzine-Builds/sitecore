@@ -20,14 +20,14 @@ use Totem\Core as Core,
  * should you need it.
  */
 if ( is_multisite() && is_network_admin() ) {
-	$system_type = __( 'network', 'sitecore' );
+	$system_type = __( 'network', 'totem' );
 } else {
-	$system_type = __( 'website', 'sitecore' );
+	$system_type = __( 'website', 'totem' );
 }
 $tab_description = apply_filters(
 	'tmg_system_info_description',
 	sprintf(
-		__( '<p class="description">Some technical details about the <a href="%s">%s</a> %s.</p>', 'sitecore' ),
+		__( '<p class="description">Some technical details about the <a href="%s">%s</a> %s.</p>', 'totem' ),
 		esc_url( get_site_url( get_current_blog_id() ) ),
 		get_bloginfo( 'name' ),
 		$system_type

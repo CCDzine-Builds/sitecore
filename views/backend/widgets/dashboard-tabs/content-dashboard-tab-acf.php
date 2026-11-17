@@ -23,14 +23,14 @@ $images = get_posts( [
 ?>
 <div id="content" class="tab-content dashboard-panel-content dashboard-content-content" style="display: none;">
 
-	<h2><?php _e( 'Manage Website Content', 'sitecore' ); ?></h2>
-	<p class="description"><?php _e( 'Manage blog posts and static pages, upload images, add helpful widgets&hellip;', 'sitecore' ); ?></p>
+	<h2><?php _e( 'Manage Website Content', 'totem' ); ?></h2>
+	<p class="description"><?php _e( 'Manage blog posts and static pages, upload images, add helpful widgets&hellip;', 'totem' ); ?></p>
 
 	<div class="dashboard-panel-column-container">
 
 		<div class="dashboard-panel-column">
 
-			<h3><?php _e( 'Media Library', 'sitecore' ); ?></h3>
+			<h3><?php _e( 'Media Library', 'totem' ); ?></h3>
 
 			<div class="dashboard-panel-section-intro dashboard-panel-content-greeting">
 				<?php if ( $images ) : ?>
@@ -45,18 +45,18 @@ $images = get_posts( [
 					<?php endforeach; ?>
 				<?php endif; ?>
 				<div>
-					<h4><?php _e( 'Images & Video', 'sitecore' ); ?></h4>
-					<p class="about-description"><?php _e( 'Manage the site library of visual media as well as audio files & documents.', 'sitecore' ); ?></p>
+					<h4><?php _e( 'Images & Video', 'totem' ); ?></h4>
+					<p class="about-description"><?php _e( 'Manage the site library of visual media as well as audio files & documents.', 'totem' ); ?></p>
 
 					<p class="dashboard-panel-call-to-action"><a class="button button-primary button-hero load-customize hide-if-no-customize" href="<?php echo esc_url( admin_url( 'upload.php' ) ); ?>"><?php _e( 'Manage Media Library' ); ?></a></p>
-					<p class="description"><?php _e( 'Add media files to the site library.', 'sitecore' ); ?></p>
+					<p class="description"><?php _e( 'Add media files to the site library.', 'totem' ); ?></p>
 				</div>
 			</div>
 		</div>
 
 		<div class="dashboard-panel-column">
 
-			<h3><?php _e( 'Content Summary', 'sitecore' ); ?></h3>
+			<h3><?php _e( 'Content Summary', 'totem' ); ?></h3>
 
 			<div id="dashboard-content-lists" style="padding: 1rem 0;">
 				<?php post_types_list(); ?>
@@ -67,33 +67,33 @@ $images = get_posts( [
 
 		<div class="dashboard-panel-column dashboard-panel-last">
 
-			<h3><?php _e( 'Manage Content', 'sitecore' ); ?></h3>
+			<h3><?php _e( 'Manage Content', 'totem' ); ?></h3>
 
 			<form role="search" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get" target="_blank" rel="nofollow noreferrer noopener">
 				<?php $content_id = 'site-' . get_current_blog_id() . '-dashboard-search-content'; ?>
 				<p class="tmg-dashboard-search-fields">
-					<label class="screen-reader-text" for="<?php echo $content_id; ?>" aria-label="<?php _e( 'Search Content', 'sitecore' ); ?>"><?php _e( 'Search Content', 'sitecore' ); ?></label>
+					<label class="screen-reader-text" for="<?php echo $content_id; ?>" aria-label="<?php _e( 'Search Content', 'totem' ); ?>"><?php _e( 'Search Content', 'totem' ); ?></label>
 
-					<input type="search" name="s" id="<?php echo $content_id; ?>" aria-labelledby="<?php _e( 'Search Content', 'sitecore' ); ?>" value="<?php echo get_search_query(); ?>" autocomplete="off" placeholder="<?php _e( 'Search Content', 'sitecore' ); ?>" aria-placeholder="<?php _e( 'Enter content search terms', 'sitecore' ); ?>" />
-					<?php submit_button( __( 'Submit', 'sitecore' ), '', false, false, [ 'id' => 'submit-' . $content_id ] ); ?>
+					<input type="search" name="s" id="<?php echo $content_id; ?>" aria-labelledby="<?php _e( 'Search Content', 'totem' ); ?>" value="<?php echo get_search_query(); ?>" autocomplete="off" placeholder="<?php _e( 'Search Content', 'totem' ); ?>" aria-placeholder="<?php _e( 'Enter content search terms', 'totem' ); ?>" />
+					<?php submit_button( __( 'Submit', 'totem' ), '', false, false, [ 'id' => 'submit-' . $content_id ] ); ?>
 				</p>
 			</form>
 
 			<ul>
 			<?php if ( current_user_can( 'manage_options' ) ) : ?>
-				<li><?php printf( '<a href="%s" class="welcome-icon welcome-content-settings">' . __( 'Website Content', 'sitecore' ) . '</a>', admin_url( 'admin.php?page=custom-content' ) ); ?></li>
+				<li><?php printf( '<a href="%s" class="welcome-icon welcome-content-settings">' . __( 'Website Content', 'totem' ) . '</a>', admin_url( 'admin.php?page=custom-content' ) ); ?></li>
 			<?php endif; ?>
 
 			<?php if ( current_user_can( 'switch_themes' ) && current_theme_supports( 'menus' ) ) : ?>
-				<li><?php printf( '<a href="%s" class="welcome-icon welcome-menus">' . __( 'Manage Menus', 'sitecore' ) . '</a>', admin_url( 'nav-menus.php' ) ); ?></li>
+				<li><?php printf( '<a href="%s" class="welcome-icon welcome-menus">' . __( 'Manage Menus', 'totem' ) . '</a>', admin_url( 'nav-menus.php' ) ); ?></li>
 			<?php endif; ?>
 
 			<?php if ( current_user_can( 'switch_themes' ) && current_theme_supports( 'widgets' ) ) : ?>
-				<li><?php printf( '<a href="%s" class="welcome-icon welcome-widgets">' . __( 'Manage Widgets', 'sitecore' ) . '</a>', admin_url( 'widgets.php' ) ); ?></li>
+				<li><?php printf( '<a href="%s" class="welcome-icon welcome-widgets">' . __( 'Manage Widgets', 'totem' ) . '</a>', admin_url( 'widgets.php' ) ); ?></li>
 			<?php endif; ?>
 
 			<?php if ( current_user_can( 'edit_posts' ) ) : ?>
-				<li><?php printf( '<a href="%s" class="welcome-icon welcome-comments">' . __( 'Manage Comments', 'sitecore' ) . '</a>', admin_url( 'edit-comments.php' ) ); ?></li>
+				<li><?php printf( '<a href="%s" class="welcome-icon welcome-comments">' . __( 'Manage Comments', 'totem' ) . '</a>', admin_url( 'edit-comments.php' ) ); ?></li>
 			<?php endif; ?>
 			</ul>
 		</div>

@@ -27,9 +27,9 @@ class Network_Admin_Settings_Page extends Add_Page {
 	public function __construct() {
 
 		$labels = [
-			'page_title'  => __( 'Administration Settings', 'sitecore' ),
-			'menu_title'  => __( 'Network Admin', 'sitecore' ),
-			'description' => __( 'Customize the content and user interfaces of network administration pages.', 'sitecore' )
+			'page_title'  => __( 'Administration Settings', 'totem' ),
+			'menu_title'  => __( 'Network Admin', 'totem' ),
+			'description' => __( 'Customize the content and user interfaces of network administration pages.', 'totem' )
 		];
 
 		$options = [

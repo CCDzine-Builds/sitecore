@@ -37,9 +37,9 @@ class Register_Sample_Tax extends Register_Tax {
 		];
 
 		$labels = [
-			'singular'    => __( 'sample tax', 'sitecore' ),
-			'plural'      => __( 'sample taxes', 'sitecore' ),
-			'description' => __( 'A sample taxonomy for the sample post type.', 'sitecore' )
+			'singular'    => __( 'sample tax', 'totem' ),
+			'plural'      => __( 'sample taxes', 'totem' ),
+			'description' => __( 'A sample taxonomy for the sample post type.', 'totem' )
 		];
 
 		$options = [

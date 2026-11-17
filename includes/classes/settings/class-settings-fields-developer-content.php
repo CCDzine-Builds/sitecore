@@ -24,37 +24,37 @@ class Settings_Fields_Developer_Content extends Settings_Fields {
 		$fields = [
 			[
 				'id'       => 'enable_text_domain',
-				'title'    => __( 'Enable Translations', 'sitecore' ),
+				'title'    => __( 'Enable Translations', 'totem' ),
 				'callback' => [ $this, 'enable_text_domain_callback' ],
 				'page'     => 'developer-tools',
 				'section'  => 'tmg-options-developer-content',
 				'type'     => 'checkbox',
 				'args'     => [
-					'description' => __( 'Fetch translation files if provided. Otherwise loads only US English.', 'sitecore' ),
+					'description' => __( 'Fetch translation files if provided. Otherwise loads only US English.', 'totem' ),
 					'class'       => 'admin-field'
 				]
 			],
 			[
 				'id'       => 'enable_meta_tags',
-				'title'    => __( 'Enable Meta Tags', 'sitecore' ),
+				'title'    => __( 'Enable Meta Tags', 'totem' ),
 				'callback' => [ $this, 'enable_meta_tags_callback' ],
 				'page'     => 'developer-tools',
 				'section'  => 'tmg-options-developer-content',
 				'type'     => 'checkbox',
 				'args'     => [
-					'description' => __( 'Add frontend meta data tags for SEO and embed display.', 'sitecore' ),
+					'description' => __( 'Add frontend meta data tags for SEO and embed display.', 'totem' ),
 					'class'       => 'admin-field'
 				]
 			],
 			[
 				'id'       => 'enable_structured_data',
-				'title'    => __( 'Enable Structured Data', 'sitecore' ),
+				'title'    => __( 'Enable Structured Data', 'totem' ),
 				'callback' => [ $this, 'enable_structured_data_callback' ],
 				'page'     => 'developer-tools',
 				'section'  => 'tmg-options-developer-content',
 				'type'     => 'checkbox',
 				'args'     => [
-					'description' => __( 'Add frontend structured data to the head.', 'sitecore' ),
+					'description' => __( 'Add frontend structured data to the head.', 'totem' ),
 					'class'       => 'admin-field'
 				]
 			]
@@ -224,7 +224,7 @@ class Settings_Fields_Developer_Content extends Settings_Fields {
 		$html .= '</label></fieldset>';
 		$html .= sprintf(
 			'<p class="description">%s</p>',
-			__( 'The <code>pre_load_textdomain</code> filter returns true or false.', 'sitecore' )
+			__( 'The <code>pre_load_textdomain</code> filter returns true or false.', 'totem' )
 		);
 
 		echo $html;
@@ -262,7 +262,7 @@ class Settings_Fields_Developer_Content extends Settings_Fields {
 		$html .= '</label></fieldset>';
 		$html .= sprintf(
 			'<p class="description">%s</p>',
-			__( 'Adds a tab under Content in the admin menu.', 'sitecore' )
+			__( 'Adds a tab under Content in the admin menu.', 'totem' )
 		);
 
 		echo $html;
@@ -334,7 +334,7 @@ class Settings_Fields_Developer_Content extends Settings_Fields {
 		$html .= '</label></fieldset>';
 		$html .= sprintf(
 			'<p class="description">%s</p>',
-			__( 'Adds a link under Content in the admin menu.', 'sitecore' )
+			__( 'Adds a link under Content in the admin menu.', 'totem' )
 		);
 
 		echo $html;
@@ -372,7 +372,7 @@ class Settings_Fields_Developer_Content extends Settings_Fields {
 		$html .= '</label></fieldset>';
 		$html .= sprintf(
 			'<p class="description">%s</p>',
-			__( 'Adds a link under Content in the admin menu.', 'sitecore' )
+			__( 'Adds a link under Content in the admin menu.', 'totem' )
 		);
 
 		echo $html;
@@ -410,7 +410,7 @@ class Settings_Fields_Developer_Content extends Settings_Fields {
 		$html .= '</label></fieldset>';
 		$html .= sprintf(
 			'<p class="description">%s</p>',
-			__( 'Adds a link under Content in the admin menu.', 'sitecore' )
+			__( 'Adds a link under Content in the admin menu.', 'totem' )
 		);
 
 		echo $html;
@@ -448,7 +448,7 @@ class Settings_Fields_Developer_Content extends Settings_Fields {
 		$html .= '</label></fieldset>';
 		$html .= sprintf(
 			'<p class="description">%s</p>',
-			__( 'Adds a link under Content in the admin menu.', 'sitecore' )
+			__( 'Adds a link under Content in the admin menu.', 'totem' )
 		);
 
 		echo $html;

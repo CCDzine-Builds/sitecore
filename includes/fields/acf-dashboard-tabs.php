@@ -20,14 +20,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 acf_add_local_field_group( [
 	'key'    => 'group_6436262911e79',
-	'title'  => __( 'Dashboard Tabs', 'sitecore' ),
+	'title'  => __( 'Dashboard Tabs', 'totem' ),
 	'fields' => [
 		[
 			'key'               => 'field_6436cea4f97b0',
 			'label'             => null,
 			'name'              => '',
 			'type'              => 'message',
-			'instructions'      => __( '', 'sitecore' ),
+			'instructions'      => __( '', 'totem' ),
 			'required'          => 0,
 			'conditional_logic' => 0,
 			'wrapper'           => [
@@ -35,16 +35,16 @@ acf_add_local_field_group( [
 				'class' => 'acf-options-page-subtitle',
 				'id'    => ''
 			],
-			'message'   => __( 'Used to replace the tabbed content on the custom user dashboard.', 'sitecore' ),
+			'message'   => __( 'Used to replace the tabbed content on the custom user dashboard.', 'totem' ),
 			'new_lines' => 'wpautop',
 			'esc_html'  => 0,
 		],
 		[
 			'key'               => 'field_643733e0b9da6',
-			'label'             => __( 'Tabs Display', 'sitecore' ),
+			'label'             => __( 'Tabs Display', 'totem' ),
 			'name'              => 'dashboard_content_tabs_active',
 			'type'              => 'true_false',
-			'instructions'      => __( 'Individual tabs can be deactivated. If tabs display is inactive, or no individual tabs are active, then the default custom dashboard content will be displayed.', 'sitecore' ),
+			'instructions'      => __( 'Individual tabs can be deactivated. If tabs display is inactive, or no individual tabs are active, then the default custom dashboard content will be displayed.', 'totem' ),
 			'required'          => 0,
 			'conditional_logic' => 0,
 			'wrapper'           => [
@@ -53,18 +53,18 @@ acf_add_local_field_group( [
 				'id'    => ''
 			],
 			'acfe_permissions'      => '',
-			'message'       => __( '', 'sitecore' ),
+			'message'       => __( '', 'totem' ),
 			'default_value' => 1,
 			'ui'            => 1,
-			'ui_on_text'  => __( 'Active', 'sitecore' ),
-			'ui_off_text' => __( 'Inactive', 'sitecore' ),
+			'ui_on_text'  => __( 'Active', 'totem' ),
+			'ui_off_text' => __( 'Inactive', 'totem' ),
 		],
 		[
 			'key'               => 'field_6436268b4dd5e',
-			'label'             => __( 'Content Tabs', 'sitecore' ),
+			'label'             => __( 'Content Tabs', 'totem' ),
 			'name'              => 'dashboard_content_tabs',
 			'type'              => 'repeater',
-			'instructions'      => __( 'If only one tab is added then the content will appear without the tabs switcher interface. <br />If no tabs are added then the default custom dashboard content will be displayed.', 'sitecore' ),
+			'instructions'      => __( 'If only one tab is added then the content will appear without the tabs switcher interface. <br />If no tabs are added then the default custom dashboard content will be displayed.', 'totem' ),
 			'required'          => 0,
 			'conditional_logic' => [
 				[
@@ -85,14 +85,14 @@ acf_add_local_field_group( [
 			'min'          => 0,
 			'max'          => 0,
 			'layout'       => 'row',
-			'button_label' => __( 'Add Tab', 'sitecore' ),
+			'button_label' => __( 'Add Tab', 'totem' ),
 			'sub_fields'   => [
 				[
 					'key'               => 'field_6436268c4dd5f',
-					'label'             => __( 'Options', 'sitecore' ),
+					'label'             => __( 'Options', 'totem' ),
 					'name'              => '',
 					'type'              => 'tab',
-					'instructions'      => __( '', 'sitecore' ),
+					'instructions'      => __( '', 'totem' ),
 					'required'          => 0,
 					'conditional_logic' => 0,
 					'wrapper'           => [
@@ -106,10 +106,10 @@ acf_add_local_field_group( [
 				],
 				[
 					'key'               => 'field_643ee8e3806e3',
-					'label'             => __( 'Active', 'sitecore' ),
+					'label'             => __( 'Active', 'totem' ),
 					'name'              => 'dashboard_content_tab_active',
 					'type'              => 'true_false',
-					'instructions'      => __( '', 'sitecore' ),
+					'instructions'      => __( '', 'totem' ),
 					'required'          => 0,
 					'conditional_logic' => 0,
 					'wrapper'           => [
@@ -129,18 +129,18 @@ acf_add_local_field_group( [
 					'message'       => '',
 					'default_value' => 1,
 					'ui'            => 1,
-					'ui_on_text'    => __( 'Yes', 'sitecore' ),
-					'ui_off_text'   => __( 'No', 'sitecore' ),
+					'ui_on_text'    => __( 'Yes', 'totem' ),
+					'ui_off_text'   => __( 'No', 'totem' ),
 					'acfe_settings' => '',
 					'acfe_validate' => '',
 					'acfe_field_group_condition' => 0,
 				],
 				[
 					'key'               => 'field_6436268c4dd60',
-					'label'             => __( 'Tab Label', 'sitecore' ),
+					'label'             => __( 'Tab Label', 'totem' ),
 					'name'              => 'dashboard_content_tab_label',
 					'type'              => 'text',
-					'instructions'      => __( '', 'sitecore' ),
+					'instructions'      => __( '', 'totem' ),
 					'required'          => 0,
 					'conditional_logic' => 0,
 					'wrapper'           => [
@@ -158,17 +158,17 @@ acf_add_local_field_group( [
 						4 => 'media_type'
 					],
 					'default_value' => '',
-					'placeholder'   => __( '', 'sitecore' ),
+					'placeholder'   => __( '', 'totem' ),
 					'prepend'       => '',
 					'append'        => '',
 					'maxlength'     => '',
 				],
 				[
 					'key'               => 'field_643ee34103d7c',
-					'label'             => __( 'Tab Icon', 'sitecore' ),
+					'label'             => __( 'Tab Icon', 'totem' ),
 					'name'              => 'dashboard_content_tab_icon',
 					'type'              => 'text',
-					'instructions'      => __( 'Add a CSS class for a Dashicons icon.', 'sitecore' ),
+					'instructions'      => __( 'Add a CSS class for a Dashicons icon.', 'totem' ),
 					'required'          => 0,
 					'conditional_logic' => 0,
 					'wrapper' => [
@@ -202,10 +202,10 @@ acf_add_local_field_group( [
 				],
 				[
 					'key'               => 'field_6436268c4dd61',
-					'label'             => __( 'Tab Heading', 'sitecore' ),
+					'label'             => __( 'Tab Heading', 'totem' ),
 					'name'              => 'dashboard_content_tab_heading',
 					'type'              => 'text',
-					'instructions'      => __( '', 'sitecore' ),
+					'instructions'      => __( '', 'totem' ),
 					'required'          => 0,
 					'conditional_logic' => 0,
 					'wrapper'           => [
@@ -223,17 +223,17 @@ acf_add_local_field_group( [
 						4 => 'media_type'
 					],
 					'default_value' => '',
-					'placeholder'   => __( '', 'sitecore' ),
+					'placeholder'   => __( '', 'totem' ),
 					'prepend'       => '',
 					'append'        => '',
 					'maxlength'     => '',
 				],
 				[
 					'key'               => 'field_6436268c4dd62',
-					'label'             => __( 'User Capability', 'sitecore' ),
+					'label'             => __( 'User Capability', 'totem' ),
 					'name'              => 'dashboard_content_tab_user_cap',
 					'type'              => 'text',
-					'instructions'      => __( '', 'sitecore' ),
+					'instructions'      => __( '', 'totem' ),
 					'required'          => 0,
 					'conditional_logic' => 0,
 					'wrapper'           => [
@@ -251,17 +251,17 @@ acf_add_local_field_group( [
 						4 => 'media_type'
 					],
 					'default_value' => 'read',
-					'placeholder'   => __( '', 'sitecore' ),
+					'placeholder'   => __( '', 'totem' ),
 					'prepend'       => '',
 					'append'        => '',
 					'maxlength'     => '',
 				],
 				[
 					'key'               => 'field_6436268c4dd63',
-					'label'             => __( 'Editor', 'sitecore' ),
+					'label'             => __( 'Editor', 'totem' ),
 					'name'              => '',
 					'type'              => 'tab',
-					'instructions'      => __( '', 'sitecore' ),
+					'instructions'      => __( '', 'totem' ),
 					'required'          => 0,
 					'conditional_logic' => 0,
 					'wrapper'           => [
@@ -275,10 +275,10 @@ acf_add_local_field_group( [
 				],
 				[
 					'key'               => 'field_6436268c4dd64',
-					'label'             => __( 'Tab Content', 'sitecore' ),
+					'label'             => __( 'Tab Content', 'totem' ),
 					'name'              => 'dashboard_content_tab_content',
 					'type'              => 'wysiwyg',
-					'instructions'      => __( '', 'sitecore' ),
+					'instructions'      => __( '', 'totem' ),
 					'required'          => 0,
 					'conditional_logic' => 0,
 					'wrapper'           => [
@@ -320,7 +320,7 @@ acf_add_local_field_group( [
 	'instruction_placement' => 'label',
 	'hide_on_screen'        => '',
 	'active'                => true,
-	'description'           => __( '', 'sitecore' ),
+	'description'           => __( '', 'totem' ),
 	'acfe_display_title'    => '',
 	'acfe_permissions'      => [
 		0 => 'administrator',

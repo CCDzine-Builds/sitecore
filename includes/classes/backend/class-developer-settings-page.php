@@ -29,9 +29,9 @@ class Developer_Settings_Page extends Add_Page {
 	public function __construct() {
 
 		$labels = [
-			'page_title'  => __( 'Developer Tools', 'sitecore' ),
-			'menu_title'  => __( 'Developers', 'sitecore' ),
-			'description' => __( 'Options for custom development tools.', 'sitecore' ),
+			'page_title'  => __( 'Developer Tools', 'totem' ),
+			'menu_title'  => __( 'Developers', 'totem' ),
+			'description' => __( 'Options for custom development tools.', 'totem' ),
 		];
 
 		$options = [
@@ -68,8 +68,8 @@ class Developer_Settings_Page extends Add_Page {
 
 		$this->add_content_tab( [
 			'id'         => 'dev-tools',
-			'tab'        => __( 'Tools', 'sitecore' ),
-			'heading'    => __( 'Developer Tools', 'sitecore' ),
+			'tab'        => __( 'Tools', 'totem' ),
+			'heading'    => __( 'Developer Tools', 'totem' ),
 			'icon'       => 'dashicons-admin-tools',
 			'content'    => '',
 			'callback'   => [ $this, 'dev_tools' ]
@@ -77,8 +77,8 @@ class Developer_Settings_Page extends Add_Page {
 
 		$this->add_content_tab( [
 			'id'         => 'content-tools',
-			'tab'        => __( 'Content', 'sitecore' ),
-			'heading'    => __( 'Custom Content', 'sitecore' ),
+			'tab'        => __( 'Content', 'totem' ),
+			'heading'    => __( 'Custom Content', 'totem' ),
 			'icon'       => 'dashicons-edit',
 			'content'    => '',
 			'callback'   => [ $this, 'content_tools' ]
@@ -86,8 +86,8 @@ class Developer_Settings_Page extends Add_Page {
 
 		$this->add_content_tab( [
 			'id'         => 'user-tools',
-			'tab'        => __( 'Users', 'sitecore' ),
-			'heading'    => __( 'User Tools', 'sitecore' ),
+			'tab'        => __( 'Users', 'totem' ),
+			'heading'    => __( 'User Tools', 'totem' ),
 			'icon'       => 'dashicons-admin-users',
 			'content'    => '',
 			'callback'   => [ $this, 'user_tools' ]
@@ -95,8 +95,8 @@ class Developer_Settings_Page extends Add_Page {
 
 		$this->add_content_tab( [
 			'id'         => 'system-info',
-			'tab'        => __( 'System', 'sitecore' ),
-			'heading'    => __( 'System Information', 'sitecore' ),
+			'tab'        => __( 'System', 'totem' ),
+			'heading'    => __( 'System Information', 'totem' ),
 			'icon'       => 'dashicons-database',
 			'content'    => '',
 			'callback'   => [ $this, 'system_info' ]

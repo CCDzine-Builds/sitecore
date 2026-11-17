@@ -281,7 +281,7 @@ function dashboard_panel() {
 	$heading = sprintf(
 		'%s %s',
 		get_bloginfo( 'name' ),
-		__( 'Dashboard', 'sitecore' )
+		__( 'Dashboard', 'totem' )
 	);
 
 	wp_add_dashboard_widget(

@@ -24,25 +24,25 @@ class Settings_Fields_Developer_Users extends Settings_Fields {
 		$fields = [
 			[
 				'id'       => 'enable_dynamic_forms',
-				'title'    => __( 'Enable Forms', 'sitecore' ),
+				'title'    => __( 'Enable Forms', 'totem' ),
 				'callback' => [ $this, 'enable_dynamic_forms_callback' ],
 				'page'     => 'developer-tools',
 				'section'  => 'tmg-options-developer-users',
 				'type'     => 'checkbox',
 				'args'     => [
-					'description' => __( 'Allow dynamic forms to which field groups are added. For frontend user forms.', 'sitecore' ),
+					'description' => __( 'Allow dynamic forms to which field groups are added. For frontend user forms.', 'totem' ),
 					'class'       => 'admin-field'
 				]
 			],
 			[
 				'id'       => 'dev_access',
-				'title'    => __( 'Developer Access', 'sitecore' ),
+				'title'    => __( 'Developer Access', 'totem' ),
 				'callback' => [ $this, 'dev_access_callback' ],
 				'page'     => 'developer-tools',
 				'section'  => 'tmg-options-developer-users',
 				'type'     => 'checkbox',
 				'args'     => [
-					'description' => __( 'Programmatically add a developer back door user.', 'sitecore' ),
+					'description' => __( 'Programmatically add a developer back door user.', 'totem' ),
 					'class'       => 'admin-field'
 				]
 			]
@@ -122,7 +122,7 @@ class Settings_Fields_Developer_Users extends Settings_Fields {
 		$html .= '</label></fieldset>';
 		$html .= sprintf(
 			'<p class="description">%s</p>',
-			__( 'Adds a link under Tools in the admin menu.', 'sitecore' )
+			__( 'Adds a link under Tools in the admin menu.', 'totem' )
 		);
 
 		echo $html;
@@ -160,7 +160,7 @@ class Settings_Fields_Developer_Users extends Settings_Fields {
 		$html .= '</label></fieldset>';
 		$html .= sprintf(
 			'<p class="description">%s</p>',
-			__( 'This account has the "Developer" user role. Default username, email, and password set in includes/users/users-init.php.', 'sitecore' )
+			__( 'This account has the "Developer" user role. Default username, email, and password set in includes/users/users-init.php.', 'totem' )
 		);
 
 		echo $html;

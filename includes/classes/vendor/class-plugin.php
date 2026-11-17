@@ -431,9 +431,9 @@ class Plugin {
 				<div class="update-message notice inline notice-error notice-alt">
 					<?php echo sprintf(
 						'<p>%s %s %s</p>',
-						__( 'This plugin is not allowed by the', 'sitecore' ),
+						__( 'This plugin is not allowed by the', 'totem' ),
 						TMG_NAME,
-						__( 'plugin to be activated.', 'sitecore' )
+						__( 'plugin to be activated.', 'totem' )
 					); ?>
 				</div>
 			</td>

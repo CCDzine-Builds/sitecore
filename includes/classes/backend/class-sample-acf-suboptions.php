@@ -33,9 +33,9 @@ class Sample_ACF_Suboptions extends Add_Page {
 	public function __construct() {
 
 		$labels = [
-			'page_title'  => __( 'Sample ACF Options Subpage', 'sitecore' ),
-			'menu_title'  => __( 'ACF Options', 'sitecore' ),
-			'description' => __( 'Demonstration of adding an ACF options subpage.', 'sitecore' )
+			'page_title'  => __( 'Sample ACF Options Subpage', 'totem' ),
+			'menu_title'  => __( 'ACF Options', 'totem' ),
+			'description' => __( 'Demonstration of adding an ACF options subpage.', 'totem' )
 		];
 
 		$options = [
@@ -94,10 +94,10 @@ class Sample_ACF_Suboptions extends Add_Page {
 		$sample = [
 			[
 				'key'               => 'field_6036c10a75eed',
-				'label'             => __( 'Sample Options Subpage Field', 'sitecore' ),
+				'label'             => __( 'Sample Options Subpage Field', 'totem' ),
 				'name'              => 'sample_options_subpage_field',
 				'type'              => 'text',
-				'instructions'      => __( 'Sample instructions.', 'sitecore' ),
+				'instructions'      => __( 'Sample instructions.', 'totem' ),
 				'required'          => 0,
 				'conditional_logic' => 0,
 				'wrapper'           => [
@@ -116,9 +116,9 @@ class Sample_ACF_Suboptions extends Add_Page {
 					5 => 'test_tax_one'
 				],
 				'default_value' => '',
-				'placeholder'   => __( 'Just a text field.', 'sitecore' ),
-				'prepend'       => __( '', 'sitecore' ),
-				'append'        => __( '', 'sitecore' ),
+				'placeholder'   => __( 'Just a text field.', 'totem' ),
+				'prepend'       => __( '', 'totem' ),
+				'append'        => __( '', 'totem' ),
 				'maxlength'     => ''
 			]
 		];
@@ -126,7 +126,7 @@ class Sample_ACF_Suboptions extends Add_Page {
 
 		acf_add_local_field_group( [
 			'key'      => $this->local_field_group_key(),
-			'title'    => __( 'Sample Options Subpage', 'sitecore' ),
+			'title'    => __( 'Sample Options Subpage', 'totem' ),
 			'fields'   => $fields,
 			'location' => [
 				[
@@ -144,7 +144,7 @@ class Sample_ACF_Suboptions extends Add_Page {
 			'instruction_placement' => 'field',
 			'hide_on_screen'        => '',
 			'active'                => true,
-			'description'           => __( 'Field group provided as a sample for the sample options page.', 'sitecore' )
+			'description'           => __( 'Field group provided as a sample for the sample options page.', 'totem' )
 		] );
 	}
 }

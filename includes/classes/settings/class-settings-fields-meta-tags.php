@@ -26,7 +26,7 @@ class Settings_Fields_Meta_Tags extends Settings_Fields {
 		$fields = [
 			[
 				'id'       => 'meta_site_keywords',
-				'title'    => __( 'Site Keywords', 'sitecore' ),
+				'title'    => __( 'Site Keywords', 'totem' ),
 				'callback' => [ $this, 'meta_site_keywords_callback' ],
 				'page'     => 'custom-content',
 				'section'  => 'tmg-options-meta-tags',
@@ -42,7 +42,7 @@ class Settings_Fields_Meta_Tags extends Settings_Fields {
 		$front_desc = [
 			[
 				'id'       => 'meta_description_front_page',
-				'title'    => __( 'Front Page Description', 'sitecore' ),
+				'title'    => __( 'Front Page Description', 'totem' ),
 				'callback' => [ $this, 'meta_description_front_page_callback' ],
 				'page'     => 'custom-content',
 				'section'  => 'tmg-options-meta-tags',
@@ -62,7 +62,7 @@ class Settings_Fields_Meta_Tags extends Settings_Fields {
 			[
 				'id'       => 'meta_description_blog_index',
 				'title'    => sprintf(
-					__( '%s Description', 'sitecore' ),
+					__( '%s Description', 'totem' ),
 					ucwords( $this->posts_name() )
 				),
 				'callback' => [ $this, 'meta_description_blog_index_callback' ],
@@ -78,7 +78,7 @@ class Settings_Fields_Meta_Tags extends Settings_Fields {
 			[
 				'id'       => 'meta_image_blog_index',
 				'title'    => sprintf(
-					__( '%s Image', 'sitecore' ),
+					__( '%s Image', 'totem' ),
 					ucwords( $this->posts_name() )
 				),
 				'callback' => [ $this, 'meta_image_blog_index_callback' ],
@@ -103,7 +103,7 @@ class Settings_Fields_Meta_Tags extends Settings_Fields {
 		$more_fields = [
 			[
 				'id'       => 'meta_image_archive',
-				'title'    => __( 'Archive Image', 'sitecore' ),
+				'title'    => __( 'Archive Image', 'totem' ),
 				'callback' => [ $this, 'meta_image_archive_callback' ],
 				'page'     => 'custom-content',
 				'section'  => 'tmg-options-meta-tags',
@@ -116,7 +116,7 @@ class Settings_Fields_Meta_Tags extends Settings_Fields {
 			],
 			[
 				'id'       => 'meta_site_copyright',
-				'title'    => __( 'Site Copyright', 'sitecore' ),
+				'title'    => __( 'Site Copyright', 'totem' ),
 				'callback' => [ $this, 'meta_site_copyright_callback' ],
 				'page'     => 'custom-content',
 				'section'  => 'tmg-options-meta-tags',
@@ -147,10 +147,10 @@ class Settings_Fields_Meta_Tags extends Settings_Fields {
 	 */
 	public function posts_name() {
 
-		$name = __( 'blog', 'sitecore' );
+		$name = __( 'blog', 'totem' );
 
 		if ( get_option( 'posts_to_news' ) ) {
-			$name = __( 'news', 'sitecore' );
+			$name = __( 'news', 'totem' );
 		}
 		return $name;
 	}
@@ -262,11 +262,11 @@ class Settings_Fields_Meta_Tags extends Settings_Fields {
 		$html = '<fieldset>';
 		$html .= sprintf(
 			'<legend class="screen-reader-text">%s</legend>',
-			__( 'Site Keywords', 'sitecore' )
+			__( 'Site Keywords', 'totem' )
 		);
 		$html .= sprintf(
 			'<p>%s</p>',
-			__( 'Add one keyword or phrase per line.', 'sitecore' )
+			__( 'Add one keyword or phrase per line.', 'totem' )
 		);
 		$html .= sprintf(
 			'<textarea id="%s" name="%s" rows="5" cols="50">%s</textarea>',
@@ -276,7 +276,7 @@ class Settings_Fields_Meta_Tags extends Settings_Fields {
 		);
 		$html .= sprintf(
 			'<p class="description">%s</p>',
-			__( 'The keywords meta tag will not print if this field is left empty.', 'sitecore' )
+			__( 'The keywords meta tag will not print if this field is left empty.', 'totem' )
 		);
 		$html .= '</fieldset>';
 
@@ -299,7 +299,7 @@ class Settings_Fields_Meta_Tags extends Settings_Fields {
 		$html = '<fieldset>';
 		$html .= sprintf(
 			'<legend class="screen-reader-text">%s</legend>',
-			__( 'Front Page Description', 'sitecore' )
+			__( 'Front Page Description', 'totem' )
 		);
 		$html .= sprintf(
 			'<label for="%s">',
@@ -310,7 +310,7 @@ class Settings_Fields_Meta_Tags extends Settings_Fields {
 			$field_id . '_tagline',
 			$field_id,
 			checked( 'tagline', $option, false ),
-			__( 'Site Tagline', 'sitecore' )
+			__( 'Site Tagline', 'totem' )
 		);
 		$html .= '</label><br />';
 		$html .= sprintf(
@@ -322,7 +322,7 @@ class Settings_Fields_Meta_Tags extends Settings_Fields {
 			$field_id . '_excerpt',
 			$field_id,
 			checked( 'excerpt', $option, false ),
-			__( 'Page Summary', 'sitecore' )
+			__( 'Page Summary', 'totem' )
 		);
 		$html .= '</label>';
 		$html .= '</fieldset>';
@@ -345,7 +345,7 @@ class Settings_Fields_Meta_Tags extends Settings_Fields {
 
 		$html = '<fieldset>';
 		$html .= sprintf(
-			__( '<legend class="screen-reader-text">%s Description</legend>', 'sitecore' ),
+			__( '<legend class="screen-reader-text">%s Description</legend>', 'totem' ),
 			ucwords( $this->posts_name() )
 		);
 		$html .= sprintf(
@@ -353,10 +353,10 @@ class Settings_Fields_Meta_Tags extends Settings_Fields {
 			$field_id,
 			$field_id,
 			$option,
-			__( 'Enter text&hellip;', 'sitecore' )
+			__( 'Enter text&hellip;', 'totem' )
 		);
 		$html .= sprintf(
-			__( '<p class="description">Description tag for %s index pages.</p>', 'sitecore' ),
+			__( '<p class="description">Description tag for %s index pages.</p>', 'totem' ),
 			$this->posts_name()
 		);
 		$html .= '</fieldset>';
@@ -381,20 +381,20 @@ class Settings_Fields_Meta_Tags extends Settings_Fields {
 			$disabled = 'disabled';
 		}
 
-		$upload = __( 'Add Image', 'sitecore' );
+		$upload = __( 'Add Image', 'totem' );
 		if ( ! empty( $option ) ) {
-			$upload = __( 'Replace Image', 'sitecore' );
+			$upload = __( 'Replace Image', 'totem' );
 		}
 
 		?>
 		<figure style="margin: 0; max-width: 360px;">
 			<img style="max-width: 100%; height: auto;" id="meta-image-blog-index-preview" src="<?php echo esc_attr( $src ); ?>" />
-			<figcaption class="screen-reader-text"><?php _e( 'Posts index meta image preview', 'sitecore' ); ?></figcaption>
+			<figcaption class="screen-reader-text"><?php _e( 'Posts index meta image preview', 'totem' ); ?></figcaption>
 		</figure>
 		<p>
 			<input type="hidden" id="meta-image-blog-index-upload-field" name="meta_image_blog_index" id="meta_image_blog_index" value="<?php echo esc_attr( $option ); ?>" />
 			<input type="button" id="meta-image-blog-index-upload-button" class="button button-primary" value="<?php echo $upload; ?>" />
-			<input type="button" id="meta-image-blog-index-remove-button" class="button" value="<?php _e( 'Remove', 'sitecore' ); ?>" <?php echo $disabled; ?> />
+			<input type="button" id="meta-image-blog-index-remove-button" class="button" value="<?php _e( 'Remove', 'totem' ); ?>" <?php echo $disabled; ?> />
 		</p>
 	<?php
 	}
@@ -416,20 +416,20 @@ class Settings_Fields_Meta_Tags extends Settings_Fields {
 			$disabled = 'disabled';
 		}
 
-		$upload = __( 'Add Image', 'sitecore' );
+		$upload = __( 'Add Image', 'totem' );
 		if ( ! empty( $option ) ) {
-			$upload = __( 'Replace Image', 'sitecore' );
+			$upload = __( 'Replace Image', 'totem' );
 		}
 
 		?>
 		<figure style="margin: 0; max-width: 360px;">
 			<img style="max-width: 100%; height: auto;" id="meta-image-archive-preview" src="<?php echo esc_attr( $src ); ?>" />
-			<figcaption class="screen-reader-text"><?php _e( 'Archive meta image preview', 'sitecore' ); ?></figcaption>
+			<figcaption class="screen-reader-text"><?php _e( 'Archive meta image preview', 'totem' ); ?></figcaption>
 		</figure>
 		<p>
 			<input type="hidden" id="meta-image-archive-upload-field" name="meta_image_archive" id="meta_image_archive" value="<?php echo esc_attr( $option ); ?>" />
 			<input type="button" id="meta-image-archive-upload-button" class="button button-primary" value="<?php echo $upload; ?>" />
-			<input type="button" id="meta-image-archive-remove-button" class="button" value="<?php _e( 'Remove', 'sitecore' ); ?>" <?php echo $disabled; ?> />
+			<input type="button" id="meta-image-archive-remove-button" class="button" value="<?php _e( 'Remove', 'totem' ); ?>" <?php echo $disabled; ?> />
 		</p>
 	<?php
 	}
@@ -450,17 +450,17 @@ class Settings_Fields_Meta_Tags extends Settings_Fields {
 		$html = '<fieldset>';
 		$html .= sprintf(
 			'<legend class="screen-reader-text">%s</legend>',
-			__( 'Site Copyright', 'sitecore' )
+			__( 'Site Copyright', 'totem' )
 		);
 		$html .= sprintf(
 			'<input id="%s" class="regular-text" name="%s" type="text" value="%s" placeholder="%s" />',
 			$field_id,
 			$field_id,
 			$option,
-			__( 'Enter text&hellip;', 'sitecore' )
+			__( 'Enter text&hellip;', 'totem' )
 		);
 		$html .= sprintf(
-			__( '<p class="description">Use %s for the copyright symbol. Use %s for the current year. Use %s for the website name.</p>', 'sitecore' ),
+			__( '<p class="description">Use %s for the copyright symbol. Use %s for the current year. Use %s for the website name.</p>', 'totem' ),
 			'<code style="user-select: all">%copy%</code>',
 			'<code style="user-select: all">%year%</code>',
 			'<code style="user-select: all">%name%</code>'

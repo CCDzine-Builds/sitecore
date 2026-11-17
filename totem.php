@@ -7,16 +7,16 @@
  * @package  Totem
  * @category Core
  * @since    1.0.0
- * @link     https://github.com/CCDzine-Builds/sitecore
+ * @link     https://github.com/CCDzine-Builds/totem
  *
  * Plugin Name:       Totem
- * Plugin URI:        https://github.com/CCDzine-Builds/sitecore
+ * Plugin URI:        https://github.com/CCDzine-Builds/totem
  * Description:       Develop site-specific plugins for ClassicPress and WordPres.
  * Version:           1.0.0
- * UpdateURI:         https://github.com/CCDzine-Builds/releases/latest/download/sitecore.zip
+ * UpdateURI:         https://github.com/CCDzine-Builds/releases/latest/download/totem.zip
  * Author:            Controlled Chaos Design
  * Author URI:        https://github.com/CCDzine-Builds
- * Text Domain:       sitecore
+ * Text Domain:       totem
  * Domain Path:       /languages
  * Requires PHP:      7.4
  * Requires at least: 4.9
@@ -58,14 +58,14 @@ function load_plugin_textdomain() {
 
 	// Standard plugin installation.
 	\load_plugin_textdomain(
-		'sitecore',
+		'totem',
 		false,
 		dirname( TMG_BASENAME ) . '/languages'
 	);
 
 	// If this plugin is in the must-use plugins directory.
 	\load_muplugin_textdomain(
-		'sitecore',
+		'totem',
 		dirname( TMG_BASENAME ) . '/languages'
 	);
 }
@@ -100,7 +100,7 @@ function plugin_page_link( $links ) {
 	$html = sprintf(
 			'<a href="%s" class="tmg-plugin-page-link">%s</a>',
 			esc_url( admin_url( $url ) ),
-			__( 'Help', 'sitecore' )
+			__( 'Help', 'totem' )
 	);
 	$link = [ $html ];
 

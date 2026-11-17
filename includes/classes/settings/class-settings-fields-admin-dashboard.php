@@ -26,12 +26,12 @@ class Settings_Fields_Admin_Dashboard extends Settings_Fields {
 		$fields = [
 			[
 				'id'       => 'enable_custom_dashboard',
-				'title'    => __( 'Custom Dashboard', 'sitecore' ),
+				'title'    => __( 'Custom Dashboard', 'totem' ),
 				'page'     => 'options-admin',
 				'section'  => 'tmg-settings-section-admin-dashboard',
 				'type'     => 'checkbox',
 				'args'     => [
-					'description' => __( 'Check to replace the default dashboard with a custom dashboard for this website.', 'sitecore' ),
+					'description' => __( 'Check to replace the default dashboard with a custom dashboard for this website.', 'totem' ),
 					'class'       => 'admin-field'
 				]
 			]

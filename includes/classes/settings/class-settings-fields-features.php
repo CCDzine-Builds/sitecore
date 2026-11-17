@@ -24,7 +24,7 @@ class Settings_Fields_Features extends Settings_Fields {
 		$fields = [
 			[
 				'id'       => 'meta_site_keywords',
-				'title'    => __( 'Site Keywords', 'sitecore' ),
+				'title'    => __( 'Site Keywords', 'totem' ),
 				'callback' => [ $this, 'meta_site_keywords_callback' ],
 				'page'     => 'custom-content',
 				'section'  => 'tmg-options-features',
@@ -71,11 +71,11 @@ class Settings_Fields_Features extends Settings_Fields {
 		$html = '<fieldset>';
 		$html .= sprintf(
 			'<legend class="screen-reader-text">%s</legend>',
-			__( 'Site Keywords', 'sitecore' )
+			__( 'Site Keywords', 'totem' )
 		);
 		$html .= sprintf(
 			'<p>%s</p>',
-			__( 'Add one keyword or phrase per line.', 'sitecore' )
+			__( 'Add one keyword or phrase per line.', 'totem' )
 		);
 		$html .= sprintf(
 			'<textarea id="%s" name="%s" rows="5" cols="50">%s</textarea>',
@@ -85,7 +85,7 @@ class Settings_Fields_Features extends Settings_Fields {
 		);
 		$html .= sprintf(
 			'<p class="description">%s</p>',
-			__( 'The keywords meta tag will not print if this field is left empty.', 'sitecore' )
+			__( 'The keywords meta tag will not print if this field is left empty.', 'totem' )
 		);
 		$html .= '</fieldset>';
 

@@ -209,7 +209,7 @@ function add_user_roles() {
 	 */
 	add_role(
 		'developer',
-		__( 'Developer', 'sitecore' ),
+		__( 'Developer', 'totem' ),
 		get_role( 'administrator' )->capabilities
 	);
 }
@@ -400,7 +400,7 @@ function network_add_roles_after_activation( $user_id, $password, $meta ) {
 function list_role_column_replace( $columns ) {
 
 	unset( $columns['role'] );
-	$columns['tmg_multiple_roles_column'] = __( 'Roles', 'sitecore' );
+	$columns['tmg_multiple_roles_column'] = __( 'Roles', 'totem' );
 
 	return $columns;
 }

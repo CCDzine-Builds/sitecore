@@ -28,7 +28,7 @@ class Content_Settings_Page extends Add_Page {
 
 		$labels = [
 			'page_title'  => $this->page_title(),
-			'menu_title'  => __( 'Content', 'sitecore' ),
+			'menu_title'  => __( 'Content', 'totem' ),
 			'description' => $this->description()
 		];
 
@@ -61,9 +61,9 @@ class Content_Settings_Page extends Add_Page {
 	protected function page_title() {
 
 		if ( ! current_user_can( 'edit_posts' ) ) {
-			$title = __( 'Website Content', 'sitecore' );
+			$title = __( 'Website Content', 'totem' );
 		} else {
-			$title = __( 'Custom Content', 'sitecore' );
+			$title = __( 'Custom Content', 'totem' );
 		}
 		return $title;
 	}
@@ -78,9 +78,9 @@ class Content_Settings_Page extends Add_Page {
 	protected function description() {
 
 		if ( ! current_user_can( 'edit_posts' ) ) {
-			$description = __( 'This is an overview of this website\'s content.', 'sitecore' );
+			$description = __( 'This is an overview of this website\'s content.', 'totem' );
 		} else {
-			$description = __( 'Manage how the content of this website is edited and displayed.', 'sitecore' );
+			$description = __( 'Manage how the content of this website is edited and displayed.', 'totem' );
 		}
 		return sprintf(
 			'<p class="description">%s</p>',
@@ -103,8 +103,8 @@ class Content_Settings_Page extends Add_Page {
 		$this->add_content_tab( [
 			'capability' => 'read',
 			'id'         => 'content-settings-intro',
-			'tab'        => __( 'Intro', 'sitecore' ),
-			'heading'    => __( 'About This Website\'s Content', 'sitecore' ),
+			'tab'        => __( 'Intro', 'totem' ),
+			'heading'    => __( 'About This Website\'s Content', 'totem' ),
 			'icon'       => 'dashicons-info',
 			'content'    => '',
 			'callback'   => [ $this, 'intro_tab' ]
@@ -114,8 +114,8 @@ class Content_Settings_Page extends Add_Page {
 		$this->add_content_tab( [
 			'capability' => 'manage_options',
 			'id'         => 'content-settings-features',
-			'tab'        => __( 'Features', 'sitecore' ),
-			'heading'    => __( 'Content Features', 'sitecore' ),
+			'tab'        => __( 'Features', 'totem' ),
+			'heading'    => __( 'Content Features', 'totem' ),
 			'icon'       => 'dashicons-flag',
 			'content'    => '',
 			'callback'   => [ $this, 'features_tab' ]
@@ -124,8 +124,8 @@ class Content_Settings_Page extends Add_Page {
 		$this->add_content_tab( [
 			'capability' => 'manage_options',
 			'id'         => 'content-settings',
-			'tab'        => __( 'Options', 'sitecore' ),
-			'heading'    => __( 'Content Options', 'sitecore' ),
+			'tab'        => __( 'Options', 'totem' ),
+			'heading'    => __( 'Content Options', 'totem' ),
 			'icon'       => 'dashicons-admin-generic',
 			'content'    => '',
 			'callback'   => [ $this, 'settings_tab' ]
@@ -135,8 +135,8 @@ class Content_Settings_Page extends Add_Page {
 			$this->add_content_tab( [
 				'capability' => 'read',
 				'id'         => 'content-settings-meta-tags',
-				'tab'        => __( 'Meta', 'sitecore' ),
-				'heading'    => __( 'Frontend Meta Tags', 'sitecore' ),
+				'tab'        => __( 'Meta', 'totem' ),
+				'heading'    => __( 'Frontend Meta Tags', 'totem' ),
 				'icon'       => 'dashicons-share1',
 				'content'    => '',
 				'callback'   => [ $this, 'meta_tags_tab' ]
@@ -232,9 +232,9 @@ class Content_Settings_Page extends Add_Page {
 				}
 				// Extend the wp.media object.
 				blog_uploader = wp.media.frames.file_frame = wp.media( {
-					title  : "<?php _e( 'Choose Image', 'sitecore' ); ?>",
+					title  : "<?php _e( 'Choose Image', 'totem' ); ?>",
 					button : {
-						text : "<?php _e( 'Choose Image', 'sitecore' ); ?>"
+						text : "<?php _e( 'Choose Image', 'totem' ); ?>"
 					},
 					library : {
 						type : 'image'
@@ -255,7 +255,7 @@ class Content_Settings_Page extends Add_Page {
 
 					$( '#meta-image-blog-index-upload-field' ).val( attachment.id );
 					$( '#meta-image-blog-index-preview' ).show().attr( 'src', attachment.url );
-					$( '#meta-image-blog-index-upload-button' ).val( "<?php _e( 'Replace Image', 'sitecore' ); ?>" );
+					$( '#meta-image-blog-index-upload-button' ).val( "<?php _e( 'Replace Image', 'totem' ); ?>" );
 					$( '#meta-image-blog-index-remove-button' ).removeAttr( 'disabled' );
 				} );
 
@@ -274,9 +274,9 @@ class Content_Settings_Page extends Add_Page {
 				}
 				// Extend the wp.media object.
 				archive_uploader = wp.media.frames.file_frame = wp.media( {
-					title  : "<?php _e( 'Choose Image', 'sitecore' ); ?>",
+					title  : "<?php _e( 'Choose Image', 'totem' ); ?>",
 					button : {
-						text : "<?php _e( 'Choose Image', 'sitecore' ); ?>"
+						text : "<?php _e( 'Choose Image', 'totem' ); ?>"
 					},
 					library : {
 						type : 'image'
@@ -297,7 +297,7 @@ class Content_Settings_Page extends Add_Page {
 
 					$( '#meta-image-archive-upload-field' ).val( attachment.id );
 					$( '#meta-image-archive-preview' ).show().attr( 'src', attachment.url );
-					$( '#meta-image-archive-upload-button' ).val( "<?php _e( 'Replace Image', 'sitecore' ); ?>" );
+					$( '#meta-image-archive-upload-button' ).val( "<?php _e( 'Replace Image', 'totem' ); ?>" );
 					$( '#meta-image-archive-remove-button' ).removeAttr( 'disabled' );
 				} );
 
@@ -307,7 +307,7 @@ class Content_Settings_Page extends Add_Page {
 
 			$( '#meta-image-blog-index-remove-button' ).click( function(e) {
 				$( '#meta-image-blog-index-upload-field' ).val( '' );
-				$( '#meta-image-blog-index-upload-button' ).val( "<?php _e( 'Add Image', 'sitecore' ); ?>" );
+				$( '#meta-image-blog-index-upload-button' ).val( "<?php _e( 'Add Image', 'totem' ); ?>" );
 				$( '#meta-image-blog-index-preview' ).hide();
 				$(this).attr( 'disabled', true );
 				return false;
@@ -315,7 +315,7 @@ class Content_Settings_Page extends Add_Page {
 
 			$( '#meta-image-archive-remove-button' ).click( function(e) {
 				$( '#meta-image-archive-upload-field' ).val( '' );
-				$( '#meta-image-archive-upload-button' ).val( "<?php _e( 'Add Image', 'sitecore' ); ?>" );
+				$( '#meta-image-archive-upload-button' ).val( "<?php _e( 'Add Image', 'totem' ); ?>" );
 				$( '#meta-image-archive-preview' ).hide();
 				$(this).attr( 'disabled', true );
 				return false;

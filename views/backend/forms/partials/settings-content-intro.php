@@ -17,13 +17,13 @@ function content_settings_intro( $content = '' ) {
 	$get_roles = Users\get_user_roles();
 
 	if ( count( $get_roles ) > 1 ) {
-		$roles = __( 'roles', 'sitecore' );
+		$roles = __( 'roles', 'totem' );
 	} else {
-		$roles = __( 'role', 'sitecore' );
+		$roles = __( 'role', 'totem' );
 	}
 
 	$role_message = sprintf(
-		__( '<p>This content is for users with your %s: %s.</p>', 'sitecore' ),
+		__( '<p>This content is for users with your %s: %s.</p>', 'totem' ),
 		$roles,
 		Users\user_roles()
 	);
@@ -33,7 +33,7 @@ function content_settings_intro( $content = '' ) {
 
 		$content .= sprintf(
 			'<p>%s</p>',
-			__( 'You are seeing this content because you have the user role of Developer, and because Advanced Custom Fields is active.', 'sitecore' )
+			__( 'You are seeing this content because you have the user role of Developer, and because Advanced Custom Fields is active.', 'totem' )
 		);
 	} else {
 		$content = $role_message;
@@ -46,7 +46,7 @@ add_action( 'tmg_content_settings_intro', __NAMESPACE__ . '\content_settings_int
 ?>
 <div>
 	<?php do_action( 'tmg_before_content_settings_intro' ); ?>
-	<p class="description"><?php _e( 'Change this intro as needed for your project.', 'sitecore' ); ?></p>
+	<p class="description"><?php _e( 'Change this intro as needed for your project.', 'totem' ); ?></p>
 	<?php do_action( 'tmg_content_settings_intro' ); ?>
 	<?php do_action( 'tmg_after_content_settings_intro' ); ?>
 </div>

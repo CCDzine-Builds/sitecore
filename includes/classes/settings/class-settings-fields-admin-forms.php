@@ -26,14 +26,14 @@ class Settings_Fields_Admin_Forms extends Settings_Fields {
 		$fields = [
 			[
 				'id'       => 'email_from_name',
-				'title'    => __( 'Email From Text', 'sitecore' ),
+				'title'    => __( 'Email From Text', 'totem' ),
 				'callback' => [ $this, 'email_from_name_callback' ],
 				'page'     => 'options-admin',
 				'section'  => 'tmg-settings-section-admin-forms',
 				'type'     => 'checkbox',
 				'args'     => [
 					'description' => sprintf(
-						__( 'For the "From" line in emails sent from the %s platform.', 'sitecore' ),
+						__( 'For the "From" line in emails sent from the %s platform.', 'totem' ),
 						platform_name()
 					),
 					'label_for' => 'email_from_name',
@@ -89,7 +89,7 @@ class Settings_Fields_Admin_Forms extends Settings_Fields {
 			$field_id,
 			$field_id,
 			$option,
-			__( 'Enter Text', 'sitecore' )
+			__( 'Enter Text', 'totem' )
 		);
 		$html .= '</fieldset>';
 		$html .= sprintf(

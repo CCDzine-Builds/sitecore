@@ -26,14 +26,14 @@ class Settings_Fields_Admin_Footer extends Settings_Fields {
 		$fields = [
 			[
 				'id'       => 'enable_custom_admin_footer',
-				'title'    => __( 'Enable Custom Footer', 'sitecore' ),
+				'title'    => __( 'Enable Custom Footer', 'totem' ),
 				'callback' => [ $this, 'enable_custom_admin_footer_callback' ],
 				'page'     => 'options-admin',
 				'section'  => 'tmg-settings-section-admin-footer',
 				'type'     => 'checkbox',
 				'args'     => [
 					'description' => sprintf(
-						__( 'Check to replace the default %s footer on admin screens.', 'sitecore' ),
+						__( 'Check to replace the default %s footer on admin screens.', 'totem' ),
 						platform_name()
 					),
 					'class'       => 'admin-field'
@@ -97,12 +97,12 @@ class Settings_Fields_Admin_Footer extends Settings_Fields {
 		$html .= '</label></fieldset>';
 		$html .= sprintf(
 			'<p class="description">%s</p>',
-			__( 'Replaces both left and right text.', 'sitecore' )
+			__( 'Replaces both left and right text.', 'totem' )
 		);
 		if ( current_user_can( 'develop' ) ) {
 			$html .= sprintf(
 				'<p class="description"><em>%s</em></p>',
-				__( 'Find the text replacement options in includes/backend/admin-footer.php.', 'sitecore' )
+				__( 'Find the text replacement options in includes/backend/admin-footer.php.', 'totem' )
 			);
 		}
 

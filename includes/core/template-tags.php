@@ -53,7 +53,7 @@ function site_logo( $html = null ) {
 		$caption = sprintf(
 			'%s %s',
 			get_bloginfo( 'name' ),
-			__( 'logo', 'sitecore' )
+			__( 'logo', 'totem' )
 		);
 	}
 

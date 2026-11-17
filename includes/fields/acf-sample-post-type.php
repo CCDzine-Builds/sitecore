@@ -23,14 +23,14 @@ if ( function_exists( 'acf_add_local_field_group' ) ) :
 
 	acf_add_local_field_group( [
 		'key'    => 'group_647c2d9e2faa6',
-		'title'  => __( 'Sample Post Type', 'sitecore' ),
+		'title'  => __( 'Sample Post Type', 'totem' ),
 		'fields' => [
 			[
 				'key'               => 'field_647c36cfd6510',
-				'label'             => __( 'Sample Custom Fields', 'sitecore' ),
+				'label'             => __( 'Sample Custom Fields', 'totem' ),
 				'name'              => '',
 				'type'              => 'message',
-				'instructions'      => __( '', 'sitecore' ),
+				'instructions'      => __( '', 'totem' ),
 				'required'          => 0,
 				'conditional_logic' => 0,
 				'wrapper'           => [
@@ -38,17 +38,17 @@ if ( function_exists( 'acf_add_local_field_group' ) ) :
 					'class' => '',
 					'id'    => ''
 				],
-				'message'   => __( 'The custom fields below, above the rich text editor, are loaded when the sample files option in Developer Tools is true.', 'sitecore' ),
+				'message'   => __( 'The custom fields below, above the rich text editor, are loaded when the sample files option in Developer Tools is true.', 'totem' ),
 				'new_lines' => 'wpautop',
 				'esc_html'  => 0,
 				'acfe_field_group_condition' => 0
 			],
 			[
 				'key'               => 'field_647c2dc8d2170',
-				'label'             => __( 'Subtitle', 'sitecore' ),
+				'label'             => __( 'Subtitle', 'totem' ),
 				'name'              => 'sample_subtitle',
 				'type'              => 'text',
-				'instructions'      => __( '', 'sitecore' ),
+				'instructions'      => __( '', 'totem' ),
 				'required'          => 0,
 				'conditional_logic' => 0,
 				'wrapper'           => [
@@ -68,7 +68,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ) :
 					6 => 'test-tax'
 				],
 				'default_value' => '',
-				'placeholder'   => __( '', 'sitecore' ),
+				'placeholder'   => __( '', 'totem' ),
 				'prepend'       => '',
 				'append'        => '',
 				'maxlength'     => '',
@@ -76,10 +76,10 @@ if ( function_exists( 'acf_add_local_field_group' ) ) :
 			],
 			[
 				'key'               => 'field_647c2eaf3a513',
-				'label'             => __( 'Call to Action', 'sitecore' ),
+				'label'             => __( 'Call to Action', 'totem' ),
 				'name'              => 'sample_call_to_action',
 				'type'              => 'radio',
-				'instructions'      => __( '', 'sitecore' ),
+				'instructions'      => __( '', 'totem' ),
 				'required'          => 0,
 				'conditional_logic' => 0,
 				'wrapper'           => [
@@ -91,9 +91,9 @@ if ( function_exists( 'acf_add_local_field_group' ) ) :
 				'acf-column-post_types' => '',
 				'acf-column-taxonomies' => '',
 				'choices' => [
-					'none'   => __( 'None', 'sitecore' ),
-					'button' => __( 'Button', 'sitecore' ),
-					'image'  => __( 'Image', 'sitecore' )
+					'none'   => __( 'None', 'totem' ),
+					'button' => __( 'Button', 'totem' ),
+					'image'  => __( 'Image', 'totem' )
 				],
 				'allow_null'        => 0,
 				'other_choice'      => 0,
@@ -105,10 +105,10 @@ if ( function_exists( 'acf_add_local_field_group' ) ) :
 			],
 			[
 				'key'               => 'field_647c31c630ca5',
-				'label'             => __( 'Action Text', 'sitecore' ),
+				'label'             => __( 'Action Text', 'totem' ),
 				'name'              => 'sample_call_to_action_text',
 				'type'              => 'text',
-				'instructions'      => __( '', 'sitecore' ),
+				'instructions'      => __( '', 'totem' ),
 				'required'          => 0,
 				'conditional_logic' => [
 					[
@@ -136,7 +136,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ) :
 					6 => 'test-tax'
 				],
 				'default_value' => '',
-				'placeholder'   => __( '', 'sitecore' ),
+				'placeholder'   => __( '', 'totem' ),
 				'prepend'       => '',
 				'append'        => '',
 				'maxlength'     => '',
@@ -144,10 +144,10 @@ if ( function_exists( 'acf_add_local_field_group' ) ) :
 			],
 			[
 				'key'               => 'field_647c30f2565bb',
-				'label'             => __( 'Action Link', 'sitecore' ),
+				'label'             => __( 'Action Link', 'totem' ),
 				'name'              => 'sample_call_to_action_link',
 				'type'              => 'url',
-				'instructions'      => __( '', 'sitecore' ),
+				'instructions'      => __( '', 'totem' ),
 				'required'          => 0,
 				'conditional_logic' => [
 					[
@@ -172,10 +172,10 @@ if ( function_exists( 'acf_add_local_field_group' ) ) :
 			],
 			[
 				'key'               => 'field_647c2f353a514',
-				'label'             => __( 'Button Background Color', 'sitecore' ),
+				'label'             => __( 'Button Background Color', 'totem' ),
 				'name'              => 'sample_call_to_action_button_bg',
 				'type'              => 'color_picker',
-				'instructions'      => __( '', 'sitecore' ),
+				'instructions'      => __( '', 'totem' ),
 				'required'          => 0,
 				'conditional_logic' => [
 					[
@@ -197,7 +197,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ) :
 				'default_value' => '#dd0000',
 				'display'       => 'default',
 				'return_format' => 'value',
-				'button_label'  => __( 'Select Color', 'sitecore' ),
+				'button_label'  => __( 'Select Color', 'totem' ),
 				'color_picker'  => 1,
 				'absolute'      => 0,
 				'input'         => 1,
@@ -209,10 +209,10 @@ if ( function_exists( 'acf_add_local_field_group' ) ) :
 			],
 			[
 				'key'               => 'field_647c301a3a515',
-				'label'             => __( 'Button Text Color', 'sitecore' ),
+				'label'             => __( 'Button Text Color', 'totem' ),
 				'name'              => 'sample_call_to_action_button_text',
 				'type'              => 'color_picker',
-				'instructions'      => __( '', 'sitecore' ),
+				'instructions'      => __( '', 'totem' ),
 				'required'          => 0,
 				'conditional_logic' => [
 					[
@@ -242,7 +242,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ) :
 				'default_value' => '#ffffff',
 				'display'       => 'default',
 				'return_format' => 'value',
-				'button_label'  => __( 'Select Color', 'sitecore' ),
+				'button_label'  => __( 'Select Color', 'totem' ),
 				'color_picker'  => 1,
 				'absolute'      => 0,
 				'input'         => 1,
@@ -254,10 +254,10 @@ if ( function_exists( 'acf_add_local_field_group' ) ) :
 			],
 			[
 				'key'               => 'field_647c3047565b8',
-				'label'             => __( 'Action Image', 'sitecore' ),
+				'label'             => __( 'Action Image', 'totem' ),
 				'name'              => 'sample_call_to_action_image',
 				'type'              => 'image',
-				'instructions'      => __( '', 'sitecore' ),
+				'instructions'      => __( '', 'totem' ),
 				'required'          => 0,
 				'conditional_logic' => [
 					[
@@ -292,10 +292,10 @@ if ( function_exists( 'acf_add_local_field_group' ) ) :
 			],
 			[
 				'key'               => 'field_647c30c2565ba',
-				'label'             => __( 'Image Text Color', 'sitecore' ),
+				'label'             => __( 'Image Text Color', 'totem' ),
 				'name'              => 'sample_call_to_action_image_text',
 				'type'              => 'color_picker',
-				'instructions'      => __( '', 'sitecore' ),
+				'instructions'      => __( '', 'totem' ),
 				'required'          => 0,
 				'conditional_logic' => [
 					[
@@ -325,7 +325,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ) :
 				'default_value' => '#ffffff',
 				'display'       => 'default',
 				'return_format' => 'value',
-				'button_label'  => __( 'Select Color', 'sitecore' ),
+				'button_label'  => __( 'Select Color', 'totem' ),
 				'color_picker'  => 1,
 				'absolute'      => 0,
 				'input'         => 1,
@@ -352,7 +352,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ) :
 		'instruction_placement' => 'label',
 		'hide_on_screen'        => '',
 		'active'                => true,
-		'description'           => __( '', 'sitecore' ),
+		'description'           => __( '', 'totem' ),
 		'acfe_autosync'         => [
 			0 => 'json'
 		],

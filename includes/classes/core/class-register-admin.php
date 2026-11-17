@@ -29,8 +29,8 @@ class Register_Admin extends Register_Type {
 	public function __construct() {
 
 		$labels = [
-			'singular'    => __( 'admin page', 'sitecore' ),
-			'plural'      => __( 'admin pages', 'sitecore' ),
+			'singular'    => __( 'admin page', 'totem' ),
+			'plural'      => __( 'admin pages', 'totem' ),
 			'description' => '',
 			'menu_icon'   => 'dashicons-clipboard'
 		];
@@ -114,7 +114,7 @@ class Register_Admin extends Register_Type {
 		$type_obj  = get_post_type_object( $post_type );
 
 		// New post type labels.
-		$type_obj->labels->all_items = __( 'Admin Pages', 'sitecore' );
+		$type_obj->labels->all_items = __( 'Admin Pages', 'totem' );
 	}
 
 	/**
@@ -234,7 +234,7 @@ class Register_Admin extends Register_Type {
 					if ( ! is_array( $get_tabs ) ) {
 						printf(
 							'<h2>%s</h2>',
-							__( 'No content available.', 'sitecore' )
+							__( 'No content available.', 'totem' )
 						);
 						return;
 					}

@@ -12,7 +12,7 @@ namespace Totem\Views\Admin;
 
 ?>
 <div>
-	<p class="description"><?php _e( 'Meta data tags for SEO and embed display.', 'sitecore' ); ?></p>
+	<p class="description"><?php _e( 'Meta data tags for SEO and embed display.', 'totem' ); ?></p>
 	<?php do_action( 'tmg_before_meta_tags_settings' ); ?>
 
 	<table class="form-table" role="presentation">

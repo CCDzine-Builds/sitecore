@@ -17,17 +17,17 @@ if ( $object->labels->singular_name ) {
 }
 
 printf(
-	__( '<p>Filtered content for %s #%s</p>', 'sitecore' ),
+	__( '<p>Filtered content for %s #%s</p>', 'totem' ),
 	$name,
 	get_the_ID()
 );
 
 printf(
-	__( '<p>This template is being displayed because the sample content filter class in the %s plugin has been instantiated.</p>', 'sitecore' ),
+	__( '<p>This template is being displayed because the sample content filter class in the %s plugin has been instantiated.</p>', 'totem' ),
 	TMG_NAME
 );
 
 printf(
-	__( '<p>The template for this notice is in the %s plugin.</p>', 'sitecore' ),
+	__( '<p>The template for this notice is in the %s plugin.</p>', 'totem' ),
 	TMG_NAME
 );

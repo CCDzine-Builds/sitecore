@@ -352,7 +352,7 @@ class Add_Page {
 	 * @return string Returns the text of the button.
 	 */
 	protected function acf_update_button() {
-		return apply_filters( 'tmg_acf_update_button', __( 'Update Page', 'sitecore' ) );
+		return apply_filters( 'tmg_acf_update_button', __( 'Update Page', 'totem' ) );
 	}
 
 	/**
@@ -363,7 +363,7 @@ class Add_Page {
 	 * @return string Returns the text of the message.
 	 */
 	protected function acf_update_message() {
-		return apply_filters( 'tmg_acf_update_message', __( 'Page Updated', 'sitecore' ) );
+		return apply_filters( 'tmg_acf_update_message', __( 'Page Updated', 'totem' ) );
 	}
 
 	/**
@@ -452,7 +452,7 @@ class Add_Page {
 		if ( array_key_exists( 'submit_label', $this->page_labels ) && $this->page_labels['submit_label'] ) {
 			$label = $this->page_labels['submit_label'];
 		} else {
-			$label = __( 'Save Settings', 'sitecore' );
+			$label = __( 'Save Settings', 'totem' );
 		}
 
 		$html = submit_button(
@@ -1028,7 +1028,7 @@ class Add_Page {
 		// Print a heading using the menu title variable.
 		echo  sprintf(
 			'<h1>%s</h1>',
-			__( $this->heading(), 'sitecore' )
+			__( $this->heading(), 'totem' )
 		);
 
 		// Print a paragraph with native description class using the description variable.
@@ -1069,7 +1069,7 @@ class Add_Page {
 		// More information tab.
 		$screen->add_help_tab( [
 			'id'       => 'more_info',
-			'title'    => __( 'More Information', 'sitecore' ),
+			'title'    => __( 'More Information', 'totem' ),
 			'content'  => null,
 			'callback' => [ $this, 'more_info' ]
 		] );

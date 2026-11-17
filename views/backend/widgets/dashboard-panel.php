@@ -21,7 +21,7 @@ if ( current_user_can( 'customize' ) || current_user_can( 'edit_theme_options' )
 	$customize = sprintf(
         '<li class="content-tab"><a href="%1s"><span class="dashicons dashicons-art"></span> %2s</a></li>',
 		'#customize',
-       __( 'Customize', 'sitecore' )
+       __( 'Customize', 'totem' )
 	);
 } else {
 	$customize = null;
@@ -41,7 +41,7 @@ if ( current_user_can( 'manage_options' ) ) {
         '<li class="content-tab"><a href="%1s"><span class="dashicons %2s"></span> %3s</a></li>',
 		'#system',
 		$system_icon,
-       __( 'System', 'sitecore' )
+       __( 'System', 'totem' )
 	);
 } else {
 	$system = null;
@@ -50,7 +50,7 @@ if ( current_user_can( 'manage_options' ) ) {
 $content = sprintf(
 	'<li class="content-tab"><a href="%1s"><span class="dashicons dashicons-edit-page"></span> %2s</a></li>',
 	'#content',
-   __( 'Content', 'sitecore' )
+   __( 'Content', 'totem' )
 );
 
 $tabs = apply_filters( 'tmg_dashboard_panel_tabs', [
@@ -59,7 +59,7 @@ $tabs = apply_filters( 'tmg_dashboard_panel_tabs', [
     sprintf(
         '<li class="content-tab active"><a href="%1s"><span class="dashicons dashicons-welcome-learn-more"></span> %2s</a></li>',
         '#welcome',
-        __( 'Welcome', 'sitecore' )
+        __( 'Welcome', 'totem' )
 	),
 	$content,
 	$customize,

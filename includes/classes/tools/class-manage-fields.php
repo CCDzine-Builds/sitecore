@@ -37,7 +37,7 @@ class Manage_Fields extends \ACF_Admin_Tool {
 	 */
 	public function initialize() {
 		$this->name  = 'manage-acf-fields';
-		$this->title = __( 'Manage Custom Fields', 'sitecore' );
+		$this->title = __( 'Manage Custom Fields', 'totem' );
     	$this->icon  = 'dashicons-editor-table';
 	}
 
@@ -51,13 +51,13 @@ class Manage_Fields extends \ACF_Admin_Tool {
 	public function html() {
 
 	?>
-	<p><?php _e( 'Manage custom fields & field groups.', 'sitecore' ); ?></p>
+	<p><?php _e( 'Manage custom fields & field groups.', 'totem' ); ?></p>
 	<p>
 		<a href="<?php echo admin_url( 'edit.php?post_type=acf-field-group' ); ?>" class="button button-primary">
-			<?php _e( 'Field Groups', 'sitecore' ); ?>
+			<?php _e( 'Field Groups', 'totem' ); ?>
 		</a>
 		<a href="<?php echo admin_url( 'edit-tags.php?taxonomy=acf-field-group-category' ); ?>" class="button button-primary">
-			<?php _e( 'Field Categories', 'sitecore' ); ?>
+			<?php _e( 'Field Categories', 'totem' ); ?>
 		</a>
 	</p>
 	<?php

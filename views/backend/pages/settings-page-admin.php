@@ -16,12 +16,12 @@ $page = get_plugin_page_hook( TMG_BASENAME, $this->parent_slug );
 	<?php
 	printf(
 		'<h1>%s</h1>',
-		__( $this->heading(), 'sitecore' )
+		__( $this->heading(), 'totem' )
 	);
 
 	printf(
 		'<p class="description">%s</p>',
-		__( $this->description(), 'sitecore' )
+		__( $this->description(), 'totem' )
 	);
 
 	?>
@@ -29,6 +29,6 @@ $page = get_plugin_page_hook( TMG_BASENAME, $this->parent_slug );
 
 		<?php echo do_action( 'render_screen_tabs_' . $page ); ?>
 
-		<p class="submit"><?php submit_button( __( 'Save Settings', 'sitecore' ), 'button-primary', '', false, [] ); ?></p>
+		<p class="submit"><?php submit_button( __( 'Save Settings', 'totem' ), 'button-primary', '', false, [] ); ?></p>
 	</form>
 </div>

@@ -27,8 +27,8 @@ class Admin_Settings_Page extends Add_Page {
 	public function __construct() {
 
 		$labels = [
-			'page_title'  => __( 'Administration Settings', 'sitecore' ),
-			'menu_title'  => __( 'Admin', 'sitecore' ),
+			'page_title'  => __( 'Administration Settings', 'totem' ),
+			'menu_title'  => __( 'Admin', 'totem' ),
 			'description' => __( 'Customize the content and user interfaces of administration pages.' )
 		];
 

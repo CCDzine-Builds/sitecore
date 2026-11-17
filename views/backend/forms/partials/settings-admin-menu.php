@@ -36,10 +36,10 @@ settings_fields( 'options-admin' );
 		<tbody>
 			<?php if ( ! can_fse() ) : ?>
 			<tr class="admin-field">
-				<th scope="row"><?php _e( 'Link Positions', 'sitecore' ); ?></th>
+				<th scope="row"><?php _e( 'Link Positions', 'totem' ); ?></th>
 				<td>
 					<fieldset>
-						<legend class="screen-reader-text"><?php _e( 'Manage Link Position Options', 'sitecore' ); ?></legend>
+						<legend class="screen-reader-text"><?php _e( 'Manage Link Position Options', 'totem' ); ?></legend>
 						<?php $settings->admin_menu_menus_top_callback(); ?><br />
 						<?php $settings->admin_menu_widgets_top_callback(); ?>
 					</fieldset>
@@ -48,11 +48,11 @@ settings_fields( 'options-admin' );
 			<?php endif; ?>
 			<?php if ( ! is_classicpress() && $show_blocks ) : ?>
 			<tr class="admin-field">
-				<th scope="row"><?php _e( 'Content Types', 'sitecore' ); ?></th>
+				<th scope="row"><?php _e( 'Content Types', 'totem' ); ?></th>
 				<td>
-					<p><?php _e( 'These content types are normally hidden from the admin menu.', 'sitecore' ); ?></p>
+					<p><?php _e( 'These content types are normally hidden from the admin menu.', 'totem' ); ?></p>
 					<fieldset>
-						<legend class="screen-reader-text"><?php _e( 'Show Hidden Content Types', 'sitecore' ); ?></legend>
+						<legend class="screen-reader-text"><?php _e( 'Show Hidden Content Types', 'totem' ); ?></legend>
 						<?php $settings->admin_menu_nav_blocks_callback(); ?><br />
 						<?php $settings->admin_menu_reuse_blocks_callback(); ?>
 					</fieldset>
@@ -60,10 +60,10 @@ settings_fields( 'options-admin' );
 			</tr>
 			<?php endif; ?>
 			<tr class="admin-field">
-				<th scope="row"><?php _e( 'Custom Order', 'sitecore' ); ?></th>
+				<th scope="row"><?php _e( 'Custom Order', 'totem' ); ?></th>
 				<td>
 					<fieldset>
-						<legend class="screen-reader-text"><?php _e( 'Custom Admin Menu Order', 'sitecore' ); ?></legend>
+						<legend class="screen-reader-text"><?php _e( 'Custom Admin Menu Order', 'totem' ); ?></legend>
 						<?php $settings->admin_menu_custom_order_callback(); ?>
 					</fieldset>
 				</td>

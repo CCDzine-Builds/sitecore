@@ -30,9 +30,9 @@ class Dashboard_Tabs_ACF extends Add_Page {
 	public function __construct() {
 
 		$labels = [
-			'page_title'  => __( 'Dashboard Tabs', 'sitecore' ),
-			'menu_title'  => __( 'Dashboard Tabs', 'sitecore' ),
-			'description' => __( 'Used to replace the tabbed content on the custom user dashboard.', 'sitecore' )
+			'page_title'  => __( 'Dashboard Tabs', 'totem' ),
+			'menu_title'  => __( 'Dashboard Tabs', 'totem' ),
+			'description' => __( 'Used to replace the tabbed content on the custom user dashboard.', 'totem' )
 		];
 
 		$options = [

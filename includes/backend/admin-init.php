@@ -346,8 +346,8 @@ function menus_widgets() {
 
 		if ( get_option( 'admin_menu_menus_top', true ) ) {
 			add_menu_page(
-				__( 'Navigation Menus', 'sitecore' ),
-				__( 'Navigation', 'sitecore' ),
+				__( 'Navigation Menus', 'totem' ),
+				__( 'Navigation', 'totem' ),
 				'delete_others_pages',
 				'nav-menus.php',
 				'',
@@ -362,8 +362,8 @@ function menus_widgets() {
 
 		if ( get_option( 'admin_menu_widgets_top', true ) ) {
 			add_menu_page(
-				__( 'Widgets', 'sitecore' ),
-				__( 'Widgets', 'sitecore' ),
+				__( 'Widgets', 'totem' ),
+				__( 'Widgets', 'totem' ),
 				'delete_others_pages',
 				'widgets.php',
 				'',
@@ -438,9 +438,9 @@ function show_in_menu( $args, $post_type ) {
 		get_option( 'admin_menu_reuse_blocks', false )
 	) {
 		if ( $content && $show_blocks ) {
-			$args['labels']['name']      = __( 'Reusable Blocks', 'sitecore' );
-			$args['labels']['menu_name'] = __( 'Reusable Blocks', 'sitecore' );
-			$args['labels']['all_items'] = __( 'Reusable Blocks', 'sitecore' );
+			$args['labels']['name']      = __( 'Reusable Blocks', 'totem' );
+			$args['labels']['menu_name'] = __( 'Reusable Blocks', 'totem' );
+			$args['labels']['all_items'] = __( 'Reusable Blocks', 'totem' );
 			$args['show_in_menu'] = 'custom-content';
 		}
 	}
@@ -449,8 +449,8 @@ function show_in_menu( $args, $post_type ) {
 		'wp_navigation' == $post_type &&
 		get_option( 'admin_menu_nav_blocks', false )
 	) {
-		$args['labels']['menu_name'] = __( 'Navigation Blocks', 'sitecore' );
-		$args['labels']['all_items'] = __( 'Navigation Blocks', 'sitecore' );
+		$args['labels']['menu_name'] = __( 'Navigation Blocks', 'totem' );
+		$args['labels']['all_items'] = __( 'Navigation Blocks', 'totem' );
 		$args['show_in_menu'] = $nav_parent;
 	}
 	return $args;
@@ -505,7 +505,7 @@ function hide_policy_content_notice() {
  */
 function admin_header_menu() {
 	register_nav_menus( [
-		'admin_header' => __( 'Admin Header', 'sitecore' )
+		'admin_header' => __( 'Admin Header', 'totem' )
 	] );
 }
 

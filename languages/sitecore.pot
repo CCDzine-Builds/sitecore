@@ -14,7 +14,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.5.2; wp-5.7.1\n"
-"X-Domain: sitecore"
+"X-Domain: totem"
 
 #: includes/classes/core/class-register-type.php:460
 msgid " archives"
@@ -365,7 +365,7 @@ msgid "https://github.com/ControlledChaos"
 msgstr ""
 
 #. URI of the plugin
-msgid "https://github.com/ControlledChaos/sitecore"
+msgid "https://github.com/ControlledChaos/totem"
 msgstr ""
 
 #: includes/classes/backend/class-content-settings.php:126

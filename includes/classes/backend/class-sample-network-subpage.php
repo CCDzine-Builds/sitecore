@@ -31,9 +31,9 @@ class Sample_Network_Subpage extends Add_Page {
 	public function __construct() {
 
 		$labels = [
-			'page_title'  => __( 'Sample Subpage', 'sitecore' ),
-			'menu_title'  => __( 'Sample Subpage', 'sitecore' ),
-			'description' => __( 'Demonstration of adding a network subpage.', 'sitecore' )
+			'page_title'  => __( 'Sample Subpage', 'totem' ),
+			'menu_title'  => __( 'Sample Subpage', 'totem' ),
+			'description' => __( 'Demonstration of adding a network subpage.', 'totem' )
 		];
 
 		$options = [
@@ -66,16 +66,16 @@ class Sample_Network_Subpage extends Add_Page {
 
 		$this->add_content_tab( [
 			'id'         => 'sample-one',
-			'tab'        => __( 'One', 'sitecore' ),
-			'heading'    => __( 'Sample Content One', 'sitecore' ),
+			'tab'        => __( 'One', 'totem' ),
+			'heading'    => __( 'Sample Content One', 'totem' ),
 			'content'    => '',
 			'callback'   => [ $this, 'sample_tab' ]
 		] );
 
 		$this->add_content_tab( [
 			'id'         => 'sample-two',
-			'tab'        => __( 'Two', 'sitecore' ),
-			'heading'    => __( 'Sample Content Two', 'sitecore' ),
+			'tab'        => __( 'Two', 'totem' ),
+			'heading'    => __( 'Sample Content Two', 'totem' ),
 			'content'    => '',
 			'callback'   => [ $this, 'sample_tab' ]
 		] );

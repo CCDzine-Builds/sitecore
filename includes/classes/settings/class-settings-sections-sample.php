@@ -24,7 +24,7 @@ class Settings_Sections_Sample extends Settings_Sections {
 		$sections = [
 			[
 				'id'       => 'tmg-settings-section-sample',
-				'title'    => __( 'Sample Settings Section', 'sitecore' ),
+				'title'    => __( 'Sample Settings Section', 'totem' ),
 				'callback' => '',
 				'page'     => 'general',
 				'args'     => [

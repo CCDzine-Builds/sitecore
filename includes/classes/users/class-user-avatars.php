@@ -254,11 +254,11 @@ class User_Avatars {
 
 		add_settings_field(
 			'tmg_tmg_user_avatars_caps',
-			__( 'Upload Permission',	'sitecore' ),
+			__( 'Upload Permission',	'totem' ),
 			[ $this, 'capability_field' ],
 			'discussion',
 			'avatars',
-			[ esc_html__( 'Only allow users with file upload capabilities to upload local avatars (authors and above).', 'sitecore' ) ]
+			[ esc_html__( 'Only allow users with file upload capabilities to upload local avatars (authors and above).', 'totem' ) ]
 		);
 
 		register_setting(
@@ -301,7 +301,7 @@ class User_Avatars {
 		?>
 		<label for="tmg_user_avatars_caps">
 			<input type="checkbox" name="tmg_user_avatars_caps" id="tmg_user_avatars_caps" value="1" <?php checked( $checked, 1 ); ?>/>
-			<?php esc_html_e( 'Only allow users with file upload capabilities to upload local avatars (authors and above)', 'sitecore' ); ?>
+			<?php esc_html_e( 'Only allow users with file upload capabilities to upload local avatars (authors and above)', 'totem' ); ?>
 		</label>
 		<?php
 	}
@@ -477,16 +477,16 @@ class User_Avatars {
 			return;
 		}
 
-		$figcaption = __( 'Default Avatar', 'sitecore' );
+		$figcaption = __( 'Default Avatar', 'totem' );
 		if ( ! empty( $user->tmg_user_avatar ) ) {
-			$figcaption = __( 'Current Avatar', 'sitecore' );
+			$figcaption = __( 'Current Avatar', 'totem' );
 		}
 
 		?>
-		<h2><?php _e( 'Avatar', 'sitecore' ); ?></h2>
+		<h2><?php _e( 'Avatar', 'totem' ); ?></h2>
 		<table class="form-table">
 			<tr>
-				<th><label for="basic-user-avatar"><?php esc_html_e( 'Upload Avatar', 'sitecore' ); ?></label></th>
+				<th><label for="basic-user-avatar"><?php esc_html_e( 'Upload Avatar', 'totem' ); ?></label></th>
 				<td style="width: 50px;" valign="top">
 					<figure style="margin: 0">
 						<?php echo get_avatar( $user->ID ); ?>
@@ -504,17 +504,17 @@ class User_Avatars {
 					echo '<input type="file" name="basic-user-avatar" id="basic-local-avatar" />';
 
 					if ( empty( $user->tmg_user_avatar ) ) {
-						echo '<p class="description">' . esc_html__( 'No local avatar is set. Use the upload field to add a local avatar.', 'sitecore' ) . '</p>';
+						echo '<p class="description">' . esc_html__( 'No local avatar is set. Use the upload field to add a local avatar.', 'totem' ) . '</p>';
 					} else {
-						echo '<p><input type="checkbox" name="tmg-user-avatar-erase" id="tmg-user-avatar-erase" value="1" /><label for="tmg-user-avatar-erase">' . esc_html__( 'Delete current avatar', 'sitecore' ) . '</label></p>';
-						echo '<p class="description">' . esc_html__( 'Replace the avatar by uploading a new avatar, or erase the current avatar by checking the delete option.', 'sitecore' ) . '</p>';
+						echo '<p><input type="checkbox" name="tmg-user-avatar-erase" id="tmg-user-avatar-erase" value="1" /><label for="tmg-user-avatar-erase">' . esc_html__( 'Delete current avatar', 'totem' ) . '</label></p>';
+						echo '<p class="description">' . esc_html__( 'Replace the avatar by uploading a new avatar, or erase the current avatar by checking the delete option.', 'totem' ) . '</p>';
 					}
 
 				} else {
 					if ( empty( $user->tmg_user_avatar ) ) {
-						echo '<p class="description">' . esc_html__( 'No local avatar is set.', 'sitecore' ) . '</p>';
+						echo '<p class="description">' . esc_html__( 'No local avatar is set.', 'totem' ) . '</p>';
 					} else {
-						echo '<p class="description">' . esc_html__( 'You do not have media management permissions. To change your local avatar, contact the site administrator.', 'sitecore' ) . '</p>';
+						echo '<p class="description">' . esc_html__( 'You do not have media management permissions. To change your local avatar, contact the site administrator.', 'totem' ) . '</p>';
 					}
 				}
 				?>
@@ -574,7 +574,7 @@ class User_Avatars {
 				switch ( $avatar['error'] ) {
 				case 'File type does not meet security guidelines. Try another.' :
 					add_action( 'user_profile_update_errors', function( $error = 'avatar_error' ){
-						esc_html__( 'Please upload a valid image file for the avatar.', 'sitecore' );
+						esc_html__( 'Please upload a valid image file for the avatar.', 'totem' );
 					} );
 					break;
 				default :
@@ -585,7 +585,7 @@ class User_Avatars {
 							return;
 						}
 
-						'<strong>' . esc_html__( 'There was an error uploading the avatar:', 'sitecore' ) . '</strong> ' .  esc_attr( $avatar['error'] );
+						'<strong>' . esc_html__( 'There was an error uploading the avatar:', 'totem' ) . '</strong> ' .  esc_attr( $avatar['error'] );
 					} );
 				}
 				return;
@@ -636,19 +636,19 @@ class User_Avatars {
 				echo '<p><input type="file" name="basic-user-avatar" id="basic-local-avatar" /></p>';
 
 				if ( empty( $user->tmg_user_avatar ) ) {
-					echo '<p class="description">' . apply_filters( 'bu_avatars_no_avatar_set_text',esc_html__( 'No local avatar is set. Use the upload field to add a local avatar.', 'sitecore' ), $user ) . '</p>';
+					echo '<p class="description">' . apply_filters( 'bu_avatars_no_avatar_set_text',esc_html__( 'No local avatar is set. Use the upload field to add a local avatar.', 'totem' ), $user ) . '</p>';
 				} else {
-					echo '<p><input type="checkbox" name="tmg-user-avatar-erase" id="tmg-user-avatar-erase" value="1" /> <label for="tmg-user-avatar-erase">' . apply_filters( 'bu_avatars_delete_avatar_text', esc_html__( 'Delete current avatar', 'sitecore' ), $user ) . '</label></p>';
-					echo '<p class="description">' . apply_filters( 'bu_avatars_replace_avatar_text', esc_html__( 'Replace the avatar by uploading a new avatar, or erase the current avatar by checking the delete option.', 'sitecore' ), $user ) . '</p>';
+					echo '<p><input type="checkbox" name="tmg-user-avatar-erase" id="tmg-user-avatar-erase" value="1" /> <label for="tmg-user-avatar-erase">' . apply_filters( 'bu_avatars_delete_avatar_text', esc_html__( 'Delete current avatar', 'totem' ), $user ) . '</label></p>';
+					echo '<p class="description">' . apply_filters( 'bu_avatars_replace_avatar_text', esc_html__( 'Replace the avatar by uploading a new avatar, or erase the current avatar by checking the delete option.', 'totem' ), $user ) . '</p>';
 				}
 
-				echo '<input type="submit" name="manage_avatar_submit" value="' . apply_filters( 'bu_avatars_update_button_text', esc_attr__( 'Update Avatar', 'sitecore' ) ) . '" />';
+				echo '<input type="submit" name="manage_avatar_submit" value="' . apply_filters( 'bu_avatars_update_button_text', esc_attr__( 'Update Avatar', 'totem' ) ) . '" />';
 
 			} else {
 				if ( empty( $user->tmg_user_avatar ) ) {
-					echo '<p class="description">' . apply_filters( 'bu_avatars_no_avatar_set_text', esc_html__( 'No local avatar is set.', 'sitecore' ), $user ) . '</p>';
+					echo '<p class="description">' . apply_filters( 'bu_avatars_no_avatar_set_text', esc_html__( 'No local avatar is set.', 'totem' ), $user ) . '</p>';
 				} else {
-					echo '<p class="description">' . apply_filters( 'bu_avatars_permissions_text', esc_html__( 'You do not have media management permissions. To change your local avatar, contact the site administrator.', 'sitecore' ), $user ) . '</p>';
+					echo '<p class="description">' . apply_filters( 'bu_avatars_permissions_text', esc_html__( 'You do not have media management permissions. To change your local avatar, contact the site administrator.', 'totem' ), $user ) . '</p>';
 				}
 			}
 			?>
@@ -678,7 +678,7 @@ class User_Avatars {
 		$user    = get_userdata( $user_id );
 
 		echo '<div>';
-			echo '<label for="basic-local-avatar">' . esc_html__( 'Avatar', 'sitecore' ) . '</label>';
+			echo '<label for="basic-local-avatar">' . esc_html__( 'Avatar', 'totem' ) . '</label>';
  			echo '<fieldset class="bbp-form avatar">';
 
 	 			echo get_avatar( $user->ID );
@@ -691,17 +691,17 @@ class User_Avatars {
 					echo '<br /><input type="file" name="basic-user-avatar" id="basic-local-avatar" /><br />';
 
 					if ( empty( $user->tmg_user_avatar ) ) {
-						echo '<span class="description" style="margin-left:0;">' . apply_filters( 'bu_avatars_no_avatar_set_text', esc_html__( 'No local avatar is set. Use the upload field to add a local avatar.', 'sitecore' ), $user ) . '</span>';
+						echo '<span class="description" style="margin-left:0;">' . apply_filters( 'bu_avatars_no_avatar_set_text', esc_html__( 'No local avatar is set. Use the upload field to add a local avatar.', 'totem' ), $user ) . '</span>';
 					} else {
-						echo '<input type="checkbox" name="tmg-user-avatar-erase" id="tmg-user-avatar-erase" value="1" style="width:auto" /> <label for="tmg-user-avatar-erase">' . apply_filters( 'bu_avatars_delete_avatar_text', __( 'Delete current avatar', 'sitecore' ), $user ) . '</label><br />';
-						echo '<span class="description" style="margin-left:0;">' . apply_filters( '', esc_html__( 'Replace the avatar by uploading a new avatar, or erase the current avatar by checking the delete option.', 'sitecore' ), $user ) . '</span>';
+						echo '<input type="checkbox" name="tmg-user-avatar-erase" id="tmg-user-avatar-erase" value="1" style="width:auto" /> <label for="tmg-user-avatar-erase">' . apply_filters( 'bu_avatars_delete_avatar_text', __( 'Delete current avatar', 'totem' ), $user ) . '</label><br />';
+						echo '<span class="description" style="margin-left:0;">' . apply_filters( '', esc_html__( 'Replace the avatar by uploading a new avatar, or erase the current avatar by checking the delete option.', 'totem' ), $user ) . '</span>';
 					}
 
 				} else {
 					if ( empty( $user->tmg_user_avatar ) ) {
-						echo '<span class="description" style="margin-left:0;">' . apply_filters( 'bu_avatars_no_avatar_set_text', esc_html__( 'No local avatar is set.', 'sitecore' ), $user ) . '</span>';
+						echo '<span class="description" style="margin-left:0;">' . apply_filters( 'bu_avatars_no_avatar_set_text', esc_html__( 'No local avatar is set.', 'totem' ), $user ) . '</span>';
 					} else {
-						echo '<span class="description" style="margin-left:0;">' . apply_filters( 'bu_avatars_permissions_text', esc_html__( 'You do not have media management permissions. To change your local avatar, contact the site administrator.', 'sitecore' ), $user ) . '</span>';
+						echo '<span class="description" style="margin-left:0;">' . apply_filters( 'bu_avatars_permissions_text', esc_html__( 'You do not have media management permissions. To change your local avatar, contact the site administrator.', 'totem' ), $user ) . '</span>';
 					}
 				}
 
@@ -776,22 +776,22 @@ class User_Avatars {
 
 		// Array of new avatar options.
 		$options = [
-			$defaults['mystery'] => __( 'Core', 'sitecore' ),
-			$defaults['light']   => __( 'Light', 'sitecore' ),
-			$defaults['dark']    => __( 'Dark', 'sitecore' ),
-			$defaults['yellow']  => __( 'Yellow', 'sitecore' ),
-			$defaults['pink']    => __( 'Pink', 'sitecore' ),
-			$defaults['blue']    => __( 'Blue', 'sitecore' ),
-			$defaults['violet']  => __( 'Violet', 'sitecore' ),
-			$defaults['red']     => __( 'Red', 'sitecore' ),
-			$defaults['green']   => __( 'Green', 'sitecore' ),
-			$defaults['orange']  => __( 'Orange', 'sitecore' ),
-			$defaults['brown']   => __( 'Brown', 'sitecore' ),
-			$defaults['tan']     => __( 'Tan', 'sitecore' ),
-			$defaults['black']   => __( 'Black', 'sitecore' ),
-			$defaults['white']   => __( 'White', 'sitecore' ),
-			$defaults['gray']    => __( 'Gray', 'sitecore' ),
-			$defaults['blank']   => __( 'Blank', 'sitecore' )
+			$defaults['mystery'] => __( 'Core', 'totem' ),
+			$defaults['light']   => __( 'Light', 'totem' ),
+			$defaults['dark']    => __( 'Dark', 'totem' ),
+			$defaults['yellow']  => __( 'Yellow', 'totem' ),
+			$defaults['pink']    => __( 'Pink', 'totem' ),
+			$defaults['blue']    => __( 'Blue', 'totem' ),
+			$defaults['violet']  => __( 'Violet', 'totem' ),
+			$defaults['red']     => __( 'Red', 'totem' ),
+			$defaults['green']   => __( 'Green', 'totem' ),
+			$defaults['orange']  => __( 'Orange', 'totem' ),
+			$defaults['brown']   => __( 'Brown', 'totem' ),
+			$defaults['tan']     => __( 'Tan', 'totem' ),
+			$defaults['black']   => __( 'Black', 'totem' ),
+			$defaults['white']   => __( 'White', 'totem' ),
+			$defaults['gray']    => __( 'Gray', 'totem' ),
+			$defaults['blank']   => __( 'Blank', 'totem' )
 		];
 
 		// Return new avatar options.

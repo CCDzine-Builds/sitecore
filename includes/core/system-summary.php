@@ -46,7 +46,7 @@ function php_version() {
 	// Markup of the notice.
 	$output = sprintf(
 		'%s <a href="%s" target="_blank" rel="nofollow noreferrer noopener">%s</a>',
-		__( 'The web server is running', 'sitecore' ),
+		__( 'The web server is running', 'totem' ),
 		esc_url( 'https://www.php.net/releases/index.php' ),
 		'PHP ' . phpversion()
 	);
@@ -106,7 +106,7 @@ function get_database_version() {
 
 	// If no database version is found.
 	} else {
-		$version = __( 'not available', 'sitecore' );
+		$version = __( 'not available', 'totem' );
 	}
 
 	// Return the applicable string.
@@ -139,7 +139,7 @@ function database_version() {
 	// Markup of the notice.
 	$output = sprintf(
 		'%s <a href="%s" target="_blank" rel="nofollow noreferrer noopener">%s</a>',
-		__( 'The database version is', 'sitecore' ),
+		__( 'The database version is', 'totem' ),
 		database_reference(),
 		get_database_version()
 	);
@@ -163,9 +163,9 @@ function system_notice() {
 
 	// Text for site or network dashboard.
 	if ( is_multisite() && is_network_admin() ) {
-		$text = __( 'This network is running', 'sitecore' );
+		$text = __( 'This network is running', 'totem' );
 	} else {
-		$text = __( 'This website is running', 'sitecore' );
+		$text = __( 'This website is running', 'totem' );
 	}
 
 	// Check for ClassicPress.
@@ -206,11 +206,11 @@ function search_engines() {
 
 	// Text for network dashboards.
 	if ( is_multisite() && is_network_admin() ) {
-		$text = __( 'Search engines are discouraged for the primary site', 'sitecore' );
+		$text = __( 'Search engines are discouraged for the primary site', 'totem' );
 
 	// Text for site dashboards.
 	} else {
-		$text = __( 'Search engines are discouraged', 'sitecore' );
+		$text = __( 'Search engines are discouraged', 'totem' );
 	}
 
 	// Check if search engines are asked not to index the site.
@@ -252,8 +252,8 @@ function count_active_plugins() {
 	}
 
 	// Conditional text by plugin count.
-	$before = _n( 'There is', 'There are', intval( $count ), 'sitecore' );
-	$after  = _n( 'active plugin.', 'active plugins.', intval( $count ), 'sitecore' );
+	$before = _n( 'There is', 'There are', intval( $count ), 'totem' );
+	$after  = _n( 'active plugin.', 'active plugins.', intval( $count ), 'totem' );
 
 	// Link to the plugins page if the current user can manage plugins.
 	if ( current_user_can( 'activate_plugins' ) ) {
@@ -295,12 +295,12 @@ function available_themes() {
 	if ( ! empty( $themes ) ) {
 
 		// Conditional text by theme count.
-		$before = _n( 'There is', 'There are', intval( $themes ), 'sitecore' );
+		$before = _n( 'There is', 'There are', intval( $themes ), 'totem' );
 
 		if ( is_network_admin() ) {
-			$after = _n( 'network enabled theme.', 'network enabled themes.', intval( $themes ), 'sitecore' );
+			$after = _n( 'network enabled theme.', 'network enabled themes.', intval( $themes ), 'totem' );
 		} else {
-			$after = _n( 'available theme.', 'available themes.', intval( $themes ), 'sitecore' );
+			$after = _n( 'available theme.', 'available themes.', intval( $themes ), 'totem' );
 		}
 
 		// Link to the themes page if the current user can manage themes.
@@ -327,7 +327,7 @@ function available_themes() {
 	} else {
 		$html = sprintf(
 			'%s',
-			__( 'There are no themes available.', 'sitecore' )
+			__( 'There are no themes available.', 'totem' )
 		);
 	}
 
@@ -380,7 +380,7 @@ function active_theme() {
 		if ( is_network_admin() ) {
 			$theme_name = sprintf(
 				'%s <a href="%s" target="_blank" rel="nofollow noreferrer noopener">%s</a>',
-				__( 'The active theme of the primary site is', 'sitecore' ),
+				__( 'The active theme of the primary site is', 'totem' ),
 				active_theme_uri(),
 				$theme_name
 			);
@@ -389,7 +389,7 @@ function active_theme() {
 		} else {
 			$theme_name = sprintf(
 				'%s <a href="%s" target="_blank" rel="nofollow noreferrer noopener">%s</a>',
-				__( 'The active theme is', 'sitecore' ),
+				__( 'The active theme is', 'totem' ),
 				active_theme_uri(),
 				$theme_name
 			);
@@ -406,7 +406,7 @@ function active_theme() {
 		if ( is_network_admin() ) {
 			$theme_name = sprintf(
 				'%s <a href="%s">%s</a>',
-				__( 'The active theme of the primary site is', 'sitecore' ),
+				__( 'The active theme of the primary site is', 'totem' ),
 				esc_url( self_admin_url( 'themes.php' ) ),
 				$theme_name
 			);
@@ -415,7 +415,7 @@ function active_theme() {
 		} else {
 			$theme_name = sprintf(
 				'%s <a href="%s">%s</a>',
-				__( 'The active theme is', 'sitecore' ),
+				__( 'The active theme is', 'totem' ),
 				esc_url( admin_url( 'themes.php' ) ),
 				$theme_name
 			);
@@ -425,7 +425,7 @@ function active_theme() {
 	} else {
 		$theme_name = sprintf(
 			'%s %s',
-			__( 'The active theme is', 'sitecore' ),
+			__( 'The active theme is', 'totem' ),
 			$theme_name
 		);
 	}

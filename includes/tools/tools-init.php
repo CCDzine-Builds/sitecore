@@ -142,11 +142,11 @@ function available_tools() {
 	if ( current_user_can( 'manage_options' ) ) :
 	?>
 	<div class="card">
-		<h2 class="title"><?php _e( 'Content Tools', 'sitecore' ); ?></h2>
+		<h2 class="title"><?php _e( 'Content Tools', 'totem' ); ?></h2>
 		<p>
 		<?php
 			printf(
-				__( 'Import and export various content types on the <a href="%s">content tools</a> page. This includes custom fields and forms. Developers can export some ACF content as PHP for plugin and theme development.', 'sitecore' ),
+				__( 'Import and export various content types on the <a href="%s">content tools</a> page. This includes custom fields and forms. Developers can export some ACF content as PHP for plugin and theme development.', 'totem' ),
 				esc_url( admin_url( 'tools.php?page=acf-tools' ) )
 			);
 		?>
@@ -158,11 +158,11 @@ function available_tools() {
 	if ( current_user_can( 'develop' ) && dev_settings_page() ) :
 	?>
 	<div class="card">
-		<h2 class="title"><?php _e( 'Developer Tools', 'sitecore' ); ?></h2>
+		<h2 class="title"><?php _e( 'Developer Tools', 'totem' ); ?></h2>
 		<p>
 		<?php
 			printf(
-				__( 'As a registered developer of this website there are <a href="%s">tools available</a> to you for managing the site.', 'sitecore' ),
+				__( 'As a registered developer of this website there are <a href="%s">tools available</a> to you for managing the site.', 'totem' ),
 				esc_url( admin_url( 'tools.php?page=developer-tools' ) )
 			);
 		?>
@@ -188,9 +188,9 @@ function add_help_tabs() {
 	$screen->add_help_tab(
 		[
 			'id'      => 'edit_options',
-			'title'   => __( 'Manage Options', 'sitecore' ),
+			'title'   => __( 'Manage Options', 'totem' ),
 			'content' => sprintf(
-				__( '<p>The <a href="%s">options management page</a> page edits the options database. Only use this if you are familiar with editing the database via the phpmyadmin interface.</p>', 'sitecore' ),
+				__( '<p>The <a href="%s">options management page</a> page edits the options database. Only use this if you are familiar with editing the database via the phpmyadmin interface.</p>', 'totem' ),
 				esc_url( admin_url( 'tools.php?page=acfe-options' ) )
 			)
 		]
@@ -200,9 +200,9 @@ function add_help_tabs() {
 		$screen->add_help_tab(
 			[
 				'id'      => 'dev_tools',
-				'title'   => __( 'Developer Tools', 'sitecore' ),
+				'title'   => __( 'Developer Tools', 'totem' ),
 				'content' => sprintf(
-					__( '<p>The <a href="%s">developer tools</a> are only available to logged-in users with the user capability of "develop" under the "Developer" user role.</p>', 'sitecore' ),
+					__( '<p>The <a href="%s">developer tools</a> are only available to logged-in users with the user capability of "develop" under the "Developer" user role.</p>', 'totem' ),
 					esc_url( admin_url( 'tools.php?page=developer-tools' ) )
 				)
 			]
@@ -323,7 +323,7 @@ function toolbar_dir_switch() {
 	$wp_admin_bar->add_menu(
 		[
 			'id'    => 'RTL',
-			'title' => sprintf( __( 'Switch to %s', 'sitecore' ), strtoupper( $direction ) ),
+			'title' => sprintf( __( 'Switch to %s', 'totem' ), strtoupper( $direction ) ),
 			'href'  => add_query_arg( [ 'd' => $direction ] )
 		]
 	);

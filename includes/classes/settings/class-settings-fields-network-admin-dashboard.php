@@ -24,12 +24,12 @@ class Settings_Fields_Network_Admin_Dashboard extends Settings_Fields {
 		$fields = [
 			[
 				'id'       => 'enable_custom_network_dashboard',
-				'title'    => __( 'Custom Dashboard', 'sitecore' ),
+				'title'    => __( 'Custom Dashboard', 'totem' ),
 				'page'     => 'options-admin',
 				'section'  => 'tmg-settings-section-network-admin-dashboard',
 				'type'     => 'checkbox',
 				'args'     => [
-					'description' => __( 'Check to replace the default dashboard with a custom dashboard for this network.', 'sitecore' ),
+					'description' => __( 'Check to replace the default dashboard with a custom dashboard for this network.', 'totem' ),
 					'class'       => 'admin-field'
 				]
 			]

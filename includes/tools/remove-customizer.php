@@ -78,7 +78,7 @@ function init() {
  * @return void
  */
 function direct_access() {
-	wp_die( __( 'The Customizer is currently disabled.', 'sitecore' ) );
+	wp_die( __( 'The Customizer is currently disabled.', 'totem' ) );
 }
 
 /**

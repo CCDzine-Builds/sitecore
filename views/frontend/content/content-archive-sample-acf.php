@@ -17,12 +17,12 @@ if ( $object->labels->singular_name ) {
 }
 
 printf(
-	__( '<p>Filtered ACF content for archived %s #%s</p>', 'sitecore' ),
+	__( '<p>Filtered ACF content for archived %s #%s</p>', 'totem' ),
 	$name,
 	get_the_ID()
 );
 
 printf(
-	__( '<p>The template for this notice is in the %s plugin.</p>', 'sitecore' ),
+	__( '<p>The template for this notice is in the %s plugin.</p>', 'totem' ),
 	TMG_NAME
 );

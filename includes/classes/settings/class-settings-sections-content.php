@@ -53,7 +53,7 @@ class Settings_Sections_Content extends Settings_Sections {
 
 		$html = sprintf(
 			'<p>%s</p>',
-			__( 'Choose options for the blog and widgets.', 'sitecore' )
+			__( 'Choose options for the blog and widgets.', 'totem' )
 		);
 
 		echo apply_filters( 'tmg_content_settings_callback', $html );

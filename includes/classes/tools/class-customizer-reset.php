@@ -88,8 +88,8 @@ final class Customizer_Reset {
 
 		// Localize the above script.
 		wp_localize_script( 'tmg-customizer-reset', 'TMG_CustomizerReset', [
-			'reset'   => __( 'Reset', 'sitecore' ),
-			'confirm' => __( 'Warning! This will remove all changes made to this theme via the Customizer. This action is irreversible.', 'sitecore' ),
+			'reset'   => __( 'Reset', 'totem' ),
+			'confirm' => __( 'Warning! This will remove all changes made to this theme via the Customizer. This action is irreversible.', 'totem' ),
 			'nonce'   => [
 				'reset' => wp_create_nonce( 'customizer-reset' ),
 			]

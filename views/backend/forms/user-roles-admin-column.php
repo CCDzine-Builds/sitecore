@@ -19,6 +19,6 @@
 		endforeach;
 		echo implode( ', ', $roles );
 	else : ?>
-		<span class="md-multiple-roles-no-role"><?php _e( 'None', 'sitecore' ); ?></span>
+		<span class="md-multiple-roles-no-role"><?php _e( 'None', 'totem' ); ?></span>
 	<?php endif; ?>
 </div>

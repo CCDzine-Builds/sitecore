@@ -56,8 +56,8 @@ function theme_filters () {
 function add_page() {
 
 	$theme_test_drive = add_theme_page(
-		__( 'Theme Test Drive Options', 'sitecore' ),
-		__( 'Theme Test Drive', 'sitecore' ),
+		__( 'Theme Test Drive Options', 'totem' ),
+		__( 'Theme Test Drive', 'totem' ),
 		'edit_theme_options',
 		'theme-test-drive',
 		__NAMESPACE__ . '\page_markup'
@@ -80,14 +80,14 @@ function test_drive_help() {
 
 	$screen->add_help_tab( [
 		'id'       => 'help_ttd_users',
-		'title'    => __( 'Logged-In Users', 'sitecore' ),
+		'title'    => __( 'Logged-In Users', 'totem' ),
 		'content'  => null,
 		'callback' => __NAMESPACE__ . '\help_tab_users'
 	] );
 
 	$screen->add_help_tab( [
 		'id'       => 'help_ttd_links',
-		'title'    => __( 'Preview Links', 'sitecore' ),
+		'title'    => __( 'Preview Links', 'totem' ),
 		'content'  => null,
 		'callback' => __NAMESPACE__ . '\help_tab_links'
 	] );
@@ -104,18 +104,18 @@ function test_drive_help() {
 function help_tab_users() {
 
 	?>
-	<h3 class="screen-reader-text"><?php _e( 'Logged-In Users', 'sitecore' ); ?></h3>
+	<h3 class="screen-reader-text"><?php _e( 'Logged-In Users', 'totem' ); ?></h3>
 
 	<p><?php _e( 'Theme test drive is easy to use.' ); ?></p>
 
 	<ol>
-		<li><?php _e( 'Select a theme to preview live on the site from the box below (lists all installed themes).', 'sitecore' ); ?></li>
-		<li><?php _e( 'Select a user level that can preview the theme test drive.', 'sitecore' ); ?></li>
-		<li><?php _e( 'Enable test drive', 'sitecore' ); ?></li>
-		<li><?php _e( 'Once the theme is ready for public viewing, disable test drive and enable the theme on the Themes page.', 'sitecore' ); ?></li>
+		<li><?php _e( 'Select a theme to preview live on the site from the box below (lists all installed themes).', 'totem' ); ?></li>
+		<li><?php _e( 'Select a user level that can preview the theme test drive.', 'totem' ); ?></li>
+		<li><?php _e( 'Enable test drive', 'totem' ); ?></li>
+		<li><?php _e( 'Once the theme is ready for public viewing, disable test drive and enable the theme on the Themes page.', 'totem' ); ?></li>
 	</ol>
 
-	<p><?php _e( 'Only logged-in users with the minimum access level will be able to see the selected theme in Theme Test Drive. To everyone else the site will display the theme that is activated on the Themes page.', 'sitecore' ); ?></p>
+	<p><?php _e( 'Only logged-in users with the minimum access level will be able to see the selected theme in Theme Test Drive. To everyone else the site will display the theme that is activated on the Themes page.', 'totem' ); ?></p>
 
 	<?php
 }
@@ -133,14 +133,14 @@ function help_tab_users() {
 function help_tab_links() {
 
 	?>
-	<h3 class="screen-reader-text"><?php _e( 'Preview Links', 'sitecore' ); ?></h3>
+	<h3 class="screen-reader-text"><?php _e( 'Preview Links', 'totem' ); ?></h3>
 
-	<p><?php _e( 'If more than one theme are installed then a list of themes available for preview will display. Each theme name is linked to the front page with that theme previewed.', 'sitecore' ); ?></p>
+	<p><?php _e( 'If more than one theme are installed then a list of themes available for preview will display. Each theme name is linked to the front page with that theme previewed.', 'totem' ); ?></p>
 
-	<p><?php _e( 'You may add <code>?theme=xxx</code> to any site url, where <code>xxx</code> is the slug of the theme you want to test, to preview that page with the relevant theme. This is especially handy for allowing users not logged in and/or clients to preview a theme in development.', 'sitecore' ); ?></p>
+	<p><?php _e( 'You may add <code>?theme=xxx</code> to any site url, where <code>xxx</code> is the slug of the theme you want to test, to preview that page with the relevant theme. This is especially handy for allowing users not logged in and/or clients to preview a theme in development.', 'totem' ); ?></p>
 	<?php printf(
 		'<p>%s <code>%s</code></p>',
-		__( 'Example:', 'sitecore' ),
+		__( 'Example:', 'totem' ),
 		esc_url( 'https://example.com/?theme=twentytwentythree' )
 	); ?>
 
@@ -202,7 +202,7 @@ function handle_theme_rigid( $package ) {
 function install_theme_unzip( $file, $dir ) {
 
 	if ( ! current_user_can( 'edit_files' ) ) {
-		_e( 'Sorry, you are not authorized to do this.', 'sitecore' );
+		_e( 'Sorry, you are not authorized to do this.', 'totem' );
 		return false;
 	}
 
@@ -217,12 +217,12 @@ function install_theme_unzip( $file, $dir ) {
 	}
 	// echo "Number of files in archive : ".$list['nb']."<br />";
 
-	_e( 'Copying the files<br />', 'sitecore' );
+	_e( 'Copying the files<br />', 'totem' );
 
 	$result = $unzip->extract( PCLZIP_OPT_PATH, $dir );
 	if ( $result == 0 ) {
 		printf(
-			__( 'Could not unarchive the file: %s <br />', 'sitecore' ),
+			__( 'Could not unarchive the file: %s <br />', 'totem' ),
 			$unzip->errorInfo( true )
 		);
 		return false;
@@ -242,7 +242,7 @@ function install_theme_loose( $package ) {
 
 	printf(
 		'%s %s<br />',
-		__( 'Downloading the theme from', 'sitecore' ),
+		__( 'Downloading the theme from', 'totem' ),
 		$package
 	);
 	$file = download_url( $package );
@@ -251,13 +251,13 @@ function install_theme_loose( $package ) {
 
 		printf(
 			'%s %s',
-			__( 'Download failed:', 'sitecore' ),
+			__( 'Download failed:', 'totem' ),
 			$file->get_error_message()
 		);
 		return;
 	}
 
-	_e( 'Unpacking the theme<br />', 'sitecore' );
+	_e( 'Unpacking the theme<br />', 'totem' );
 
 	// Unzip theme to theme directory.
 	$result = install_theme_unzip( $file, ABSPATH . 'wp-content/themes/' );
@@ -266,10 +266,10 @@ function install_theme_loose( $package ) {
 	unlink( $file );
 
 	if ( $result ) {
-		_e( '<br />Theme installed successfully.<br />Refresh page to view in test drive.<br />', 'sitecore' );
+		_e( '<br />Theme installed successfully.<br />Refresh page to view in test drive.<br />', 'totem' );
 	} else {
 		printf(
-			__( '<br />Error installing the theme. <br />You can try installing the theme manually: <a href="%s">%s</a><br />', 'sitecore' ),
+			__( '<br />Error installing the theme. <br />You can try installing the theme manually: <a href="%s">%s</a><br />', 'totem' ),
 			$package,
 			$package
 		);
@@ -286,14 +286,14 @@ function install_theme_rigid( $package ) {
 	}
 
 	if ( ! is_object( $wp_filesystem ) ) {
-		_e( '<strong><em>Could not access filesystem.</strong></em><br />', 'sitecore' );
+		_e( '<strong><em>Could not access filesystem.</strong></em><br />', 'totem' );
 		return;
 	}
 
 	if ( $wp_filesystem->errors->get_error_code() ) {
 		printf(
 			'<strong><em>%s %s</strong></em><br />',
-			__( 'Filesystem error:', 'sitecore' ),
+			__( 'Filesystem error:', 'totem' ),
 			$wp_filesystem->errors->get_error_message()
 		);
 		return;
@@ -302,7 +302,7 @@ function install_theme_rigid( $package ) {
 	//Get the Base folder
 	$base = $wp_filesystem->get_base_dir();
 	if ( empty( $base ) ) {
-		_e( '<strong><em>Unable to locate WordPress directory.</strong></em><br />', 'sitecore' );
+		_e( '<strong><em>Unable to locate WordPress directory.</strong></em><br />', 'totem' );
 		return;
 	}
 
@@ -315,7 +315,7 @@ function install_theme_rigid( $package ) {
 	if ( is_wp_error( $file ) ) {
 		printf(
 			'<strong><em>%s %s</strong></em><br />',
-			__( 'Download failed:', 'sitecore' ),
+			__( 'Download failed:', 'totem' ),
 			$file->get_error_message()
 		);
 		return;
@@ -328,7 +328,7 @@ function install_theme_rigid( $package ) {
 		$wp_filesystem->delete( $working_dir, true );
 	}
 
-	_e( 'Unpacking the theme<br />', 'sitecore' );
+	_e( 'Unpacking the theme<br />', 'totem' );
 
 	// Unzip package to theme directory.
 	$result = unzip_file( $file, $working_dir );
@@ -338,19 +338,19 @@ function install_theme_rigid( $package ) {
 		$wp_filesystem->delete( $working_dir, true );
 		printf(
 			'<strong><em>%s %s</strong></em><br />',
-			__( 'Unpack failed:', 'sitecore' ),
+			__( 'Unpack failed:', 'totem' ),
 			$result->get_error_message()
 		);
 		return;
 	}
 
-	_e( 'Installing the theme<br />', 'sitecore' );
+	_e( 'Installing the theme<br />', 'totem' );
 
 	// Copy new version of plugin into place.
 	if ( ! copy_dir( $working_dir, $base . 'wp-content/themes' ) ) {
 
 		$wp_filesystem->delete( $working_dir, true );
-		_e( '<strong><em>Installation failed (theme already installed?)</strong></em><br />', 'sitecore' );
+		_e( '<strong><em>Installation failed (theme already installed?)</strong></em><br />', 'totem' );
 		return;
 	}
 
@@ -363,7 +363,7 @@ function install_theme_rigid( $package ) {
 	// Once extracted, delete the package.
 	unlink( $file );
 
-	_e( '<br />Theme installed successfully.<br />Refresh page to view in test drive.<br />', 'sitecore' );
+	_e( '<br />Theme installed successfully.<br />Refresh page to view in test drive.<br />', 'totem' );
 	return;
 }
 
@@ -514,7 +514,7 @@ function theme_links() {
 		else :
 			$links = sprintf(
 				'<p><strong>%1s</strong></p>',
-				__( 'There are no themes available to test drive.', 'sitecore' )
+				__( 'There are no themes available to test drive.', 'totem' )
 			);
 		endif; // count( $allowed )
 
@@ -553,7 +553,7 @@ function theme_select() {
 		$select .= '</select> ';
 	}
 
-	$select .= __( 'Select from installed themes', 'sitecore' );
+	$select .= __( 'Select from installed themes', 'totem' );
 	$select .= '</label>';
 
 	echo $select;
@@ -583,7 +583,7 @@ function test_drive_enabled() {
 function page_markup() {
 
 	if ( $_SERVER['REQUEST_METHOD'] === 'POST' && ! wp_verify_nonce( @$_POST['_wpnonce'], 'theme-drive' ) ) {
-		$die = __( 'Nonce invalid. Please re-submit the form.', 'sitecore' );
+		$die = __( 'Nonce invalid. Please re-submit the form.', 'totem' );
 		wp_die( $die );
 		exit;
 	}
@@ -592,11 +592,11 @@ function page_markup() {
 	$disabled = '';
 
 	if ( test_drive_enabled() ) {
-		$enable_button  = __( 'Update Test Drive', 'sitecore' );
-		$disable_button = __( 'Disable Test Drive', 'sitecore' );
+		$enable_button  = __( 'Update Test Drive', 'totem' );
+		$disable_button = __( 'Disable Test Drive', 'totem' );
 	} else {
-		$enable_button  = __( 'Enable Test Drive', 'sitecore' );
-		$disable_button = __( 'Test Drive Disabled', 'sitecore' );
+		$enable_button  = __( 'Enable Test Drive', 'totem' );
+		$disable_button = __( 'Test Drive Disabled', 'totem' );
 		$disabled = 'disabled';
 	}
 
@@ -609,25 +609,25 @@ function page_markup() {
 		$get_option = $_POST['td_themes'];
 		update_option( 'td_themes', $get_option );
 
-		$enable_button  = __( 'Update Test Drive', 'sitecore' );
-		$disable_button = __( 'Disable Test Drive', 'sitecore' );
+		$enable_button  = __( 'Update Test Drive', 'totem' );
+		$disable_button = __( 'Disable Test Drive', 'totem' );
 		$enabled  = wp_get_theme( $get_option );
 		$disabled = '';
 
 		$access_level = (int)$_POST['access_level'];
 		update_option( 'td_level', $access_level );
 
-		$access_users = __( 'administrators', 'sitecore' );
+		$access_users = __( 'administrators', 'totem' );
 		if ( '7' == $access_level ) {
-			$access_users = __( 'editors and up', 'sitecore' );
+			$access_users = __( 'editors and up', 'totem' );
 		} elseif ( '2' == $access_level ) {
-			$access_users = __( 'authors and up', 'sitecore' );
+			$access_users = __( 'authors and up', 'totem' );
 		} elseif ( '1' == $access_level ) {
-			$access_users = __( 'contributors and up', 'sitecore' );
+			$access_users = __( 'contributors and up', 'totem' );
 		}
 
 		$action_message = sprintf(
-			__( 'Theme Test Drive enabled for %s with %s.', 'sitecore' ),
+			__( 'Theme Test Drive enabled for %s with %s.', 'totem' ),
 			ucfirst( $access_users ),
 			$enabled->get( 'Name' )
 		);
@@ -643,9 +643,9 @@ function page_markup() {
 		delete_option( 'td_themes' );
 		delete_option( 'td_level' );
 
-		$enable_button  = __( 'Enable Test Drive', 'sitecore' );
-		$disable_button = __( 'Test Drive Disabled', 'sitecore' );
-		$action_message = __( 'Theme Test Drive has been disabled.', 'sitecore' );
+		$enable_button  = __( 'Enable Test Drive', 'totem' );
+		$disable_button = __( 'Test Drive Disabled', 'totem' );
+		$action_message = __( 'Theme Test Drive has been disabled.', 'totem' );
 		printf(
 			'<div id="message" class="notice notice-success is-dismissible"><p>%s</p></div>',
 			$action_message
@@ -666,8 +666,8 @@ function page_markup() {
 ?>
 <div class="wrap" >
 
-	<h1><?php _e( 'Theme Test Drive', 'sitecore' ); ?></h1>
-	<p class="description"><?php _e( 'Safely test any theme while visitors view the active theme.', 'sitecore' ); ?></p>
+	<h1><?php _e( 'Theme Test Drive', 'totem' ); ?></h1>
+	<p class="description"><?php _e( 'Safely test any theme while visitors view the active theme.', 'totem' ); ?></p>
 
 	<form method="post" action="<?php echo $action_url; ?>" novalidate="novalidate">
 		<?php wp_nonce_field( 'theme-drive' ); ?>
@@ -675,7 +675,7 @@ function page_markup() {
 		<?php if ( isset( $_POST['theme_install_loose'] ) ) {
 			printf(
 				'<h2>%s</h2>',
-				__( 'Theme Installation Results', 'sitecore' )
+				__( 'Theme Installation Results', 'totem' )
 			);
 
 			if ( ! isset( $_POST['install_theme'] ) ) {
@@ -687,7 +687,7 @@ function page_markup() {
 			if ( $install_theme_loose != '' ) {
 				handle_theme_loose( $install_theme_loose );
 			} else {
-				_e( '<p class="ttd-install-no-url"><span class="ttd-inline-emphasis ttd-inline-error">Error:</span> No theme URL specified.</p>', 'sitecore' );
+				_e( '<p class="ttd-install-no-url"><span class="ttd-inline-emphasis ttd-inline-error">Error:</span> No theme URL specified.</p>', 'totem' );
 			}
 		} ?>
 
@@ -696,44 +696,44 @@ function page_markup() {
 		if ( count( wp_get_themes() ) > 1 ) :
 
 		?>
-		<h2><?php _e( 'Theme Preview Links', 'sitecore' ); ?></h2>
+		<h2><?php _e( 'Theme Preview Links', 'totem' ); ?></h2>
 
-		<p><?php _e( 'The following list of installed themes are linked to a preview URL to view this site with the corresponding theme. See page help tab for details.', 'sitecore' ); ?></p>
+		<p><?php _e( 'The following list of installed themes are linked to a preview URL to view this site with the corresponding theme. See page help tab for details.', 'totem' ); ?></p>
 
 		<?php echo theme_links(); ?>
 		<?php endif; // count( wp_get_themes() ) ?>
 
-		<h2><?php _e( 'Select Test Theme', 'sitecore' ); ?></h2>
+		<h2><?php _e( 'Select Test Theme', 'totem' ); ?></h2>
 
 		<?php if ( test_drive_enabled() ) {
 			printf(
-				__( '<p>Test drive is enabled with %s.</p>', 'sitecore' ),
+				__( '<p>Test drive is enabled with %s.</p>', 'totem' ),
 				wp_get_theme( $enabled )
 			);
 		} else {
 			printf(
-				__( '<p>The active/public theme is %s.</p>', 'sitecore' ),
+				__( '<p>The active/public theme is %s.</p>', 'totem' ),
 				wp_get_theme()
 			);
 		} ?>
 
-		<p><?php _e( 'Choose a theme to display to logged-in users.', 'sitecore' ); ?></p>
+		<p><?php _e( 'Choose a theme to display to logged-in users.', 'totem' ); ?></p>
 		<?php theme_select(); ?>
 
-		<h2><?php _e( 'Access Level', 'sitecore' ); ?></h2>
+		<h2><?php _e( 'Access Level', 'totem' ); ?></h2>
 
-		<p><?php _e( 'Specify the level of users to have access to the selected theme preview. Default is level 10.', 'sitecore' ); ?></p>
+		<p><?php _e( 'Specify the level of users to have access to the selected theme preview. Default is level 10.', 'totem' ); ?></p>
 		<ul>
-			<li><?php _e( '10: Administrators', 'sitecore' ); ?></li>
-			<li><?php _e( '7: Editors', 'sitecore' ); ?></li>
-			<li><?php _e( '2: Authors', 'sitecore' ); ?></li>
-			<li><?php _e( '1: Contributors', 'sitecore' ); ?></li>
+			<li><?php _e( '10: Administrators', 'totem' ); ?></li>
+			<li><?php _e( '7: Editors', 'totem' ); ?></li>
+			<li><?php _e( '2: Authors', 'totem' ); ?></li>
+			<li><?php _e( '1: Contributors', 'totem' ); ?></li>
 		</ul>
-		<p><?php _e( 'The access level is ignored when accessing the site with the preview URL parameter.', 'sitecore' ); ?></p>
+		<p><?php _e( 'The access level is ignored when accessing the site with the preview URL parameter.', 'totem' ); ?></p>
 
 		<p>
 			<label for="access_level">
-				<input type="text" name="access_level" id="access_level" value="<?php echo esc_attr( $access_level ); ?>" size="2" maxlength="2" placeholder="10" /> <?php _e( 'Access level', 'sitecore' ); ?>
+				<input type="text" name="access_level" id="access_level" value="<?php echo esc_attr( $access_level ); ?>" size="2" maxlength="2" placeholder="10" /> <?php _e( 'Access level', 'totem' ); ?>
 			</label>
 		</p>
 
@@ -743,12 +743,12 @@ function page_markup() {
 		</p>
 
 
-		<h2><?php _e( 'Easy Theme Installation', 'sitecore' ); ?></h2>
+		<h2><?php _e( 'Easy Theme Installation', 'totem' ); ?></h2>
 
-		<p><?php _e( 'Enter the URL to the theme <code>.zip</code> file then install.', 'sitecore' ); ?></p>
+		<p><?php _e( 'Enter the URL to the theme <code>.zip</code> file then install.', 'totem' ); ?></p>
 		<p>
 			<input type="text" name="install_theme" id="install_theme" value="" />
-			<input class="button" type="submit" name="theme_install_loose" value="<?php _e( 'Install Theme', 'sitecore' ); ?>" class="button-primary" />
+			<input class="button" type="submit" name="theme_install_loose" value="<?php _e( 'Install Theme', 'totem' ); ?>" class="button-primary" />
 		</p>
 	</form>
 </div>

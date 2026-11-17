@@ -24,25 +24,25 @@ class Settings_Fields_Media_Images extends Settings_Fields {
 		$fields = [
 			[
 				'id'       => 'hard_crop_medium',
-				'title'    => __( 'Medium Size Crop', 'sitecore' ),
+				'title'    => __( 'Medium Size Crop', 'totem' ),
 				'callback' => [ $this, 'hard_crop_medium_callback' ],
 				'page'     => 'media',
 				'section'  => 'default',
 				'type'     => 'checkbox',
 				'args'     => [
-					'description' => __( 'Crop medium images to exact dimensions.', 'sitecore' ),
+					'description' => __( 'Crop medium images to exact dimensions.', 'totem' ),
 					'class'       => 'media-field'
 				]
 			],
 			[
 				'id'       => 'hard_crop_large',
-				'title'    => __( 'Large Size Crop', 'sitecore' ),
+				'title'    => __( 'Large Size Crop', 'totem' ),
 				'callback' => [ $this, 'hard_crop_large_callback' ],
 				'page'     => 'media',
 				'section'  => 'default',
 				'type'     => 'checkbox',
 				'args'     => [
-					'description' => __( 'Crop large images to exact dimensions.', 'sitecore' ),
+					'description' => __( 'Crop large images to exact dimensions.', 'totem' ),
 					'class'       => 'media-field'
 				]
 			]

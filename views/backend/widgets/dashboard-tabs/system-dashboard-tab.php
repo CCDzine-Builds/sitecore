@@ -32,36 +32,36 @@ if ( is_classicpress() ) {
 ?>
 <div id="system" class="tab-content dashboard-panel-content dashboard-content-system" style="display: none;">
 
-	<h2><?php _e( 'Website & Hosting', 'sitecore' ); ?></h2>
-	<p class="description"><?php _e( 'Information about what makes this website run.', 'sitecore' ); ?></p>
+	<h2><?php _e( 'Website & Hosting', 'totem' ); ?></h2>
+	<p class="description"><?php _e( 'Information about what makes this website run.', 'totem' ); ?></p>
 
 	<div class="dashboard-panel-column-container">
 
 		<div class="dashboard-panel-column">
 
-			<h3><?php _e( 'Content Platform', 'sitecore' ); ?></h3>
+			<h3><?php _e( 'Content Platform', 'totem' ); ?></h3>
 
 			<div class="dashboard-panel-section-intro dashboard-panel-system-greeting">
 
 				<figure>
-					<a href="<?php echo admin_url( 'about.php' ); ?>" title="<?php echo __( 'About', 'sitecore' ) . ' ' . platform_name(); ?>">
+					<a href="<?php echo admin_url( 'about.php' ); ?>" title="<?php echo __( 'About', 'totem' ) . ' ' . platform_name(); ?>">
 						<?php
 						if ( is_readable( $avatar ) ) {
 							echo file_get_contents( $avatar );
 						} ?>
 					</a>
-					<figcaption class="screen-reader-text"><?php echo platform_name() . ' ' . __( 'Avatar', 'sitecore' ); ?></figcaption>
+					<figcaption class="screen-reader-text"><?php echo platform_name() . ' ' . __( 'Avatar', 'totem' ); ?></figcaption>
 				</figure>
 
 				<div>
 					<?php printf(
 						'<h4>%s %s</h4>',
 						platform_name(),
-						__( 'Website', 'sitecore' )
+						__( 'Website', 'totem' )
 					); ?>
 					<p class="about-description">
 						<?php printf(
-							__( 'This website is running version %s of %s.', 'sitecore' ),
+							__( 'This website is running version %s of %s.', 'totem' ),
 							platform_version(),
 							platform_name()
 						); ?>
@@ -70,7 +70,7 @@ if ( is_classicpress() ) {
 					<p class="dashboard-panel-call-to-action"><a class="button button-primary button-hero load-customize hide-if-no-customize" href="<?php echo esc_url( admin_url( 'about.php' ) ); ?>"><?php _e( 'Release Notes' ); ?></a></p>
 					<p class="description">
 						<?php printf(
-							__( 'Information on the active version of %s.', 'sitecore' ),
+							__( 'Information on the active version of %s.', 'totem' ),
 							platform_name()
 						); ?>
 					</p>
@@ -80,7 +80,7 @@ if ( is_classicpress() ) {
 
 		<div class="dashboard-panel-column">
 
-			<h3><?php _e( 'System Overview', 'sitecore' ); ?></h3>
+			<h3><?php _e( 'System Overview', 'totem' ); ?></h3>
 
 			<ul class="tmg-widget-details-list tmg-widget-system-list">
 				<li><icon class="dashicons dashicons-editor-code"></icon> <?php echo Summary\php_version(); ?></li>
@@ -109,15 +109,15 @@ if ( is_classicpress() ) {
 
 		<div class="dashboard-panel-column dashboard-panel-last">
 
-			<h3><?php _e( 'Website Options', 'sitecore' ); ?></h3>
+			<h3><?php _e( 'Website Options', 'totem' ); ?></h3>
 
 			<ul id="dashboard-website-options">
-				<li><a href="<?php echo admin_url( 'options-general.php' ); ?>"><?php _e( 'General Settings', 'sitecore' ); ?></a></li>
+				<li><a href="<?php echo admin_url( 'options-general.php' ); ?>"><?php _e( 'General Settings', 'totem' ); ?></a></li>
 
-				<li><a href="<?php echo admin_url( 'options.php' ); ?>"><?php _e( 'Options Editor', 'sitecore' ); ?></a></li>
+				<li><a href="<?php echo admin_url( 'options.php' ); ?>"><?php _e( 'Options Editor', 'totem' ); ?></a></li>
 
 				<?php if ( ! get_option( 'disable_site_health', false ) ) : ?>
-				<li><a href="<?php echo admin_url( 'site-health.php' ); ?>"><?php _e( 'Site Health', 'sitecore' ); ?></a></li>
+				<li><a href="<?php echo admin_url( 'site-health.php' ); ?>"><?php _e( 'Site Health', 'totem' ); ?></a></li>
 				<?php endif; ?>
 			</ul>
 		</div>

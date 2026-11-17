@@ -82,7 +82,7 @@ define( 'TMG_VERSION', '1.0.0' );
  * @var   string The name of the plugin.
  */
 if ( ! defined( 'TMG_NAME' ) ) {
-	define( 'TMG_NAME', __( 'Totem', 'sitecore' ) );
+	define( 'TMG_NAME', __( 'Totem', 'totem' ) );
 }
 
 /**
@@ -161,7 +161,7 @@ if ( ! defined( 'TMG_CONFIG' ) ) {
 		 * @since 1.0.0
 		 * @var   string The name of the developer/agency.
 		 */
-		'dev_name' => __( 'Controlled Chaos', 'sitecore' ),
+		'dev_name' => __( 'Controlled Chaos', 'totem' ),
 
 		/**
 		 * Developer URL
@@ -185,7 +185,7 @@ if ( ! defined( 'TMG_CONFIG' ) ) {
 		 * @since 1.0.0
 		 * @var   string The URL of the plugin.
 		 */
-		'plugin_url' => esc_url( 'https://github.com/CCDzine-Builds/sitecore' ),
+		'plugin_url' => esc_url( 'https://github.com/CCDzine-Builds/totem' ),
 
 		/**
 		 * Allow Site Health

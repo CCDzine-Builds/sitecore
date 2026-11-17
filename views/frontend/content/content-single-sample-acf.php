@@ -23,19 +23,19 @@ $code_text = __( 'This is a sample shortcode, using the <code>[sample]</code> ta
 $code_tag = "[sample wrap_text='yes' text_class='sample-paragraph' text_weight='600']{$code_text}[/sample]";
 
 printf(
-	__( '<p>Filtered content for %s #%s</p>', 'sitecore' ),
+	__( '<p>Filtered content for %s #%s</p>', 'totem' ),
 	$name,
 	get_the_ID()
 );
 
 printf(
-	__( '<p>This template is being displayed because the sample content filter class in the %s plugin has been instantiated. This template is also being displayed because the Advanced Custom Fields plugin is active or the bundled Applied Content Forms files in the %s plugin are included.</p>', 'sitecore' ),
+	__( '<p>This template is being displayed because the sample content filter class in the %s plugin has been instantiated. This template is also being displayed because the Advanced Custom Fields plugin is active or the bundled Applied Content Forms files in the %s plugin are included.</p>', 'totem' ),
 	TMG_NAME,
 	TMG_NAME
 );
 
 printf(
-	__( '<p>The template for this notice is in the %s plugin.</p>', 'sitecore' ),
+	__( '<p>The template for this notice is in the %s plugin.</p>', 'totem' ),
 	TMG_NAME
 );
 

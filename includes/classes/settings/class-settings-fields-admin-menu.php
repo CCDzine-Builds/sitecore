@@ -26,60 +26,60 @@ class Settings_Fields_Admin_Menu extends Settings_Fields {
 		$fields = [
 			[
 				'id'       => 'admin_menu_menus_top',
-				'title'    => __( 'Navigation Link', 'sitecore' ),
+				'title'    => __( 'Navigation Link', 'totem' ),
 				'page'     => 'options-admin',
 				'section'  => 'tmg-settings-section-admin-menu',
 				'type'     => 'checkbox',
 				'args'     => [
-					'description' => __( 'Check to make the link to the navigation menus screen a top-level menu entry.', 'sitecore' ),
+					'description' => __( 'Check to make the link to the navigation menus screen a top-level menu entry.', 'totem' ),
 					'label_for'   => 'admin_menu_menus_top',
 					'class'       => 'admin-field'
 				]
 			],
 			[
 				'id'       => 'admin_menu_widgets_top',
-				'title'    => __( 'Widgets Link', 'sitecore' ),
+				'title'    => __( 'Widgets Link', 'totem' ),
 				'page'     => 'options-admin',
 				'section'  => 'tmg-settings-section-admin-menu',
 				'type'     => 'checkbox',
 				'args'     => [
-					'description' => __( 'Check to make the link to the widgets screen a top-level menu entry.', 'sitecore' ),
+					'description' => __( 'Check to make the link to the widgets screen a top-level menu entry.', 'totem' ),
 					'label_for'   => 'admin_menu_widgets_top',
 					'class'       => 'admin-field'
 				]
 			],
 			[
 				'id'       => 'admin_menu_nav_blocks',
-				'title'    => __( 'Navigation Blocks', 'sitecore' ),
+				'title'    => __( 'Navigation Blocks', 'totem' ),
 				'page'     => 'options-admin',
 				'section'  => 'tmg-settings-section-admin-menu',
 				'type'     => 'checkbox',
 				'args'     => [
-					'description' => __( 'Check to show navigation blocks in the menu.', 'sitecore' ),
+					'description' => __( 'Check to show navigation blocks in the menu.', 'totem' ),
 					'label_for'   => 'admin_menu_nav_blocks',
 					'class'       => 'admin-field'
 				]
 			],
 			[
 				'id'       => 'admin_menu_reuse_blocks',
-				'title'    => __( 'Reusable Blocks', 'sitecore' ),
+				'title'    => __( 'Reusable Blocks', 'totem' ),
 				'page'     => 'options-admin',
 				'section'  => 'tmg-settings-section-admin-menu',
 				'type'     => 'checkbox',
 				'args'     => [
-					'description' => __( 'Check to show reusable blocks in the menu.', 'sitecore' ),
+					'description' => __( 'Check to show reusable blocks in the menu.', 'totem' ),
 					'label_for'   => 'admin_menu_reuse_blocks',
 					'class'       => 'admin-field'
 				]
 			],
 			[
 				'id'       => 'admin_menu_custom_order',
-				'title'    => __( 'Custom Order', 'sitecore' ),
+				'title'    => __( 'Custom Order', 'totem' ),
 				'page'     => 'options-admin',
 				'section'  => 'tmg-settings-section-admin-menu',
 				'type'     => 'checkbox',
 				'args'     => [
-					'description' => __( 'Check to use the custom menu order.', 'sitecore' ),
+					'description' => __( 'Check to use the custom menu order.', 'totem' ),
 					'label_for'   => 'admin_menu_custom_order',
 					'class'       => 'admin-field'
 				]
@@ -265,9 +265,9 @@ class Settings_Fields_Admin_Menu extends Settings_Fields {
 		$option   = $this->admin_menu_nav_blocks_sanitize();
 
 		if ( get_option( 'admin_menu_menus_top', true ) ) {
-			$parent = __( 'Navigation', 'sitecore' );
+			$parent = __( 'Navigation', 'totem' );
 		} else {
-			$parent = __( 'Appearance', 'sitecore' );
+			$parent = __( 'Appearance', 'totem' );
 		}
 
 		$html = sprintf(
@@ -283,7 +283,7 @@ class Settings_Fields_Admin_Menu extends Settings_Fields {
 		);
 		$html .= '</label>';
 		$html .= sprintf(
-			__( '<p class="description">Adds a link under %s in the admin menu.</p>', 'sitecore' ),
+			__( '<p class="description">Adds a link under %s in the admin menu.</p>', 'totem' ),
 			$parent
 		);
 
@@ -318,7 +318,7 @@ class Settings_Fields_Admin_Menu extends Settings_Fields {
 		$html .= '</label>';
 		$html .= sprintf(
 			'<p class="description">%s</p>',
-			__( 'Adds a link under Content in the admin menu.', 'sitecore' )
+			__( 'Adds a link under Content in the admin menu.', 'totem' )
 		);
 
 		echo $html;

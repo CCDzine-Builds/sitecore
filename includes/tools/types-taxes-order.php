@@ -63,8 +63,8 @@ function setup() {
 function options_page() {
 
 	add_options_page(
-		__( 'Posts & Taxonomies Sort Order', 'sitecore' ),
-		__( 'Sort Order', 'sitecore' ),
+		__( 'Posts & Taxonomies Sort Order', 'totem' ),
+		__( 'Sort Order', 'totem' ),
 		'manage_options',
 		'sort-order-settings',
 		__NAMESPACE__ . '\options_page_html'

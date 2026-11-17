@@ -81,8 +81,8 @@ function filter_dropdown() {
 	// The HTML of the dropdown select box abave the table.
 	?>
 	<select name="page_template_filter" id="page_template_filter">
-		<option value="all"><?php _e( 'All Page Templates', 'sitecore' ); ?></option>
-		<option value="default" <?php echo ( $template == 'default' ) ? ' selected="selected" ' : ''; ?>><?php echo _e( 'Default Template', 'sitecore' ); ?></option>
+		<option value="all"><?php _e( 'All Page Templates', 'totem' ); ?></option>
+		<option value="default" <?php echo ( $template == 'default' ) ? ' selected="selected" ' : ''; ?>><?php echo _e( 'Default Template', 'totem' ); ?></option>
 		<?php page_template_dropdown( $template ); ?>
 	</select>
 	<?php
@@ -97,7 +97,7 @@ function filter_dropdown() {
 function menu_order_list_label() {
 	return apply_filters(
 		'tmg_menu_order_list_label',
-		__( 'Order', 'sitecore' )
+		__( 'Order', 'totem' )
 	);
 }
 
@@ -205,7 +205,7 @@ function sort_by_menu_order( $vars ) {
 function template_columns_head( $columns ) {
 
 	// The column heading name to new `template` column.
-	$columns['template'] = __( 'Template', 'sitecore' );
+	$columns['template'] = __( 'Template', 'totem' );
 
 	// Return the heading name.
 	return $columns;
@@ -234,8 +234,8 @@ function template_columns_content( $column_name ) {
 
 				echo sprintf(
 					'<span title="%1s">%2s</span>',
-					__( 'Default Template', 'sitecore' ),
-					__( 'Default Template', 'sitecore' )
+					__( 'Default Template', 'totem' ),
+					__( 'Default Template', 'totem' )
 				);
 
 			// If it's not the default template.
@@ -248,7 +248,7 @@ function template_columns_content( $column_name ) {
 				if ( isset( $templates[ $template ] ) ) {
 					echo sprintf(
 						'<span title="%1s %2s">%3s</span>',
-						__( 'Template file:', 'sitecore' ),
+						__( 'Template file:', 'totem' ),
 						$template,
 						$templates[ $template ]
 					);
@@ -257,7 +257,7 @@ function template_columns_content( $column_name ) {
 				} else {
 					echo sprintf(
 						'<span title="%1s">%2s</span>',
-						__( 'This template file does not exist', 'sitecore' ),
+						__( 'This template file does not exist', 'totem' ),
 						$template
 					);
 				}
@@ -265,8 +265,8 @@ function template_columns_content( $column_name ) {
 		} else {
 			echo sprintf(
 				'<span title="%1s">%2s</span>',
-				__( 'Default Template', 'sitecore' ),
-				__( 'Default Template', 'sitecore' )
+				__( 'Default Template', 'totem' ),
+				__( 'Default Template', 'totem' )
 			);
 		}
 	}
@@ -325,7 +325,7 @@ function get_column_image( $post_ID ) {
 function image_column_head( $defaults ) {
 
 	// The column heading name.
-	$name = __( 'Featured Image', 'sitecore' );
+	$name = __( 'Featured Image', 'totem' );
 
 	// Apply a filter for conditional modification.
 	$heading = apply_filters( 'tmg_image_column_head', $name );
@@ -365,11 +365,11 @@ function image_column_content( $column_name, $post_ID ) {
 
 		// If the post has a featured image.
 		if ( $post_featured_image ) {
-			echo '<img src="' . esc_url( $post_featured_image ) . '" alt="' . get_the_title( $post_ID ) . __( ' — featured image', 'sitecore' ) . '" width="48px" height="48px" />';
+			echo '<img src="' . esc_url( $post_featured_image ) . '" alt="' . get_the_title( $post_ID ) . __( ' — featured image', 'totem' ) . '" width="48px" height="48px" />';
 
 		// If the post doen't have a featured image then use the fallback image.
 		} else {
-			echo '<img src="' . esc_url( TMG_URL . 'assets/images/featured-image-placeholder.png' ) . '" alt="' . __( 'No featured image available', 'sitecore' ) . '" width="48px" height="48px" />';
+			echo '<img src="' . esc_url( TMG_URL . 'assets/images/featured-image-placeholder.png' ) . '" alt="' . __( 'No featured image available', 'totem' ) . '" width="48px" height="48px" />';
 		}
 	}
 }

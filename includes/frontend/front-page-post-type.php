@@ -115,7 +115,7 @@ function front_page_query_customize( $wp_customize ) {
 	$post_types = front_page_query();
 
 	$choices = [];
-	$choices['post'] = __( 'Posts', 'sitecore' );
+	$choices['post'] = __( 'Posts', 'totem' );
 
 	foreach ( $post_types as $post_type ) {
 		$choices[$post_type->name] = $post_type->labels->name;
@@ -128,8 +128,8 @@ function front_page_query_customize( $wp_customize ) {
 	] );
 
 	$wp_customize->add_control( 'front_page_post_type', [
-		'label'       => __( 'Front Page Post Type', 'sitecore' ),
-		'description' => __( 'Choose which post type to display in the front page feed.', 'sitecore' ),
+		'label'       => __( 'Front Page Post Type', 'totem' ),
+		'description' => __( 'Choose which post type to display in the front page feed.', 'totem' ),
 		'type'        => 'radio',
 		'choices'     => $choices,
 		'section'     => 'static_front_page',
@@ -137,11 +137,11 @@ function front_page_query_customize( $wp_customize ) {
 		'active_callback' => __NAMESPACE__ . '\\front_page_query_callback'
 	] );
 
-	$wp_customize->get_section( 'static_front_page' )->description = __( 'Select what is displayed on the front page of this website. It can be posts of a selected type in reverse chronological order or static content.', 'sitecore' );
+	$wp_customize->get_section( 'static_front_page' )->description = __( 'Select what is displayed on the front page of this website. It can be posts of a selected type in reverse chronological order or static content.', 'totem' );
 
 	$wp_customize->get_control( 'show_on_front' )->choices = [
-		'posts' => __( 'Post type feed', 'sitecore' ),
-		'page'  => __( 'Static content', 'sitecore' ),
+		'posts' => __( 'Post type feed', 'totem' ),
+		'page'  => __( 'Static content', 'totem' ),
 	];
 }
 

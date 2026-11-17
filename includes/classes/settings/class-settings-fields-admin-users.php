@@ -26,37 +26,37 @@ class Settings_Fields_Admin_Users extends Settings_Fields {
 		$fields = [
 			[
 				'id'       => 'enable_multi_user_roles',
-				'title'    => __( 'Multiple User Roles', 'sitecore' ),
+				'title'    => __( 'Multiple User Roles', 'totem' ),
 				'callback' => [ $this, 'enable_multi_user_roles_callback' ],
 				'page'     => 'options-admin',
 				'section'  => 'tmg-settings-section-admin-users',
 				'type'     => 'checkbox',
 				'args'     => [
-					'description' => __( 'Check to enable multiple user roles on profile edit screens.', 'sitecore' ),
+					'description' => __( 'Check to enable multiple user roles on profile edit screens.', 'totem' ),
 					'class'       => 'admin-field'
 				]
 			],
 			[
 				'id'       => 'enable_user_avatars',
-				'title'    => __( 'Custom User Avatars', 'sitecore' ),
+				'title'    => __( 'Custom User Avatars', 'totem' ),
 				'callback' => [ $this, 'enable_user_avatars_callback' ],
 				'page'     => 'options-admin',
 				'section'  => 'tmg-settings-section-admin-users',
 				'type'     => 'checkbox',
 				'args'     => [
-					'description' => __( 'Check to enable user avatar uploads and extended, local options for the default avatar.', 'sitecore' ),
+					'description' => __( 'Check to enable user avatar uploads and extended, local options for the default avatar.', 'totem' ),
 					'class'       => 'admin-field'
 				]
 			],
 			[
 				'id'       => 'disable_admin_color_schemes',
-				'title'    => __( 'Disable Admin Color Schemes', 'sitecore' ),
+				'title'    => __( 'Disable Admin Color Schemes', 'totem' ),
 				'callback' => [ $this, 'disable_admin_color_schemes_callback' ],
 				'page'     => 'options-admin',
 				'section'  => 'tmg-settings-section-admin-users',
 				'type'     => 'checkbox',
 				'args'     => [
-					'description' => __( 'Check to disable the user admin color scheme picker.', 'sitecore' ),
+					'description' => __( 'Check to disable the user admin color scheme picker.', 'totem' ),
 					'class'       => 'admin-field'
 				]
 			]
@@ -188,7 +188,7 @@ class Settings_Fields_Admin_Users extends Settings_Fields {
 		$html .= '</label></fieldset>';
 		$html .= sprintf(
 			'<p class="description">%s</p>',
-			__( 'Avatar uploads are added to user profile screens and the default avatars are available on the Discussion Settings screen.', 'sitecore' )
+			__( 'Avatar uploads are added to user profile screens and the default avatars are available on the Discussion Settings screen.', 'totem' )
 		);
 
 		echo $html;
@@ -211,7 +211,7 @@ class Settings_Fields_Admin_Users extends Settings_Fields {
 		if ( defined( 'TMG_ALLOW_ADMIN_COLOR_PICKER' ) && false == TMG_ALLOW_ADMIN_COLOR_PICKER ) {
 			$html = sprintf(
 				'<p>%s</p>',
-				__( 'This option has been disabled in the wp-config file.', 'sitecore' )
+				__( 'This option has been disabled in the wp-config file.', 'totem' )
 			);
 
 		} else {
@@ -233,7 +233,7 @@ class Settings_Fields_Admin_Users extends Settings_Fields {
 			$html .= '</label></fieldset>';
 			$html .= sprintf(
 				'<p class="description">%s</p>',
-				__( 'This is handy for custom admin themes.', 'sitecore' )
+				__( 'This is handy for custom admin themes.', 'totem' )
 			);
 		}
 

@@ -36,8 +36,8 @@ class Register_Dashboard_Tab extends Register_Type {
 		 * parent class will capitalize them where appropriate.
 		 */
 		$labels = [
-			'singular'    => __( 'dashboard tab', 'sitecore' ),
-			'plural'      => __( 'dashboard tabs', 'sitecore' ),
+			'singular'    => __( 'dashboard tab', 'totem' ),
+			'plural'      => __( 'dashboard tabs', 'totem' ),
 			'description' => '',
 			'menu_icon'   => 'dashicons-index-card',
 			'excerpt_mb'  => false
@@ -117,7 +117,7 @@ class Register_Dashboard_Tab extends Register_Type {
 		$type_obj  = get_post_type_object( $post_type );
 
 		// New post type labels.
-		$type_obj->labels->all_items = __( 'All Tabs', 'sitecore' );
-		$type_obj->labels->add_new   = __( 'New Tab', 'sitecore' );
+		$type_obj->labels->all_items = __( 'All Tabs', 'totem' );
+		$type_obj->labels->add_new   = __( 'New Tab', 'totem' );
 	}
 }

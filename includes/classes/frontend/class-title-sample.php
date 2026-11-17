@@ -71,7 +71,7 @@ class Title_Sample extends Title_Filter {
 				}
 
 				$title = sprintf(
-					__( 'Filtered Demo Title: %s #%s', 'sitecore' ),
+					__( 'Filtered Demo Title: %s #%s', 'totem' ),
 					$name,
 					get_the_ID()
 				);
@@ -115,7 +115,7 @@ class Title_Sample extends Title_Filter {
 				}
 
 				$title = sprintf(
-					__( 'Filtered Demo Title: Archived %s #%s', 'sitecore' ),
+					__( 'Filtered Demo Title: Archived %s #%s', 'totem' ),
 					$name,
 					get_the_ID()
 				);

@@ -26,14 +26,14 @@ class Settings_Fields_Admin_Header extends Settings_Fields {
 		$fields = [
 			[
 				'id'       => 'enable_custom_admin_header',
-				'title'    => __( 'Enable Custom Header', 'sitecore' ),
+				'title'    => __( 'Enable Custom Header', 'totem' ),
 				'callback' => [ $this, 'enable_custom_admin_header_callback' ],
 				'page'     => 'options-admin',
 				'section'  => 'tmg-settings-section-admin-header',
 				'type'     => 'checkbox',
 				'args'     => [
 					'description' => sprintf(
-						__( 'Check to enable the custom header on admin screens.', 'sitecore' )
+						__( 'Check to enable the custom header on admin screens.', 'totem' )
 					),
 					'class'       => 'admin-field'
 				]
@@ -96,7 +96,7 @@ class Settings_Fields_Admin_Header extends Settings_Fields {
 		$html .= '</label></fieldset>';
 		$html .= sprintf(
 			'<p class="description">%s</p>',
-			__( 'Adds the site title, the tagline/description, logo, and registers a navigation menu.', 'sitecore' )
+			__( 'Adds the site title, the tagline/description, logo, and registers a navigation menu.', 'totem' )
 		);
 
 		echo $html;

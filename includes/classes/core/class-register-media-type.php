@@ -33,9 +33,9 @@ class Register_Media_Type extends Register_Tax {
 		];
 
 		$labels = [
-			'singular'    => __( 'media type', 'sitecore' ),
-			'plural'      => __( 'media types', 'sitecore' ),
-			'description' => __( 'Organize the media library by file types.', 'sitecore' ),
+			'singular'    => __( 'media type', 'totem' ),
+			'plural'      => __( 'media types', 'totem' ),
+			'description' => __( 'Organize the media library by file types.', 'totem' ),
 			'menu_icon'   => 'dashicons-tag'
 		];
 

@@ -62,9 +62,9 @@ function title_placeholders( $title ) {
 
 	if ( $post_type_obj ) {
 		$name = $post_type_obj->labels->singular_name;
-		$post_title = esc_html__( $name . ' Title', 'sitecore' );
+		$post_title = esc_html__( $name . ' Title', 'totem' );
 	} else {
-		$post_title = esc_html__( 'Title', 'sitecore' );
+		$post_title = esc_html__( 'Title', 'totem' );
 	}
 
 	// Apply a filter conditional modification.
@@ -147,10 +147,10 @@ function excerpt_metabox() {
 				$title = sprintf(
 					'%s %s',
 					$type->labels->singular_name,
-					__( 'Summary', 'sitecore' )
+					__( 'Summary', 'totem' )
 				);
 			} else {
-				$title = __( 'Content Summary', 'sitecore' );
+				$title = __( 'Content Summary', 'totem' );
 			}
 
 			$wp_meta_boxes[ $type->name ]['normal']['core']['postexcerpt']['title']    = $title;
@@ -170,11 +170,11 @@ function excerpt_metabox_callback( $post ) {
 
 ?>
 <p class="description">
-	<?php _e( 'Add a brief summary of this content to be used in archive pages, depending upon the active theme, and to be used in search engine metadata and for display in social media embeds.', 'sitecore' ); ?>
+	<?php _e( 'Add a brief summary of this content to be used in archive pages, depending upon the active theme, and to be used in search engine metadata and for display in social media embeds.', 'totem' ); ?>
 </p>
 
 <label class="screen-reader-text" for="excerpt">
-	<?php _e( 'Summary Description', 'sitecore' ); ?>
+	<?php _e( 'Summary Description', 'totem' ); ?>
 </label>
 
 <textarea rows="1" cols="40" name="excerpt" id="excerpt"><?php echo $post->post_excerpt; ?></textarea>
@@ -231,48 +231,48 @@ function update_messages( $messages ) {
 			0  => '', // Unused. Messages start at index 1.
 
 			1  => sprintf(
-				__( '%1s updated. <a href="%2s">View %3s</a>', 'sitecore' ), $post_object->labels->singular_name,
+				__( '%1s updated. <a href="%2s">View %3s</a>', 'totem' ), $post_object->labels->singular_name,
 				esc_url( get_permalink( $post_ID ) ),
 				$post_object->labels->singular_name
 			),
-			2  => __( 'Custom field updated.', 'sitecore' ),
-			3  => __( 'Custom field deleted.', 'sitecore' ),
+			2  => __( 'Custom field updated.', 'totem' ),
+			3  => __( 'Custom field deleted.', 'totem' ),
 			4  => sprintf(
-				__( '1%s updated.', 'sitecore' ),
+				__( '1%s updated.', 'totem' ),
 				$post_object->labels->singular_name
 			),
 			5  => isset( $_GET['revision']) ? sprintf(
-				__( '%1s restored to revision from %2s', 'sitecore' ),
+				__( '%1s restored to revision from %2s', 'totem' ),
 				$post_object->labels->singular_name,
 				wp_post_revision_title( (int) $_GET['revision'], false )
 				) : false,
 			6  => sprintf(
-				__( '%1s published. <a href="%2s">View %3s</a>', 'sitecore' ),
+				__( '%1s published. <a href="%2s">View %3s</a>', 'totem' ),
 				$post_object->labels->singular_name,
 				esc_url( get_permalink( $post_ID ) ),
 				$post_object->labels->singular_name
 			),
 			7  => sprintf(
-				__( '%1s saved.', 'sitecore' ),
+				__( '%1s saved.', 'totem' ),
 				$post_object->labels->singular_name
 			),
 			8  => sprintf(
-				__( '%1s submitted. <a target="_blank" href="%2s">Preview %3s</a>', 'sitecore' ),
+				__( '%1s submitted. <a target="_blank" href="%2s">Preview %3s</a>', 'totem' ),
 				$post_object->labels->singular_name,
 				esc_url( add_query_arg( 'preview', 'true',
 				get_permalink( $post_ID ) ) ),
 				$post_object->labels->singular_name
 			),
 			9  => sprintf(
-				__( '%1s scheduled for: <strong>%2s</strong>. <a target="_blank" href="%3s">Preview %4s</a>', 'sitecore'  ),
+				__( '%1s scheduled for: <strong>%2s</strong>. <a target="_blank" href="%3s">Preview %4s</a>', 'totem'  ),
 				$post_object->labels->singular_name,
-				date_i18n( __( 'M j, Y @ G:i', 'sitecore' ),
+				date_i18n( __( 'M j, Y @ G:i', 'totem' ),
 				strtotime( $post->post_date ) ),
 				esc_url( get_permalink( $post_ID ) ),
 				$post_object->labels->singular_name
 			),
 			10 => sprintf(
-				__( '%1s draft updated. <a target="_blank" href="%2s">Preview %3s</a>', 'sitecore'  ),
+				__( '%1s draft updated. <a target="_blank" href="%2s">Preview %3s</a>', 'totem'  ),
 				$post_object->labels->singular_name,
 				esc_url( add_query_arg( 'preview', 'true',
 				get_permalink( $post_ID ) ) ),

@@ -61,14 +61,14 @@ function title() {
 	// Custom author title.
 	$author = sprintf(
 		'%1s %2s',
-		__( 'Posts by', 'sitecore' ),
+		__( 'Posts by', 'totem' ),
 		get_the_author_meta( 'display_name', $author_id )
 	);
 
 	// Custom search title.
 	$search = sprintf(
 		'%1s %2s',
-		__( 'Searching', 'sitecore' ),
+		__( 'Searching', 'totem' ),
 		get_bloginfo( 'name' )
 	);
 
@@ -149,7 +149,7 @@ function description() {
 		wp_strip_all_tags(
 			sprintf(
 				'%s %s',
-				__( 'Showing search results for', 'sitecore' ),
+				__( 'Showing search results for', 'totem' ),
 				get_search_query()
 			)
 		)
@@ -203,7 +203,7 @@ function description() {
 		$description = $auto_excerpt;
 
 	} elseif ( is_404() ) {
-		$description = __( '404 Error: Not Found', 'sitecore' );
+		$description = __( '404 Error: Not Found', 'totem' );
 
 	} else {
 		$description = '';
@@ -600,7 +600,7 @@ function copyright_default() {
 		$copy,
 		$year,
 		$name,
-		__( 'All rights reserved.', 'sitecore' )
+		__( 'All rights reserved.', 'totem' )
 	);
 	return apply_filters( 'tmg_meta_copyright_default', $default );
 }

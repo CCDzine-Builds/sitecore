@@ -66,10 +66,10 @@ function plugin_credit() {
 	$html = sprintf(
 		'%s %s <a href="%s" target="_blank" rel="nofollow">%s</a> %s',
 		get_bloginfo( 'name' ),
-		esc_html__( 'is managed by the', 'sitecore' ),
+		esc_html__( 'is managed by the', 'totem' ),
 		esc_url( TMG_PLUGIN_URL ),
 		esc_html( TMG_NAME ),
-		esc_html__( 'plugin', 'sitecore' )
+		esc_html__( 'plugin', 'totem' )
 	);
 	return $html;
 }
@@ -85,7 +85,7 @@ function dev_website() {
 	$html = sprintf(
 		'%s %s <a href="%s" target="_blank" rel="nofollow">%s</a>',
 		get_bloginfo( 'name' ),
-		esc_html__( 'website was designed & developed by', 'sitecore' ),
+		esc_html__( 'website was designed & developed by', 'totem' ),
 		esc_url( TMG_DEV_URL ),
 		esc_html( TMG_DEV_NAME )
 	);
@@ -102,9 +102,9 @@ function dev_email() {
 
 	$html = sprintf(
 		'%s %s %s <a href="mailto:%s">%s</a>',
-		esc_html__( 'Contact', 'sitecore' ),
+		esc_html__( 'Contact', 'totem' ),
 		esc_html( TMG_DEV_NAME ),
-		esc_html__( 'for website assistance:', 'sitecore' ),
+		esc_html__( 'for website assistance:', 'totem' ),
 		esc_html( TMG_DEV_EMAIL ),
 		esc_html( TMG_DEV_EMAIL )
 	);

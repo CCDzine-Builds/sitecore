@@ -35,14 +35,14 @@ class Settings_Fields_Developer extends Settings_Fields {
 		$fields = [
 			[
 				'id'       => 'fix_update_in_progress',
-				'title'    => __( 'Update in Progress', 'sitecore' ),
+				'title'    => __( 'Update in Progress', 'totem' ),
 				'callback' => [ $this, 'fix_update_in_progress_callback' ],
 				'page'     => $register['page'],
 				'section'  => $register['section'],
 				'type'     => 'checkbox',
 				'args'     => [
 					'description' => sprintf(
-						__( 'Fix another %s update already in progress.', 'sitecore' ),
+						__( 'Fix another %s update already in progress.', 'totem' ),
 						platform_name()
 					),
 					'class'       => 'admin-field'
@@ -50,62 +50,62 @@ class Settings_Fields_Developer extends Settings_Fields {
 			],
 			[
 				'id'       => 'theme_test_drive',
-				'title'    => __( 'Theme Test Drive', 'sitecore' ),
+				'title'    => __( 'Theme Test Drive', 'totem' ),
 				'callback' => [ $this, 'theme_test_drive_callback' ],
 				'page'     => $register['page'],
 				'section'  => $register['section'],
 				'type'     => 'checkbox',
 				'args'     => [
-					'description' => __( 'Safely test any theme while visitors view the active theme.', 'sitecore' ),
+					'description' => __( 'Safely test any theme while visitors view the active theme.', 'totem' ),
 					'class'       => 'admin-field'
 				]
 			],
 			[
 				'id'       => 'direction_switch',
-				'title'    => __( 'Direction Switcher', 'sitecore' ),
+				'title'    => __( 'Direction Switcher', 'totem' ),
 				'callback' => [ $this, 'direction_switch_callback' ],
 				'page'     => $register['page'],
 				'section'  => $register['section'],
 				'type'     => 'checkbox',
 				'args'     => [
-					'description' => __( 'Easily switch backend and frontend screens between left-to-right and right-to-left orientations.', 'sitecore' ),
+					'description' => __( 'Easily switch backend and frontend screens between left-to-right and right-to-left orientations.', 'totem' ),
 					'class'       => 'admin-field'
 				]
 			],
 			[
 				'id'       => 'disable_site_health',
-				'title'    => __( 'Disable Site Health', 'sitecore' ),
+				'title'    => __( 'Disable Site Health', 'totem' ),
 				'callback' => [ $this, 'disable_site_health_callback' ],
 				'page'     => $register['page'],
 				'section'  => $register['section'],
 				'type'     => 'checkbox',
 				'args'     => [
-					'description' => __( 'Disable WordPress\' site health feature.', 'sitecore' ),
+					'description' => __( 'Disable WordPress\' site health feature.', 'totem' ),
 					'class'       => 'admin-field'
 				]
 			],
 			[
 				'id'       => 'disable_floc',
-				'title'    => __( 'Disable FloC', 'sitecore' ),
+				'title'    => __( 'Disable FloC', 'totem' ),
 				'callback' => [ $this, 'disable_floc_callback' ],
 				'page'     => $register['page'],
 				'section'  => $register['section'],
 				'type'     => 'checkbox',
 				'args'     => [
-					'description' => __( 'Disable Google\'s next-generation tracking technology.', 'sitecore' ),
+					'description' => __( 'Disable Google\'s next-generation tracking technology.', 'totem' ),
 					'class'       => 'admin-field'
 				]
 			],
 			[
 				'id'       => 'enable_sample_files',
-				'title'    => __( 'Enable Sample Files', 'sitecore' ),
+				'title'    => __( 'Enable Sample Files', 'totem' ),
 				'callback' => [ $this, 'enable_sample_files_callback' ],
 				'page'     => $register['page'],
 				'section'  => $register['section'],
 				'type'     => 'checkbox',
 				'args'     => [
 					'description' => sprintf(
-						__( 'Load content and pages that have been included in the %s plugin for demonstration purposes.', 'sitecore' ),
+						__( 'Load content and pages that have been included in the %s plugin for demonstration purposes.', 'totem' ),
 						TMG_NAME
 					),
 					'class'       => 'admin-field'
@@ -116,13 +116,13 @@ class Settings_Fields_Developer extends Settings_Fields {
 		$customizer_reset = [
 			[
 				'id'       => 'customizer_reset',
-				'title'    => __( 'Customizer Reset', 'sitecore' ),
+				'title'    => __( 'Customizer Reset', 'totem' ),
 				'callback' => [ $this, 'customizer_reset_callback' ],
 				'page'     => $register['page'],
 				'section'  => $register['section'],
 				'type'     => 'checkbox',
 				'args'     => [
-					'description' => __( 'Enable the ability to reset customizations to the active theme.', 'sitecore' ),
+					'description' => __( 'Enable the ability to reset customizations to the active theme.', 'totem' ),
 					'class'       => 'admin-field'
 				]
 			]
@@ -279,11 +279,11 @@ class Settings_Fields_Developer extends Settings_Fields {
 			$lock = get_option( 'core_updater', null );
 		}
 		$no_lock = sprintf(
-			__( '<p>There is no update lock issue.</p>', 'sitecore' ),
+			__( '<p>There is no update lock issue.</p>', 'totem' ),
 			admin_url( 'update-core.php' )
 		);
 		$no_lock .= sprintf(
-			__( '<p class="description">Go to the <a href="%s">Updates page</a>.</p>', 'sitecore' ),
+			__( '<p class="description">Go to the <a href="%s">Updates page</a>.</p>', 'totem' ),
 			admin_url( 'update-core.php' )
 		);
 
@@ -362,7 +362,7 @@ class Settings_Fields_Developer extends Settings_Fields {
 		$html .= '</label></fieldset>';
 		$html .= sprintf(
 			'<p class="description">%s</p>',
-			__( 'Adds a page under Appearance.', 'sitecore' )
+			__( 'Adds a page under Appearance.', 'totem' )
 		);
 
 		echo $html;
@@ -400,7 +400,7 @@ class Settings_Fields_Developer extends Settings_Fields {
 		$html .= '</label></fieldset>';
 		$html .= sprintf(
 			'<p class="description">%s</p>',
-			__( 'Adds a button in the user toolbar.', 'sitecore' )
+			__( 'Adds a button in the user toolbar.', 'totem' )
 		);
 
 		echo $html;
@@ -438,7 +438,7 @@ class Settings_Fields_Developer extends Settings_Fields {
 		$html .= '</label></fieldset>';
 		$html .= sprintf(
 			'<p class="description">%s</p>',
-			__( 'Removes the dashboard widget and the menu entry, disables site health notifications.', 'sitecore' )
+			__( 'Removes the dashboard widget and the menu entry, disables site health notifications.', 'totem' )
 		);
 
 		echo $html;
@@ -476,7 +476,7 @@ class Settings_Fields_Developer extends Settings_Fields {
 		$html .= '</label></fieldset>';
 		$html .= sprintf(
 			'<p class="description">%s</p>',
-			__( 'Adds an http header to disable FLoC.', 'sitecore' )
+			__( 'Adds an http header to disable FLoC.', 'totem' )
 		);
 
 		echo $html;
@@ -548,7 +548,7 @@ class Settings_Fields_Developer extends Settings_Fields {
 		$html .= '</label></fieldset>';
 		$html .= sprintf(
 			'<p class="description">%s</p>',
-			__( 'Adds a button in the Customizer panel header.', 'sitecore' )
+			__( 'Adds a button in the Customizer panel header.', 'totem' )
 		);
 
 		echo $html;

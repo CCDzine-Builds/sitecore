@@ -102,27 +102,27 @@ function row_notice( $plugin_file, $plugin_data, $status ) {
 
 		<?php if ( isset( $plugin_data['update'] ) && ! empty( $plugin_data['update'] ) ) : ?>
 
-			.plugins tr.<?php echo 'sitecore'; ?>-plugin-tr td {
+			.plugins tr.<?php echo 'totem'; ?>-plugin-tr td {
 				box-shadow: none ! important;
 			}
 
-			.plugins tr.<?php echo 'sitecore'; ?>-plugin-tr .update-message {
+			.plugins tr.<?php echo 'totem'; ?>-plugin-tr .update-message {
 				margin-bottom: 0;
 			}
 
 		<?php endif; ?>
 	</style>
 
-	<tr id="plugin-php-notice" class="plugin-update-tr active <?php echo 'sitecore'; ?>-plugin-tr">
+	<tr id="plugin-php-notice" class="plugin-update-tr active <?php echo 'totem'; ?>-plugin-tr">
 		<td colspan="<?php echo $colspan; ?>" class="plugin-update colspanchange">
 			<div class="update-message notice inline notice-error notice-alt">
 				<?php echo sprintf(
 					'<p>%s %s %s %s %s %s</p>',
-					__( 'Functionality of the', 'sitecore' ),
+					__( 'Functionality of the', 'totem' ),
 					TMG_NAME,
-					__( 'plugin has been disabled because it requires PHP version', 'sitecore' ),
+					__( 'plugin has been disabled because it requires PHP version', 'totem' ),
 					TMG_MIN_PHP_VERSION,
-					__( 'or greater. Your system is running PHP version', 'sitecore' ),
+					__( 'or greater. Your system is running PHP version', 'totem' ),
 					phpversion()
 				); ?>
 			</div>
@@ -153,11 +153,11 @@ function php_notice() {
 	<div id="plugin-php-notice" class="notice notice-error">
 		<?php echo sprintf(
 			'<p>%s %s %s %s %s %s</p>',
-			__( 'Functionality of the', 'sitecore' ),
+			__( 'Functionality of the', 'totem' ),
 			TMG_NAME,
-			__( 'plugin has been disabled because it requires PHP version', 'sitecore' ),
+			__( 'plugin has been disabled because it requires PHP version', 'totem' ),
 			TMG_MIN_PHP_VERSION,
-			__( 'or greater. Your system is running PHP version', 'sitecore' ),
+			__( 'or greater. Your system is running PHP version', 'totem' ),
 			phpversion()
 		); ?>
 	</div>
@@ -181,16 +181,16 @@ function megalomattic_notice() {
 
 	$notice = sprintf(
 		'%s %s %s',
-		__( 'The', 'sitecore' ),
+		__( 'The', 'totem' ),
 		TMG_NAME,
-		__( 'plugin is not allowed to be used for websites hosted by WordPress[dot]com.', 'sitecore' )
+		__( 'plugin is not allowed to be used for websites hosted by WordPress[dot]com.', 'totem' )
 	);
 
 	if ( current_user_can( 'deactivate_plugin', TMG_BASENAME ) ) {
 		$notice .= sprintf(
 			' <a href="%s">%s</a>',
 			wp_nonce_url( $deactivate, 'deactivate-plugin_' . TMG_BASENAME ),
-			__( 'Deactivate', 'sitecore' )
+			__( 'Deactivate', 'totem' )
 		);
 	}
 ?>

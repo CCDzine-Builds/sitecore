@@ -27,12 +27,12 @@ class Manage_Website_Page extends Add_Page {
 	public function __construct() {
 
 		if ( current_user_can( 'edit_others_posts' ) ) {
-			$page_title  = __( 'Help Managing This Website', 'sitecore' );
-			$menu_title  = __( 'Manage Website', 'sitecore' );
+			$page_title  = __( 'Help Managing This Website', 'totem' );
+			$menu_title  = __( 'Manage Website', 'totem' );
 			$description = __( 'This page provides you with help managing this website.' );
 		} else {
-			$page_title  = __( 'Help Using This Website', 'sitecore' );
-			$menu_title  = __( 'Website Help', 'sitecore' );
+			$page_title  = __( 'Help Using This Website', 'totem' );
+			$menu_title  = __( 'Website Help', 'totem' );
 			$description = __( 'This page provides you with help using this website.' );
 		}
 
@@ -85,29 +85,29 @@ class Manage_Website_Page extends Add_Page {
 		if ( current_user_can( 'develop' ) ) {
 			$page_message = sprintf(
 				'<h2 style="padding: 0;">%s</h2>',
-				__( 'Developer Notice', 'sitecore' )
+				__( 'Developer Notice', 'totem' )
 			);
 			$page_message .= sprintf(
 				'<p>%s</p>',
-				__( 'This Advanced Custom Fields message field is added via the <code>ACF_Manage_Site</code> class. It is provided as demonstration of adding a field group from the <code>acf_field_groups()</code> method.', 'sitecore' )
+				__( 'This Advanced Custom Fields message field is added via the <code>ACF_Manage_Site</code> class. It is provided as demonstration of adding a field group from the <code>acf_field_groups()</code> method.', 'totem' )
 			);
 		} elseif ( current_user_can( 'manage_options' ) ) {
 			$page_message = sprintf(
 				'<h2 style="padding: 0;">%s</h2>',
-				__( 'Administrator Notice', 'sitecore' )
+				__( 'Administrator Notice', 'totem' )
 			);
 			$page_message .= sprintf(
 				'<p>%s</p>',
-				__( 'This is a sample page to demonstrate adding a page. Have your website developer add to this page or remove it.', 'sitecore' )
+				__( 'This is a sample page to demonstrate adding a page. Have your website developer add to this page or remove it.', 'totem' )
 			);
 		} else {
 			$page_message = sprintf(
 				'<h2 style="padding: 0;">%s</h2>',
-				__( 'Nothing to See', 'sitecore' )
+				__( 'Nothing to See', 'totem' )
 			);
 			$page_message .= sprintf(
 				'<p>%s</p>',
-				__( 'Sorry, this is a sample page to demonstrate adding a page.', 'sitecore' )
+				__( 'Sorry, this is a sample page to demonstrate adding a page.', 'totem' )
 			);
 		}
 		return $page_message;
@@ -128,7 +128,7 @@ class Manage_Website_Page extends Add_Page {
 
 			acf_add_local_field_group( [
 				'key'    => 'group_6408c44b12845',
-				'title'  => __( 'Manage Website', 'sitecore' ),
+				'title'  => __( 'Manage Website', 'totem' ),
 				'fields' => [
 					[
 						'key'               => 'field_6408c48bfd582',
@@ -136,7 +136,7 @@ class Manage_Website_Page extends Add_Page {
 						'name'              => '',
 						'aria-label'        => '',
 						'type'              => 'message',
-						'instructions'      => __( '', 'sitecore' ),
+						'instructions'      => __( '', 'totem' ),
 						'required'          => 0,
 						'conditional_logic' => 0,
 						'wrapper'           => [
@@ -165,7 +165,7 @@ class Manage_Website_Page extends Add_Page {
 				'instruction_placement' => 'label',
 				'hide_on_screen'        => '',
 				'active'                => true,
-				'description'           => __( '', 'sitecore' ),
+				'description'           => __( '', 'totem' ),
 				'show_in_rest'          => 0
 			] );
 

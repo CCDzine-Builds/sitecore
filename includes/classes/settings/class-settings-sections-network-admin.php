@@ -24,7 +24,7 @@ class Settings_Sections_Network_Admin extends Settings_Sections {
 		$sections = [
 			[
 				'id'       => 'tmg-settings-section-network-admin-menu',
-				'title'    => __( 'Menu Settings', 'sitecore' ),
+				'title'    => __( 'Menu Settings', 'totem' ),
 				'callback' => '',
 				'page'     => 'options-admin',
 				'args'     => [
@@ -35,7 +35,7 @@ class Settings_Sections_Network_Admin extends Settings_Sections {
 			],
 			[
 				'id'       => 'tmg-settings-section-network-admin-dashboard',
-				'title'    => __( 'Dashboard Settings', 'sitecore' ),
+				'title'    => __( 'Dashboard Settings', 'totem' ),
 				'callback' => '',
 				'page'     => 'options-admin',
 				'args'     => [

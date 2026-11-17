@@ -233,14 +233,14 @@ function menus_personal_data() {
 
 	// New Export Data submenu entry.
 	$submenu['users.php'][25] = [
-		__( 'Export Data', 'sitecore' ),
+		__( 'Export Data', 'totem' ),
 		'export_others_personal_data',
 		'export-personal-data.php'
 	];
 
 	// New Erase Data submenu entry.
 	$submenu['users.php'][30] = [
-		__( 'Erase Data', 'sitecore' ),
+		__( 'Erase Data', 'totem' ),
 		'erase_others_personal_data',
 		'erase-personal-data.php'
 	];
@@ -278,12 +278,12 @@ function profile_editor( $user ) {
 
 	ob_start();
 	?>
-	<h2><?php _e( 'User Details', 'sitecore' ); ?></h2>
+	<h2><?php _e( 'User Details', 'totem' ); ?></h2>
 
 	<table class="form-table">
 		<tbody>
 			<tr>
-				<th><label for="description"><?php _e( 'Biographical Info', 'sitecore' ); ?></label></th>
+				<th><label for="description"><?php _e( 'Biographical Info', 'totem' ); ?></label></th>
 				<td>
 					<?php
 					$description = get_user_meta( $user->ID, 'description', true );
@@ -305,7 +305,7 @@ function profile_editor( $user ) {
 						]
 					);
 					?>
-					<p class="description"><?php _e( 'Share a little biographical information to fill out your profile. This may be shown publicly.', 'sitecore' ); ?></p>
+					<p class="description"><?php _e( 'Share a little biographical information to fill out your profile. This may be shown publicly.', 'totem' ); ?></p>
 				</td>
 			</tr>
 		</tbody>
@@ -520,7 +520,7 @@ function user_login( $username = '' ) {
 	if ( isset( $user_data->user_login ) ) {
 		$username = esc_html( $user_data->user_login );
 	} else {
-		$username = __( 'Not available', 'sitecore' );
+		$username = __( 'Not available', 'totem' );
 	}
 
 	// Return the username.
@@ -542,7 +542,7 @@ function get_user_roles( $roles = [] ) {
 
 	// Add Super Admin if applicable to current user.
 	if ( is_multisite() && is_super_admin( get_current_user_id() ) ) {
-		$super = [ __( 'Super Admin', 'sitecore' ) ];
+		$super = [ __( 'Super Admin', 'totem' ) ];
 		$roles = array_merge( $super, $roles );
 	}
 
@@ -567,12 +567,12 @@ function user_roles( $role_i18n = [] ) {
 	// Translate and capitalize each role.
 	if ( is_array( $roles ) ) {
 		foreach( $roles as $role ) {
-			$role_i18n[] = ucwords( __( $role, 'sitecore' ) );
+			$role_i18n[] = ucwords( __( $role, 'totem' ) );
 		}
 	} else {
 
 		// Default array.
-		$role_i18n = [ __( 'Undetermined', 'sitecore' ) ];
+		$role_i18n = [ __( 'Undetermined', 'totem' ) ];
 	}
 
 	// Return a comma-separated list of user roles.
@@ -594,7 +594,7 @@ function nickname( $nickname = '' ) {
 	if ( isset( $user_data->nickname ) ) {
 		$nickname = esc_html( $user_data->user_login );
 	} else {
-		$nickname = __( 'Not available', 'sitecore' );
+		$nickname = __( 'Not available', 'totem' );
 	}
 
 	// Return the nickname.
@@ -616,7 +616,7 @@ function display_name( $display_name = '' ) {
 	if ( isset( $user_data->display_name ) ) {
 		$display_name = esc_html( $user_data->display_name );
 	} else {
-		$display_name = __( 'Not available', 'sitecore' );
+		$display_name = __( 'Not available', 'totem' );
 	}
 
 	// Return the display name.
@@ -644,7 +644,7 @@ function email( $user_email = '' ) {
 			sanitize_email( $user_data->user_email )
 		);
 	} else {
-		$user_email = __( 'Not available', 'sitecore' );
+		$user_email = __( 'Not available', 'totem' );
 	}
 
 	// Return the linked email address.
@@ -669,7 +669,7 @@ function website( $website = '' ) {
 			esc_url( get_user_option( 'user_url' ) )
 		);
 	} else {
-		$website = __( 'No website provided.', 'sitecore' );
+		$website = __( 'No website provided.', 'totem' );
 	}
 
 	// Return the linked website URL or notice.
@@ -687,9 +687,9 @@ function toolbar( $enabled = '' ) {
 
 	// Check the toolbar user option.
 	if ( 'true' == get_user_option( 'show_admin_bar_front' ) ) {
-		$enabled = __( 'Yes', 'sitecore' );
+		$enabled = __( 'Yes', 'totem' );
 	} else {
-		$enabled = __( 'No', 'sitecore' );
+		$enabled = __( 'No', 'totem' );
 	}
 
 	// Return the string.
@@ -723,7 +723,7 @@ function get_user_color_scheme( $name = 'Fresh' ) {
 	 * use the "Fresh" label is applied in that instance.
 	 */
 	if ( ! $scheme || 'fresh' == $option ) {
-		$name = __( 'Fresh', 'sitecore' );
+		$name = __( 'Fresh', 'totem' );
 
 	// Use the scheme name if available.
 	} elseif ( $scheme ) {
@@ -731,7 +731,7 @@ function get_user_color_scheme( $name = 'Fresh' ) {
 
 	// A fallback that is likely unnecessary.
 	} else {
-		$name = __( 'Not available', 'sitecore' );
+		$name = __( 'Not available', 'totem' );
 	}
 
 	// The name of the color scheme.
