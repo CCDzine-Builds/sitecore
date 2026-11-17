@@ -2,13 +2,13 @@
 /**
  * Add a widget type
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Classes
  * @category   Widgets
  * @since      1.0.0
  */
 
-namespace SiteCore\Classes\Widgets;
+namespace Totem\Classes\Widgets;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -563,7 +563,7 @@ class Add_Widget extends \WP_Widget {
 	public function form( $instance ) {
 
 		// Look for the file.
-		$file = SCP_PATH . $this->widget_views() . $this->form_file();
+		$file = TMG_PATH . $this->widget_views() . $this->form_file();
 
 		// Include the file if it exists.
 		if ( file_exists( $file ) ) {
@@ -588,7 +588,7 @@ class Add_Widget extends \WP_Widget {
 	public function widget( $args, $instance ) {
 
 		// Look for the file.
-		$file = SCP_PATH . $this->widget_views() . $this->widget_file();
+		$file = TMG_PATH . $this->widget_views() . $this->widget_file();
 
 		// Include the file if it exists.
 		if ( file_exists( $file ) ) {

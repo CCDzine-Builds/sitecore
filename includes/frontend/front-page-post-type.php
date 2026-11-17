@@ -4,15 +4,15 @@
  *
  * Select a custom post type to be displayed in place of latest posts on the front page.
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Includes
  * @category   Frontend
  * @since      1.0.0
  */
 
-namespace SiteCore\Front_Page_Post_Type;
+namespace Totem\Front_Page_Post_Type;
 
-use function SiteCore\Core\can_fse;
+use function Totem\Core\can_fse;
 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
@@ -56,7 +56,7 @@ function front_page_query_args() {
 		'_builtin'          => false
 	];
 
-	return apply_filters( 'scp_front_page_query_args', $args );
+	return apply_filters( 'tmg_front_page_query_args', $args );
 }
 
 /**

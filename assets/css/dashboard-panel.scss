@@ -15,7 +15,7 @@
 	display: none;
 }
 
-#dashboard-widgets #normal-sortables > div:not( #scp-dashboard ) {
+#dashboard-widgets #normal-sortables > div:not( #tmg-dashboard ) {
 	display: none;
 }
 
@@ -23,17 +23,17 @@
 	width: 100% !important;
 }
 
-#scp-dashboard.postbox {
+#tmg-dashboard.postbox {
 	background-color: inherit;
 	border: none;
 	box-shadow: none;
 }
 
-#scp-dashboard .postbox-header {
+#tmg-dashboard .postbox-header {
 	display: none;
 }
 
-#scp-dashboard .inside {
+#tmg-dashboard .inside {
 	display: block !important;
 	max-width: 1280px;
 	padding: 0;
@@ -172,7 +172,7 @@
 /// ClassicPress
 ///
 .classicpress-admin {
-	#normal-sortables #scp-dashboard summary {
+	#normal-sortables #tmg-dashboard summary {
 		display: none;
 	}
 }

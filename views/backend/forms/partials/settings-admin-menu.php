@@ -2,16 +2,16 @@
 /**
  * Form fields for admin settings menu tab
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Views
  * @category   Forms
  * @since      1.0.0
  */
 
-namespace SiteCore\Views\Admin;
+namespace Totem\Views\Admin;
 
-use SiteCore\Classes\Settings as Settings;
-use function SiteCore\Core\{
+use Totem\Classes\Settings as Settings;
+use function Totem\Core\{
 	is_classicpress,
 	can_fse
 };
@@ -31,7 +31,7 @@ settings_fields( 'options-admin' );
 
 ?>
 <div>
-	<?php do_action( 'scp_before_admin_menu_settings' ); ?>
+	<?php do_action( 'tmg_before_admin_menu_settings' ); ?>
 	<table class="form-table" role="presentation">
 		<tbody>
 			<?php if ( ! can_fse() ) : ?>
@@ -70,6 +70,6 @@ settings_fields( 'options-admin' );
 			</tr>
 		</tbody>
 	</table>
-	<?php do_action( 'scp_after_admin_menu_settings' ); ?>
+	<?php do_action( 'tmg_after_admin_menu_settings' ); ?>
 </div>
 

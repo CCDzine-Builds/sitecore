@@ -2,13 +2,13 @@
 /**
  * Plugin deactivation
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Includes
  * @category   Activate
  * @since      1.0.0
  */
 
-namespace SiteCore\Deactivate;
+namespace Totem\Deactivate;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {

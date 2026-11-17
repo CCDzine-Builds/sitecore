@@ -2,15 +2,15 @@
 /**
  * Admin toolbar settings fields
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Classes
  * @category   Settings
  * @since      1.0.0
  */
 
-namespace SiteCore\Classes\Settings;
+namespace Totem\Classes\Settings;
 
-use function SiteCore\Core\platform_name;
+use function Totem\Core\platform_name;
 
 class Settings_Fields_Admin_Toolbar extends Settings_Fields {
 
@@ -33,7 +33,7 @@ class Settings_Fields_Admin_Toolbar extends Settings_Fields {
 				),
 				'callback' => [ $this, 'toolbar_remove_platform_link_callback' ],
 				'page'     => 'options-admin',
-				'section'  => 'scp-settings-section-admin-toolbar',
+				'section'  => 'tmg-settings-section-admin-toolbar',
 				'type'     => 'checkbox',
 				'args'     => [
 					'description' => sprintf(
@@ -48,7 +48,7 @@ class Settings_Fields_Admin_Toolbar extends Settings_Fields {
 				'title'    => __( 'Disable Toolbar', 'sitecore' ),
 				'callback' => [ $this, 'disable_user_toolbar_callback' ],
 				'page'     => 'options-admin',
-				'section'  => 'scp-settings-section-admin-toolbar',
+				'section'  => 'tmg-settings-section-admin-toolbar',
 				'type'     => 'checkbox',
 				'args'     => [
 					'description' => __( 'Check to add option for disabling the user toolbar on the front end.', 'sitecore' ),
@@ -78,7 +78,7 @@ class Settings_Fields_Admin_Toolbar extends Settings_Fields {
 		} else {
 			$option = false;
 		}
-		return apply_filters( 'scp_toolbar_remove_platform_link', $option );
+		return apply_filters( 'tmg_toolbar_remove_platform_link', $option );
 	}
 
 	/**
@@ -96,7 +96,7 @@ class Settings_Fields_Admin_Toolbar extends Settings_Fields {
 		} else {
 			$option = false;
 		}
-		return apply_filters( 'scp_disable_user_toolbar', $option );
+		return apply_filters( 'tmg_disable_user_toolbar', $option );
 	}
 
 	/**

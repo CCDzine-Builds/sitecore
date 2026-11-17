@@ -2,15 +2,15 @@
 /**
  * Developer Tools page class
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Classes
  * @category   Admin
  * @since      1.0.0
  */
 
-namespace SiteCore\Classes\Admin;
+namespace Totem\Classes\Admin;
 
-use SiteCore\Classes\Settings as Settings_Class;
+use Totem\Classes\Settings as Settings_Class;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -111,7 +111,7 @@ class Developer_Settings_Page extends Add_Page {
 	 * @return mixed Returns the tab content.
 	 */
 	public function dev_tools() {
-		include SCP_PATH . 'views/backend/forms/partials/settings-dev-tools.php';
+		include TMG_PATH . 'views/backend/forms/partials/settings-dev-tools.php';
 	}
 
 	/**
@@ -122,7 +122,7 @@ class Developer_Settings_Page extends Add_Page {
 	 * @return mixed Returns the tab content.
 	 */
 	public function content_tools() {
-		include SCP_PATH . 'views/backend/forms/partials/settings-dev-content.php';
+		include TMG_PATH . 'views/backend/forms/partials/settings-dev-content.php';
 	}
 
 	/**
@@ -133,7 +133,7 @@ class Developer_Settings_Page extends Add_Page {
 	 * @return mixed Returns the tab content.
 	 */
 	public function user_tools() {
-		include SCP_PATH . 'views/backend/forms/partials/settings-dev-user-tools.php';
+		include TMG_PATH . 'views/backend/forms/partials/settings-dev-user-tools.php';
 	}
 
 	/**
@@ -144,6 +144,6 @@ class Developer_Settings_Page extends Add_Page {
 	 * @return mixed Returns the tab content.
 	 */
 	public function system_info() {
-		include SCP_PATH . 'views/backend/forms/partials/settings-dev-system-info.php';
+		include TMG_PATH . 'views/backend/forms/partials/settings-dev-system-info.php';
 	}
 }

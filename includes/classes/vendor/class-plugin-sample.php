@@ -2,13 +2,13 @@
 /**
  * Sample plugin compatibility
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Classes
  * @category   Vendor
  * @since      1.0.0
  */
 
-namespace SiteCore\Classes\Vendor;
+namespace Totem\Classes\Vendor;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -54,7 +54,7 @@ class Plugin_Sample extends Plugin {
 	public function use_bundled() {
 
 		// Override constant.
-		if ( defined( 'SCP_USE_SAMPLE_PLUGIN' ) && false == SCP_USE_SAMPLE_PLUGIN ) {
+		if ( defined( 'TMG_USE_SAMPLE_PLUGIN' ) && false == TMG_USE_SAMPLE_PLUGIN ) {
 			return false;
 		}
 		return true;

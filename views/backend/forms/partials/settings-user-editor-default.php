@@ -2,14 +2,14 @@
 /**
  * Form fields for user default editor option
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Views
  * @category   Forms
  * @since      1.0.0
  */
 
 // Alias namespaces.
-use SiteCore\Classes\Core as Core;
+use Totem\Classes\Core as Core;
 
 ?>
 <table class="form-table">

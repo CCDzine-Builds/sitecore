@@ -2,13 +2,13 @@
 /**
  * Admin footer
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Includes
  * @category   Admin
  * @since      1.0.0
  */
 
-namespace SiteCore\Admin_Footer;
+namespace Totem\Admin_Footer;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -67,8 +67,8 @@ function plugin_credit() {
 		'%s %s <a href="%s" target="_blank" rel="nofollow">%s</a> %s',
 		get_bloginfo( 'name' ),
 		esc_html__( 'is managed by the', 'sitecore' ),
-		esc_url( SCP_PLUGIN_URL ),
-		esc_html( SCP_NAME ),
+		esc_url( TMG_PLUGIN_URL ),
+		esc_html( TMG_NAME ),
 		esc_html__( 'plugin', 'sitecore' )
 	);
 	return $html;
@@ -86,8 +86,8 @@ function dev_website() {
 		'%s %s <a href="%s" target="_blank" rel="nofollow">%s</a>',
 		get_bloginfo( 'name' ),
 		esc_html__( 'website was designed & developed by', 'sitecore' ),
-		esc_url( SCP_DEV_URL ),
-		esc_html( SCP_DEV_NAME )
+		esc_url( TMG_DEV_URL ),
+		esc_html( TMG_DEV_NAME )
 	);
 	return $html;
 }
@@ -103,10 +103,10 @@ function dev_email() {
 	$html = sprintf(
 		'%s %s %s <a href="mailto:%s">%s</a>',
 		esc_html__( 'Contact', 'sitecore' ),
-		esc_html( SCP_DEV_NAME ),
+		esc_html( TMG_DEV_NAME ),
 		esc_html__( 'for website assistance:', 'sitecore' ),
-		esc_html( SCP_DEV_EMAIL ),
-		esc_html( SCP_DEV_EMAIL )
+		esc_html( TMG_DEV_EMAIL ),
+		esc_html( TMG_DEV_EMAIL )
 	);
 	return $html;
 }

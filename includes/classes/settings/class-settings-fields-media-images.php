@@ -2,13 +2,13 @@
 /**
  * Media image fields
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Classes
  * @category   Settings
  * @since      1.0.0
  */
 
-namespace SiteCore\Classes\Settings;
+namespace Totem\Classes\Settings;
 
 class Settings_Fields_Media_Images extends Settings_Fields {
 
@@ -69,7 +69,7 @@ class Settings_Fields_Media_Images extends Settings_Fields {
 		} else {
 			$option = false;
 		}
-		return apply_filters( 'scp_hard_crop_medium', $option );
+		return apply_filters( 'tmg_hard_crop_medium', $option );
 	}
 
 	/**
@@ -87,7 +87,7 @@ class Settings_Fields_Media_Images extends Settings_Fields {
 		} else {
 			$option = false;
 		}
-		return apply_filters( 'scp_hard_crop_large', $option );
+		return apply_filters( 'tmg_hard_crop_large', $option );
 	}
 
 	/**

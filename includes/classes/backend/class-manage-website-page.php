@@ -2,13 +2,13 @@
 /**
  * Add Manage Website page
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Classes
  * @category   Admin
  * @since      1.0.0
  */
 
-namespace SiteCore\Classes\Admin;
+namespace Totem\Classes\Admin;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -70,7 +70,7 @@ class Manage_Website_Page extends Add_Page {
 	 * @return void
 	 */
 	public function content_callback() {
-		include_once SCP_PATH . 'views/backend/pages/manage-website.php';
+		include_once TMG_PATH . 'views/backend/pages/manage-website.php';
 	}
 
 	/**

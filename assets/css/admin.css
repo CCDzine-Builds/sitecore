@@ -239,8 +239,6 @@
   float: left;
   display: inline-block;
   padding-right: 10px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -469,7 +467,6 @@ html .backend-tabbed-content .ui-button.ui-state-disabled:hover {
 .backend-tabbed-content .ui-tabs-nav li.ui-tabs-active a:hover {
   border-bottom: 1px solid #f1f1f1;
   background: #f1f1f1;
-  -webkit-box-shadow: none;
   box-shadow: none;
   color: #000;
 }
@@ -511,11 +508,10 @@ html .backend-tabbed-content .ui-button.ui-state-disabled:hover {
 .import-registered-field-groups-arrays {
   -webkit-user-select: all;
   -moz-user-select: all;
-  -ms-user-select: all;
   user-select: all;
 }
 
-.scp-bullet-list {
+.tmg-bullet-list {
   list-style: disc;
   margin-left: 1em;
 }

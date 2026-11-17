@@ -7,16 +7,16 @@
  * Content is from the default rich text
  * editor or block editor in WordPress 5.0+.
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Classes
  * @category   Front
  * @since      1.0.0
  */
 
-namespace SiteCore\Classes\Front;
+namespace Totem\Classes\Front;
 
 // Alias namespaces.
-use SiteCore\Classes\Vendor as Vendor;
+use Totem\Classes\Vendor as Vendor;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -334,7 +334,7 @@ class Content_Filter {
 
 			// Plugin template path.
 			if ( array_key_exists( 'plugin', $singular ) ) {
-				$plugin = SCP_PATH . $singular['plugin'] . $this->acf_suffix() . '.php';
+				$plugin = TMG_PATH . $singular['plugin'] . $this->acf_suffix() . '.php';
 			}
 		}
 
@@ -381,7 +381,7 @@ class Content_Filter {
 
 			// Plugin template path.
 			if ( array_key_exists( 'plugin', $templates['archive'] ) ) {
-				$plugin = SCP_PATH . $templates['archive']['plugin'] . $this->acf_suffix() . '.php';
+				$plugin = TMG_PATH . $templates['archive']['plugin'] . $this->acf_suffix() . '.php';
 			}
 		}
 
@@ -479,8 +479,8 @@ class Content_Filter {
 	 * @return void
 	 */
 	public function before_content() {
-		$before_content = do_action( 'SiteCore\before_content_filter' );
-		return apply_filters( 'scp_before_content_filter', $before_content );
+		$before_content = do_action( 'Totem\before_content_filter' );
+		return apply_filters( 'tmg_before_content_filter', $before_content );
 	}
 
 	/**
@@ -490,7 +490,7 @@ class Content_Filter {
 	 * @return void
 	 */
 	public function after_content() {
-		$after_content = do_action( 'SiteCore\after_content_filter' );
-		return apply_filters( 'scp_after_content_filter', $after_content );
+		$after_content = do_action( 'Totem\after_content_filter' );
+		return apply_filters( 'tmg_after_content_filter', $after_content );
 	}
 }

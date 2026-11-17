@@ -2,13 +2,13 @@
 /**
  * Developer settings sections
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Classes
  * @category   Settings
  * @since      1.0.0
  */
 
-namespace SiteCore\Classes\Settings;
+namespace Totem\Classes\Settings;
 
 class Settings_Sections_Developer extends Settings_Sections {
 
@@ -23,7 +23,7 @@ class Settings_Sections_Developer extends Settings_Sections {
 
 		$sections = [
 			[
-				'id'       => 'scp-options-developer',
+				'id'       => 'tmg-options-developer',
 				'title'    => '',
 				'callback' => '',
 				'page'     => 'developer-tools',
@@ -34,7 +34,7 @@ class Settings_Sections_Developer extends Settings_Sections {
 				]
 			],
 			[
-				'id'       => 'scp-options-developer-content',
+				'id'       => 'tmg-options-developer-content',
 				'title'    => '',
 				'callback' => '',
 				'page'     => 'developer-tools',
@@ -45,7 +45,7 @@ class Settings_Sections_Developer extends Settings_Sections {
 				]
 			],
 			[
-				'id'       => 'scp-options-developer-users-content',
+				'id'       => 'tmg-options-developer-users-content',
 				'title'    => '',
 				'callback' => '',
 				'page'     => 'developer-tools',

@@ -2,15 +2,15 @@
 /**
  * Initiate widget classes and functions
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Includes
  * @category   Widgets
  * @since      1.0.0
  */
 
-namespace SiteCore\Widgets;
+namespace Totem\Widgets;
 
-use SiteCore\Classes\Widgets as Widgets_Class;
+use Totem\Classes\Widgets as Widgets_Class;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -46,7 +46,7 @@ function setup() {
 function classes() {
 
 	if (
-		class_exists( 'SiteCore\Classes\Widgets\Sample_Widget' ) &&
+		class_exists( 'Totem\Classes\Widgets\Sample_Widget' ) &&
 		get_option( 'enable_sample_files', false )
 	) {
 		new Widgets_Class\Sample_Widget;
@@ -63,5 +63,5 @@ function classes() {
  */
 function widget_links_args( $args ) {
 	$args['title_li'] = __( 'Featured Links', 'sitecore' );
-	return apply_filters( 'scp_widget_links_args', $args );
+	return apply_filters( 'tmg_widget_links_args', $args );
 }

@@ -2,22 +2,22 @@
 /**
  * Form fields for admin settings header tab
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Views
  * @category   Forms
  * @since      1.0.0
  */
 
-namespace SiteCore\Views\Admin;
+namespace Totem\Views\Admin;
 
 ?>
 <div>
-	<?php do_action( 'scp_before_admin_header_settings' ); ?>
+	<?php do_action( 'tmg_before_admin_header_settings' ); ?>
 	<table class="form-table" role="presentation">
 		<?php
 		settings_fields( 'options-admin' );
-		do_settings_fields( 'options-admin', 'scp-settings-section-admin-header' );
+		do_settings_fields( 'options-admin', 'tmg-settings-section-admin-header' );
 		?>
 	</table>
-	<?php do_action( 'scp_after_admin_header_settings' ); ?>
+	<?php do_action( 'tmg_after_admin_header_settings' ); ?>
 </div>

@@ -2,15 +2,15 @@
 /**
  * Network classes & functions
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Includes
  * @category   Network
  * @since      1.0.0
  */
 
-namespace SiteCore\Network;
+namespace Totem\Network;
 
-use SiteCore\{
+use Totem\{
 	Classes\Network  as Network_Class,
 	Classes\Admin    as Admin_Class,
 	Classes\Settings as Settings_Class

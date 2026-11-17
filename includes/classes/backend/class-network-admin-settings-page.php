@@ -2,13 +2,13 @@
 /**
  * Network admin settings page
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Classes
  * @category   Admin
  * @since      1.0.0
  */
 
-namespace SiteCore\Classes\Admin;
+namespace Totem\Classes\Admin;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -92,7 +92,7 @@ class Network_Admin_Settings_Page extends Add_Page {
 	 * @return mixed Returns the tab content.
 	 */
 	public function dashboard_tab() {
-		include SCP_PATH . 'views/backend/forms/partials/settings-network-admin-dashboard.php';
+		include TMG_PATH . 'views/backend/forms/partials/settings-network-admin-dashboard.php';
 	}
 
 	/**
@@ -103,6 +103,6 @@ class Network_Admin_Settings_Page extends Add_Page {
 	 * @return mixed Returns the tab content.
 	 */
 	public function menu_tab() {
-		include SCP_PATH . 'views/backend/forms/partials/settings-network-admin-menu.php';
+		include TMG_PATH . 'views/backend/forms/partials/settings-network-admin-menu.php';
 	}
 }

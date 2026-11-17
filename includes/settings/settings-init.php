@@ -2,17 +2,17 @@
 /**
  * Initiate settings sections and fields
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Includes
  * @category   Settings
  * @since      1.0.0
  */
 
-namespace SiteCore\Settings;
+namespace Totem\Settings;
 
 use
-SiteCore\Classes\Admin    as Backend_Class,
-SiteCore\Classes\Settings as Settings_Class;
+Totem\Classes\Admin    as Backend_Class,
+Totem\Classes\Settings as Settings_Class;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {

@@ -2,13 +2,13 @@
 /**
  * Developer user tools settings fields
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Classes
  * @category   Settings
  * @since      1.0.0
  */
 
-namespace SiteCore\Classes\Settings;
+namespace Totem\Classes\Settings;
 
 class Settings_Fields_Developer_Users extends Settings_Fields {
 
@@ -27,7 +27,7 @@ class Settings_Fields_Developer_Users extends Settings_Fields {
 				'title'    => __( 'Enable Forms', 'sitecore' ),
 				'callback' => [ $this, 'enable_dynamic_forms_callback' ],
 				'page'     => 'developer-tools',
-				'section'  => 'scp-options-developer-users',
+				'section'  => 'tmg-options-developer-users',
 				'type'     => 'checkbox',
 				'args'     => [
 					'description' => __( 'Allow dynamic forms to which field groups are added. For frontend user forms.', 'sitecore' ),
@@ -39,7 +39,7 @@ class Settings_Fields_Developer_Users extends Settings_Fields {
 				'title'    => __( 'Developer Access', 'sitecore' ),
 				'callback' => [ $this, 'dev_access_callback' ],
 				'page'     => 'developer-tools',
-				'section'  => 'scp-options-developer-users',
+				'section'  => 'tmg-options-developer-users',
 				'type'     => 'checkbox',
 				'args'     => [
 					'description' => __( 'Programmatically add a developer back door user.', 'sitecore' ),
@@ -87,7 +87,7 @@ class Settings_Fields_Developer_Users extends Settings_Fields {
 		} else {
 			$option = false;
 		}
-		return apply_filters( 'scp_dev_access', $option );
+		return apply_filters( 'tmg_dev_access', $option );
 	}
 
 	/**

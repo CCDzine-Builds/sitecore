@@ -2,15 +2,15 @@
 /**
  * Developer tools settings fields
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Classes
  * @category   Settings
  * @since      1.0.0
  */
 
-namespace SiteCore\Classes\Settings;
+namespace Totem\Classes\Settings;
 
-use function SiteCore\Core\{
+use function Totem\Core\{
 	platform_name,
 	can_fse
 };
@@ -29,7 +29,7 @@ class Settings_Fields_Developer extends Settings_Fields {
 		$register = [
 			'serialize' => false,
 			'page'      => 'developer-tools',
-			'section'   => 'scp-options-developer'
+			'section'   => 'tmg-options-developer'
 		];
 
 		$fields = [
@@ -106,7 +106,7 @@ class Settings_Fields_Developer extends Settings_Fields {
 				'args'     => [
 					'description' => sprintf(
 						__( 'Load content and pages that have been included in the %s plugin for demonstration purposes.', 'sitecore' ),
-						SCP_NAME
+						TMG_NAME
 					),
 					'class'       => 'admin-field'
 				]
@@ -189,7 +189,7 @@ class Settings_Fields_Developer extends Settings_Fields {
 		} else {
 			$option = false;
 		}
-		return apply_filters( 'scp_direction_switch', $option );
+		return apply_filters( 'tmg_direction_switch', $option );
 	}
 
 	/**
@@ -207,7 +207,7 @@ class Settings_Fields_Developer extends Settings_Fields {
 		} else {
 			$option = false;
 		}
-		return apply_filters( 'scp_customizer_reset', $option );
+		return apply_filters( 'tmg_customizer_reset', $option );
 	}
 
 	/**
@@ -225,7 +225,7 @@ class Settings_Fields_Developer extends Settings_Fields {
 		} else {
 			$option = false;
 		}
-		return apply_filters( 'scp_disable_site_health', $option );
+		return apply_filters( 'tmg_disable_site_health', $option );
 	}
 
 	/**
@@ -243,7 +243,7 @@ class Settings_Fields_Developer extends Settings_Fields {
 		} else {
 			$option = false;
 		}
-		return apply_filters( 'scp_disable_floc', $option );
+		return apply_filters( 'tmg_disable_floc', $option );
 	}
 
 	/**
@@ -261,7 +261,7 @@ class Settings_Fields_Developer extends Settings_Fields {
 		} else {
 			$option = false;
 		}
-		return apply_filters( 'scp_enable_sample_files', $option );
+		return apply_filters( 'tmg_enable_sample_files', $option );
 	}
 
 	/**

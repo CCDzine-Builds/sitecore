@@ -6,13 +6,13 @@
  * specific roles and capabilities based on inclusion
  * and exclusion settings.
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Includes
  * @category   Tools
  * @since      1.0.0
  */
 
-namespace SiteCore\Disable_Toolbar ;
+namespace Totem\Disable_Toolbar ;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -274,7 +274,7 @@ function disable_personal_option() {
  * @return void
  */
 function parent_page() {
-	return apply_filters( 'scp_disable_toolbar_parent_page', 'users.php' );
+	return apply_filters( 'tmg_disable_toolbar_parent_page', 'users.php' );
 }
 
 /**

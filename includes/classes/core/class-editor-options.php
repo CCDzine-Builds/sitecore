@@ -2,13 +2,13 @@
 /**
  * Sample/starter class
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Classes
  * @category   Core
  * @since      1.0.0
  */
 
-namespace SiteCore\Classes\Core;
+namespace Totem\Classes\Core;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -511,7 +511,7 @@ class Editor_Options {
 	 * @return void
 	 */
 	public static function editor_settings_default() {
-		include_once SCP_PATH . 'views/backend/forms/partials/settings-writing-editor-default.php';
+		include_once TMG_PATH . 'views/backend/forms/partials/settings-writing-editor-default.php';
 	}
 
 	/**
@@ -522,7 +522,7 @@ class Editor_Options {
 	 * @return void
 	 */
 	public static function editor_settings_allow() {
-		include_once SCP_PATH . 'views/backend/forms/partials/settings-writing-editor-allow.php';
+		include_once TMG_PATH . 'views/backend/forms/partials/settings-writing-editor-allow.php';
 	}
 
 	/**
@@ -549,7 +549,7 @@ class Editor_Options {
 			return;
 		}
 
-		include_once SCP_PATH . 'views/backend/forms/partials/settings-user-editor-default.php';
+		include_once TMG_PATH . 'views/backend/forms/partials/settings-user-editor-default.php';
 	}
 
 	/**
@@ -560,7 +560,7 @@ class Editor_Options {
 	 * @return void
 	 */
 	public static function network_settings() {
-		include_once SCP_PATH . 'views/backend/forms/partials/settings-network-editor-default.php';
+		include_once TMG_PATH . 'views/backend/forms/partials/settings-network-editor-default.php';
 	}
 
 	/**
@@ -846,7 +846,7 @@ class Editor_Options {
 
 		wp_enqueue_script(
 			'editor-options',
-			SCP_URL . 'assets/js/editor-options' . $suffix . '.js',
+			TMG_URL . 'assets/js/editor-options' . $suffix . '.js',
 			[ 'wp-element', 'wp-components', 'lodash' ],
 			'1.4',
 			true

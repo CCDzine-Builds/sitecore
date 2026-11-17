@@ -2,15 +2,15 @@
 /**
  * Site frontend
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Includes
  * @category   Frontend
  * @since      1.0.0
  */
 
-namespace SiteCore\Front;
+namespace Totem\Front;
 
-use SiteCore\Classes\Front as Front_Class;
+use Totem\Classes\Front as Front_Class;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -117,8 +117,8 @@ function remove_versions( $src ) {
 
 function scripts_styles() {
 
-	wp_enqueue_style( 'scp-lightbox', SCP_URL . 'assets/css/lightbox.css', [], null, 'screen' );
-	wp_enqueue_script( 'scp-lightbox', SCP_URL . 'assets/js/lightbox.js', [ 'jquery' ], null, true );
+	wp_enqueue_style( 'tmg-lightbox', TMG_URL . 'assets/css/lightbox.css', [], null, 'screen' );
+	wp_enqueue_script( 'tmg-lightbox', TMG_URL . 'assets/js/lightbox.js', [ 'jquery' ], null, true );
 }
 
 /**

@@ -2,13 +2,13 @@
 /**
  * Output of the Administration Settings page
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Views
  * @category   Admin
  * @since      1.0.0
  */
 
-$page = get_plugin_page_hook( SCP_BASENAME, $this->parent_slug );
+$page = get_plugin_page_hook( TMG_BASENAME, $this->parent_slug );
 
 ?>
 <div class="wrap admin-settings">

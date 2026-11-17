@@ -11,16 +11,16 @@
  * in a settings file is to prevent site administrators wrongly
  * or incorrectly configuring the site built by developers.
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Configuration
  * @category   Core
  * @since      1.0.0
  */
 
-namespace SiteCore;
+namespace Totem;
 
 // Alias namespaces.
-use SiteCore\Classes as Classes;
+use Totem\Classes as Classes;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -33,7 +33,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @since 1.0.0
  * @var   string The minimum required PHP version.
  */
-define( 'SCP_MIN_PHP_VERSION', '7.4' );
+define( 'TMG_MIN_PHP_VERSION', '7.4' );
 
 /**
  * Function: Minimum PHP version
@@ -46,7 +46,7 @@ define( 'SCP_MIN_PHP_VERSION', '7.4' );
  */
 function min_php_version() {
 
-	if ( version_compare( phpversion(), SCP_MIN_PHP_VERSION, '<' ) ) {
+	if ( version_compare( phpversion(), TMG_MIN_PHP_VERSION, '<' ) ) {
 		return false;
 	}
 	return true;
@@ -73,7 +73,7 @@ if ( ! defined( 'IS_WPCOM' ) ) {
  * @since 1.0.0
  * @var   string The latest plugin version.
  */
-define( 'SCP_VERSION', '1.0.0' );
+define( 'TMG_VERSION', '1.0.0' );
 
 /**
  * Plugin name
@@ -81,8 +81,8 @@ define( 'SCP_VERSION', '1.0.0' );
  * @since 1.0.0
  * @var   string The name of the plugin.
  */
-if ( ! defined( 'SCP_NAME' ) ) {
-	define( 'SCP_NAME', __( 'Site Core', 'sitecore' ) );
+if ( ! defined( 'TMG_NAME' ) ) {
+	define( 'TMG_NAME', __( 'Totem', 'sitecore' ) );
 }
 
 /**
@@ -92,7 +92,7 @@ if ( ! defined( 'SCP_NAME' ) ) {
  * @var   string The filesystem directory path (with trailing slash)
  *               for the plugin __FILE__ passed in.
  */
-define( 'SCP_PATH', plugin_dir_path( __FILE__ ) );
+define( 'TMG_PATH', plugin_dir_path( __FILE__ ) );
 
 /**
  * Constant: Plugin folder URL
@@ -101,7 +101,7 @@ define( 'SCP_PATH', plugin_dir_path( __FILE__ ) );
  * @var   string The URL directory path (with trailing slash)
  *               for the plugin __FILE__ passed in.
  */
-define( 'SCP_URL', plugin_dir_url( __FILE__ ) );
+define( 'TMG_URL', plugin_dir_url( __FILE__ ) );
 
 /**
  * PHP version check
@@ -123,9 +123,9 @@ if ( ! min_php_version() ) {
  * @since 1.0.0
  * @var   array Plugin identification, support, settings.
  */
-if ( ! defined( 'SCP_CONFIG' ) ) {
+if ( ! defined( 'TMG_CONFIG' ) ) {
 
-	define( 'SCP_CONFIG', [
+	define( 'TMG_CONFIG', [
 
 		/**
 		 * Plugin name
@@ -135,7 +135,7 @@ if ( ! defined( 'SCP_CONFIG' ) ) {
 		 * @since 1.0.0
 		 * @var   string The name of the plugin.
 		 */
-		'name' => SCP_NAME,
+		'name' => TMG_NAME,
 
 		/**
 		 * Companion theme
@@ -219,8 +219,8 @@ if ( ! defined( 'SCP_CONFIG' ) ) {
  * @since 1.0.0
  * @var   string Slug of the companion theme.
  */
-if ( ! defined( 'SCP_THEME' ) ) {
-	define( 'SCP_THEME', SCP_CONFIG['theme'] );
+if ( ! defined( 'TMG_THEME' ) ) {
+	define( 'TMG_THEME', TMG_CONFIG['theme'] );
 }
 
 /**
@@ -229,8 +229,8 @@ if ( ! defined( 'SCP_THEME' ) ) {
  * @since 1.0.0
  * @var   string Slug of the companion theme.
  */
-if ( ! defined( 'SCP_THEME_PREFIX' ) ) {
-	define( 'SCP_THEME_PREFIX', SCP_CONFIG['theme_prefix'] );
+if ( ! defined( 'TMG_THEME_PREFIX' ) ) {
+	define( 'TMG_THEME_PREFIX', TMG_CONFIG['theme_prefix'] );
 }
 
 /**
@@ -239,8 +239,8 @@ if ( ! defined( 'SCP_THEME_PREFIX' ) ) {
  * @since 1.0.0
  * @var   string The name of the developer/agency.
  */
-if ( ! defined( 'SCP_DEV_NAME' ) ) {
-	define( 'SCP_DEV_NAME', SCP_CONFIG['dev_name'] );
+if ( ! defined( 'TMG_DEV_NAME' ) ) {
+	define( 'TMG_DEV_NAME', TMG_CONFIG['dev_name'] );
 }
 
 /**
@@ -249,8 +249,8 @@ if ( ! defined( 'SCP_DEV_NAME' ) ) {
  * @since 1.0.0
  * @var   string The URL of the developer/agency.
  */
-if ( ! defined( 'SCP_DEV_URL' ) ) {
-	define( 'SCP_DEV_URL', SCP_CONFIG['dev_url'] );
+if ( ! defined( 'TMG_DEV_URL' ) ) {
+	define( 'TMG_DEV_URL', TMG_CONFIG['dev_url'] );
 }
 
 /**
@@ -259,8 +259,8 @@ if ( ! defined( 'SCP_DEV_URL' ) ) {
  * @since 1.0.0
  * @var   string The URL of the developer/agency.
  */
-if ( ! defined( 'SCP_DEV_EMAIL' ) ) {
-	define( 'SCP_DEV_EMAIL', SCP_CONFIG['dev_email'] );
+if ( ! defined( 'TMG_DEV_EMAIL' ) ) {
+	define( 'TMG_DEV_EMAIL', TMG_CONFIG['dev_email'] );
 }
 
 /**
@@ -269,8 +269,8 @@ if ( ! defined( 'SCP_DEV_EMAIL' ) ) {
  * @since 1.0.0
  * @var   string The URL of the plugin.
  */
-if ( ! defined( 'SCP_PLUGIN_URL' ) ) {
-	define( 'SCP_PLUGIN_URL', SCP_CONFIG['plugin_url'] );
+if ( ! defined( 'TMG_PLUGIN_URL' ) ) {
+	define( 'TMG_PLUGIN_URL', TMG_CONFIG['plugin_url'] );
 }
 
 /**
@@ -279,8 +279,8 @@ if ( ! defined( 'SCP_PLUGIN_URL' ) ) {
  * @since 1.0.0
  * @var   boolean Whether to allow the Site Health feature.
  */
-if ( ! defined( 'SCP_DISABLE_SITE_HEALTH' ) ) {
-	define( 'SCP_DISABLE_SITE_HEALTH', SCP_CONFIG['site_health'] );
+if ( ! defined( 'TMG_DISABLE_SITE_HEALTH' ) ) {
+	define( 'TMG_DISABLE_SITE_HEALTH', TMG_CONFIG['site_health'] );
 }
 
 /**
@@ -289,8 +289,8 @@ if ( ! defined( 'SCP_DISABLE_SITE_HEALTH' ) ) {
  * @since 1.0.0
  * @var   boolean Whether to allow the Customizer.
  */
-if ( ! defined( 'SCP_ALLOW_CUSTOMIZER' ) ) {
-	define( 'SCP_ALLOW_CUSTOMIZER', SCP_CONFIG['customizer'] );
+if ( ! defined( 'TMG_ALLOW_CUSTOMIZER' ) ) {
+	define( 'TMG_ALLOW_CUSTOMIZER', TMG_CONFIG['customizer'] );
 }
 
 /**
@@ -299,6 +299,6 @@ if ( ! defined( 'SCP_ALLOW_CUSTOMIZER' ) ) {
  * @since 1.0.0
  * @var   boolean Whether to allow admin color pickers.
  */
-if ( ! defined( 'SCP_ALLOW_ADMIN_COLOR_PICKER' ) ) {
-	define( 'SCP_ALLOW_ADMIN_COLOR_PICKER', SCP_CONFIG['color_picker'] );
+if ( ! defined( 'TMG_ALLOW_ADMIN_COLOR_PICKER' ) ) {
+	define( 'TMG_ALLOW_ADMIN_COLOR_PICKER', TMG_CONFIG['color_picker'] );
 }

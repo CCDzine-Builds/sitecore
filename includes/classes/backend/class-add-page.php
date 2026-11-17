@@ -2,15 +2,15 @@
 /**
  * Add admin page class
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Classes
  * @category   Admin
  * @since      1.0.0
  */
 
-namespace SiteCore\Classes\Admin;
+namespace Totem\Classes\Admin;
 
-use SiteCore\Compatibility as Compat;
+use Totem\Compatibility as Compat;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -352,7 +352,7 @@ class Add_Page {
 	 * @return string Returns the text of the button.
 	 */
 	protected function acf_update_button() {
-		return apply_filters( 'scp_acf_update_button', __( 'Update Page', 'sitecore' ) );
+		return apply_filters( 'tmg_acf_update_button', __( 'Update Page', 'sitecore' ) );
 	}
 
 	/**
@@ -363,7 +363,7 @@ class Add_Page {
 	 * @return string Returns the text of the message.
 	 */
 	protected function acf_update_message() {
-		return apply_filters( 'scp_acf_update_message', __( 'Page Updated', 'sitecore' ) );
+		return apply_filters( 'tmg_acf_update_message', __( 'Page Updated', 'sitecore' ) );
 	}
 
 	/**
@@ -383,7 +383,7 @@ class Add_Page {
 		if ( $this->page_options['settings'] ) {
 			return $this->page_options['capability'];
 		} else {
-			return 'scp_no_user_form_access';
+			return 'tmg_no_user_form_access';
 		}
 	}
 
@@ -988,7 +988,7 @@ class Add_Page {
 	 * Page content
 	 *
 	 * This can be used in the default `content_callback()` method.
-	 * Hooking into `scp_submenu_page_content` adds
+	 * Hooking into `tmg_submenu_page_content` adds
 	 * content/markup inside the standard page markup.
 	 * Use a new `content_callback()` method to override these defaults.
 	 *
@@ -1000,7 +1000,7 @@ class Add_Page {
 
 		$content = do_action( 'render_screen_tabs_' . $this->page_options['menu_slug'] );
 
-		return apply_filters( 'scp_admin_page_content_' . $this->page_options['menu_slug'], $content );
+		return apply_filters( 'tmg_admin_page_content_' . $this->page_options['menu_slug'], $content );
 	}
 
 	/**
@@ -1088,7 +1088,7 @@ class Add_Page {
 	 * @return void
 	 */
 	public function more_info() {
-		include_once SCP_PATH . 'views/backend/help/sample-more-info.php';
+		include_once TMG_PATH . 'views/backend/help/sample-more-info.php';
 	}
 
 	/**
@@ -1107,7 +1107,7 @@ class Add_Page {
 
 		ob_start();
 
-		include_once SCP_PATH . 'views/backend/help/sample-sidebar.php';
+		include_once TMG_PATH . 'views/backend/help/sample-sidebar.php';
 
 		$html = ob_get_clean();
 

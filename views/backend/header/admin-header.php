@@ -2,15 +2,15 @@
 /**
  * Form fields for admin settings dashboard tab
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Views
  * @category   Admin
  * @since      1.0.0
  */
 
-namespace SiteCore\Views\Admin_Header;
+namespace Totem\Views\Admin_Header;
 
-use SiteCore\Tags as Tags;
+use Totem\Tags as Tags;
 
 $site_description = get_bloginfo( 'description', 'display' );
 

@@ -2,15 +2,15 @@
 /**
  * Posts list tables
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Includes
  * @category   Admin
  * @since      1.0.0
  */
 
-namespace SiteCore\Admin\List_Tables;
+namespace Totem\Admin\List_Tables;
 
-use SiteCore\Classes as Classes;
+use Totem\Classes as Classes;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -96,7 +96,7 @@ function filter_dropdown() {
  */
 function menu_order_list_label() {
 	return apply_filters(
-		'scp_menu_order_list_label',
+		'tmg_menu_order_list_label',
 		__( 'Order', 'sitecore' )
 	);
 }
@@ -298,7 +298,7 @@ function get_column_image( $post_ID ) {
 	}
 
 	// Apply a filter for conditional modification.
-	$thumbnail = apply_filters( 'scp_column_thumbnail_size', $size );
+	$thumbnail = apply_filters( 'tmg_column_thumbnail_size', $size );
 
 	// If there is an ID (if the post has a featured image).
 	if ( $post_thumbnail_id ) {
@@ -328,7 +328,7 @@ function image_column_head( $defaults ) {
 	$name = __( 'Featured Image', 'sitecore' );
 
 	// Apply a filter for conditional modification.
-	$heading = apply_filters( 'scp_image_column_head', $name );
+	$heading = apply_filters( 'tmg_image_column_head', $name );
 
 	// The column heading name to new `featured_image` column.
 	$defaults['featured_image'] = esc_html__( $heading );
@@ -369,7 +369,7 @@ function image_column_content( $column_name, $post_ID ) {
 
 		// If the post doen't have a featured image then use the fallback image.
 		} else {
-			echo '<img src="' . esc_url( SCP_URL . 'assets/images/featured-image-placeholder.png' ) . '" alt="' . __( 'No featured image available', 'sitecore' ) . '" width="48px" height="48px" />';
+			echo '<img src="' . esc_url( TMG_URL . 'assets/images/featured-image-placeholder.png' ) . '" alt="' . __( 'No featured image available', 'sitecore' ) . '" width="48px" height="48px" />';
 		}
 	}
 }

@@ -2,14 +2,14 @@
 /**
  * Form fields for allow user editor option
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Views
  * @category   Forms
  * @since      1.0.0
  */
 
 // Alias namespaces.
-use SiteCore\Classes\Core as Core;
+use Totem\Classes\Core as Core;
 
 // Editor settings.
 $settings = Core\Editor_Options :: get_settings( 'refresh' );

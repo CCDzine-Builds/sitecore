@@ -2,7 +2,7 @@
 /**
  * ACF content for sample post type in taxonomy archive
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Views
  * @category   Front
  * @since      1.0.0

@@ -2,7 +2,7 @@
 /**
  * Content for sample post type archive
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Views
  * @category   Front
  * @since      1.0.0
@@ -30,7 +30,7 @@ printf(
 
 printf(
 	__( '<p>The template for this notice is in the %s plugin.</p>', 'sitecore' ),
-	SCP_NAME
+	TMG_NAME
 );
 
 // Append content with shortcode.

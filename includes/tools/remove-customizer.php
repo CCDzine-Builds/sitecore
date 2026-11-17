@@ -2,13 +2,13 @@
 /**
  * Remove Customizer
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Includes
  * @category   Tools
  * @since      1.0.0
  */
 
-namespace SiteCore\Remove_Customizer;
+namespace Totem\Remove_Customizer;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -45,7 +45,7 @@ function remove() {
 	};
 
 	// If the Customizer is disabled in the system config file.
-	if ( ( defined( 'SCP_ALLOW_CUSTOMIZER' ) && false == SCP_ALLOW_CUSTOMIZER ) && ! current_user_can( 'develop' ) ) {
+	if ( ( defined( 'TMG_ALLOW_CUSTOMIZER' ) && false == TMG_ALLOW_CUSTOMIZER ) && ! current_user_can( 'develop' ) ) {
 
 		// Remove Customizer parts.
 		add_action( 'admin_init', $ns( 'init' ), 10 );

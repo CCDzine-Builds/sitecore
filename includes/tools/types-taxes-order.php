@@ -2,13 +2,13 @@
 /**
  * Drag & drop custom post and taxonomy orders
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Includes
  * @category   Tools
  * @since      1.0.0
  */
 
-namespace SiteCore\Types_Taxes_Order;
+namespace Totem\Types_Taxes_Order;
 
 // Restrict direct access.
 if ( ! defined( 'WPINC' ) ) {
@@ -81,7 +81,7 @@ function options_page() {
  *       moved to the Reading Settings page.
  */
 function options_page_html() {
-	require SCP_PATH . 'views/backend/forms/settings-page-posts-order.php';
+	require TMG_PATH . 'views/backend/forms/settings-page-posts-order.php';
 }
 
 /**
@@ -148,7 +148,7 @@ function load_assets() {
 
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'jquery-ui-sortable' );
-		wp_enqueue_script( 'post-tax-order', SCP_URL . 'assets/js/post-tax-order' . $suffix . '.js', [ 'jquery' ], null, true );
+		wp_enqueue_script( 'post-tax-order', TMG_URL . 'assets/js/post-tax-order' . $suffix . '.js', [ 'jquery' ], null, true );
 	}
 }
 
@@ -331,11 +331,11 @@ function update_options() {
 
 	global $wpdb;
 
-	if ( ! isset( $_POST['scp_posts_order_submit'] ) ) {
+	if ( ! isset( $_POST['tmg_posts_order_submit'] ) ) {
 		return false;
 	}
 
-	check_admin_referer( 'scp_posts_order_nonce' );
+	check_admin_referer( 'tmg_posts_order_nonce' );
 
 	$input_options            = [];
 	$input_options['objects'] = isset( $_POST['objects'] ) ? $_POST['objects'] : '';
@@ -666,14 +666,14 @@ function taxcmp( $a, $b ) {
  */
 function get_order_options_objects() {
 
-	if ( $scp_order_options = get_option( 'sort_order_options' ) ) {
-		$scp_order_options = get_option( 'sort_order_options' );
+	if ( $tmg_order_options = get_option( 'sort_order_options' ) ) {
+		$tmg_order_options = get_option( 'sort_order_options' );
 	} else {
-		$scp_order_options = [];
+		$tmg_order_options = [];
 	}
 
-	if ( isset( $scp_order_options['objects'] ) && is_array( $scp_order_options['objects'] ) ) {
-		$objects = $scp_order_options['objects'];
+	if ( isset( $tmg_order_options['objects'] ) && is_array( $tmg_order_options['objects'] ) ) {
+		$objects = $tmg_order_options['objects'];
 	} else {
 		$objects = [];
 	}
@@ -688,14 +688,14 @@ function get_order_options_objects() {
  */
 function get_order_options_tags() {
 
-	if ( $scp_order_options = get_option( 'sort_order_options' ) ) {
-		$scp_order_options = get_option( 'sort_order_options' );
+	if ( $tmg_order_options = get_option( 'sort_order_options' ) ) {
+		$tmg_order_options = get_option( 'sort_order_options' );
 	} else {
-		$scp_order_options = [];
+		$tmg_order_options = [];
 	}
 
-	if ( isset( $scp_order_options['tags'] ) && is_array( $scp_order_options['tags'] ) ) {
-		$tags = $scp_order_options['tags'];
+	if ( isset( $tmg_order_options['tags'] ) && is_array( $tmg_order_options['tags'] ) ) {
+		$tags = $tmg_order_options['tags'];
 	} else {
 		$tags = [];
 	}

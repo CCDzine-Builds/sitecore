@@ -2,7 +2,7 @@
 /**
  * ACF customize dashboard tab
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Views
  * @category   Widgets
  * @since      1.0.0
@@ -11,7 +11,7 @@
 // Get icon URL or fallbacks.
 $theme_icon_path = get_theme_file_path( '/assets/images/theme-icon.jpg' );
 $theme_icon_url  = get_theme_file_uri( '/assets/images/theme-icon.jpg' );
-$brush_icon_url  = SCP_URL . 'assets/images/theme-brush-icon.svg';
+$brush_icon_url  = TMG_URL . 'assets/images/theme-brush-icon.svg';
 $get_site_logo   = get_theme_mod( 'custom_logo' );
 $site_logo_url   = wp_get_attachment_image_src( $get_site_logo, 'admin-avatar' );
 $get_header_img  = get_custom_header();

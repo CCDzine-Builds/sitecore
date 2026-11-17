@@ -2,13 +2,13 @@
 /**
  * Remove blog
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Includes
  * @category   Core
  * @since      1.0.0
  */
 
-namespace SiteCore\Remove_Blog;
+namespace Totem\Remove_Blog;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {

@@ -2,13 +2,13 @@
 /**
  * Features settings fields
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Classes
  * @category   Settings
  * @since      1.0.0
  */
 
-namespace SiteCore\Classes\Settings;
+namespace Totem\Classes\Settings;
 
 class Settings_Fields_Features extends Settings_Fields {
 
@@ -27,7 +27,7 @@ class Settings_Fields_Features extends Settings_Fields {
 				'title'    => __( 'Site Keywords', 'sitecore' ),
 				'callback' => [ $this, 'meta_site_keywords_callback' ],
 				'page'     => 'custom-content',
-				'section'  => 'scp-options-features',
+				'section'  => 'tmg-options-features',
 				'type'     => 'textarea',
 				'args'     => [
 					'description' => null,
@@ -52,7 +52,7 @@ class Settings_Fields_Features extends Settings_Fields {
 	 */
 	public function meta_site_keywords_sanitize() {
 		$option = wp_strip_all_tags( get_option( 'meta_site_keywords' ), false );
-		return apply_filters( 'scp_meta_site_keywords', $option );
+		return apply_filters( 'tmg_meta_site_keywords', $option );
 	}
 
 	/**

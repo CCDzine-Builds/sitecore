@@ -2,15 +2,15 @@
 /**
  * Admin forms settings fields
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Classes
  * @category   Settings
  * @since      1.0.0
  */
 
-namespace SiteCore\Classes\Settings;
+namespace Totem\Classes\Settings;
 
-use function SiteCore\Core\platform_name;
+use function Totem\Core\platform_name;
 
 class Settings_Fields_Admin_Forms extends Settings_Fields {
 
@@ -29,7 +29,7 @@ class Settings_Fields_Admin_Forms extends Settings_Fields {
 				'title'    => __( 'Email From Text', 'sitecore' ),
 				'callback' => [ $this, 'email_from_name_callback' ],
 				'page'     => 'options-admin',
-				'section'  => 'scp-settings-section-admin-forms',
+				'section'  => 'tmg-settings-section-admin-forms',
 				'type'     => 'checkbox',
 				'args'     => [
 					'description' => sprintf(
@@ -61,7 +61,7 @@ class Settings_Fields_Admin_Forms extends Settings_Fields {
 
 		if ( ! empty( $option ) && ! ctype_space( $option ) ) {
 			$option = esc_html( $option );
-			return apply_filters( 'scp_email_from_name', $option );
+			return apply_filters( 'tmg_email_from_name', $option );
 		}
 		return null;
 	}

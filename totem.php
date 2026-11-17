@@ -1,15 +1,15 @@
 <?php
 /**
- * Site Core plugin
+ * Totem plugin
  *
  * Develop site-specific plugins for ClassicPress and WordPress.
  *
- * @package  Site_Core
+ * @package  Totem
  * @category Core
  * @since    1.0.0
  * @link     https://github.com/CCDzine-Builds/sitecore
  *
- * Plugin Name:       Site Core
+ * Plugin Name:       Totem
  * Plugin URI:        https://github.com/CCDzine-Builds/sitecore
  * Description:       Develop site-specific plugins for ClassicPress and WordPres.
  * Version:           1.0.0
@@ -27,7 +27,7 @@
  * Network:           true
  */
 
-namespace SiteCore;
+namespace Totem;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -35,110 +35,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * License & Warranty
- *
- * This product is free software. It can be redistributed and/or modified
- * ad libidum. There is no license distributed with this product.
- *
- * This product is distributed WITHOUT ANY WARRANTY; without even the implied
- * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
- *
- * @see DISCLAIMER.md
- */
-
-/**
- * Author's Note
- *
- * To all who may read this,
- *
- * I hope you find this code to be easily deciphered. I have
- * learned much by examining the code of well written & well
- * documented products so I have done my best to document this
- * code with comments where necessary, even where not necessary,
- * and by using logical, descriptive names for PHP classes &
- * methods, HTML IDs, CSS classes, etc.
- *
- * Beginners, note that the short array syntax ( `[]` rather than
- * `array()` ) is used. Use of the `array()` function is encouraged
- * by some to make the code more easily read by beginners. I argue
- * that beginners will inevitably encounter the short array syntax
- * so they may as well learn to recognize this early. If the code
- * is well documented then it will be clear when the brackets (`[]`)
- * represent an array. And someday you too will be writing many
- * arrays in your code and you will find the short syntax to be
- * a time saver. Let's not unnecessarily dumb-down code; y'all
- * are smart folk if you are reading this and you'll figure it out
- * like I did.
- *
- * Greg Sweet, Controlled Chaos Design, former mule packer, cook,
- * landscaper, & janitor who learned PHP by breaking stuff and by
- * reading code comments.
- */
-
-/**
- * Renaming & rebranding the plugin
- *
- * First change the name of this file to reflect the new name of your plugin.
- * Or leave the name since it clearly describes the purpose of the plugin.
- *
- * Next change the information above in the plugin header and either change
- * the plugin name in the License & Warranty notice or remove it.
- *
- * Following is a list of strings to find and replace in all plugin files.
- *
- * 1. Plugin name
- *    Find `Site Core` and replace with your plugin name.
- *
- * 2. Package
- *    Find `Site_Core` and replace with your plugin name. This will
- *    change the package name in file headers.
- *
- * 3. Namespace
- *    Find `SiteCore` and replace with something unique to your plugin.
- *
- * 4. Text domain
- *    Find `sitecore` and replace with the new name of your
- *    primary plugin file (this file). It is standard to match the domain
- *    with the file name but this is not required to run the code.
- *
- * 5. Admin page slug
- *    Find `site-core` and replace with the new base slug of your
- *    plugin's admin pages.
- *
- * 6. Constants prefix
- *    Find `SCP` and replace with something unique to your plugin. Use
- *    only uppercase letters.
- *
- * 7. General prefix
- *    Find `scp` and replace with something unique to your plugin name. Use
- *    only lowercase letters. This will change the prefix of all filters and
- *    settings, and the prefix of functions outside of a class.
- *
- * 8. Constants
- *    See the `includes/config.php` file to change developer/agency details,
- *    plugin name & URL, plus more personal or white-label constants.
- *
- * 9. Plugin URI:
- *    Find `https://github.com/CCDzine-Builds/sitecore` and replace with the
- *    URI of your plugin.
- *
- * 10. Change the developer backup account info in the `Users` class.
- *     @see includes/classes/users/class-users.php
- *
- * 11. Edit the README file in the root directory as needed, or delete it.
- *
- * 12. Finally, remember to modify or remove any instructional information in
- * admin pages, including contextual help tabs. Remove these renaming
- * instructions as desired.
- */
-
-/**
  * Constant: Plugin base name
  *
  * @since 1.0.0
  * @var   string The base name of this plugin file.
  */
-define( 'SCP_BASENAME', plugin_basename( __FILE__ ) );
+define( 'TMG_BASENAME', plugin_basename( __FILE__ ) );
 
 // Maybe get plugin file to check for other plugins.
 $get_plugin = ABSPATH . 'wp-admin/includes/plugin.php';
@@ -158,13 +60,13 @@ function load_plugin_textdomain() {
 	\load_plugin_textdomain(
 		'sitecore',
 		false,
-		dirname( SCP_BASENAME ) . '/languages'
+		dirname( TMG_BASENAME ) . '/languages'
 	);
 
 	// If this plugin is in the must-use plugins directory.
 	\load_muplugin_textdomain(
 		'sitecore',
-		dirname( SCP_BASENAME ) . '/languages'
+		dirname( TMG_BASENAME ) . '/languages'
 	);
 }
 add_action( 'init', __NAMESPACE__ . '\load_plugin_textdomain' );
@@ -194,9 +96,9 @@ function plugin_page_link( $links ) {
 		return $links;
 	}
 
-	$url  = apply_filters( 'scp_plugin_page_link_url', $page );
+	$url  = apply_filters( 'tmg_plugin_page_link_url', $page );
 	$html = sprintf(
-			'<a href="%s" class="scp-plugin-page-link">%s</a>',
+			'<a href="%s" class="tmg-plugin-page-link">%s</a>',
 			esc_url( admin_url( $url ) ),
 			__( 'Help', 'sitecore' )
 	);
@@ -205,7 +107,7 @@ function plugin_page_link( $links ) {
 	return array_merge( $link, $links );
 }
 add_action( 'plugins_loaded', function() {
-	add_filter( 'plugin_action_links_' . SCP_BASENAME, __NAMESPACE__ . '\plugin_page_link' );
+	add_filter( 'plugin_action_links_' . TMG_BASENAME, __NAMESPACE__ . '\plugin_page_link' );
 } );
 
 // Get plugin configuration file.
@@ -218,8 +120,8 @@ require plugin_dir_path( __FILE__ ) . 'config.php';
  * for PHP version which otherwise disables the functionality of
  * the plugin.
  */
-include_once SCP_PATH . 'includes/activate/activate.php';
-include_once SCP_PATH . 'includes/activate/deactivate.php';
+include_once TMG_PATH . 'includes/activate/activate.php';
+include_once TMG_PATH . 'includes/activate/deactivate.php';
 
 /**
  * Register the activation & deactivation hooks
@@ -314,4 +216,4 @@ if ( IS_WPCOM ) {
 }
 
 // Get the plugin initialization file.
-require_once SCP_PATH . 'init.php';
+require_once TMG_PATH . 'init.php';

@@ -2,7 +2,7 @@
 /**
  * Sample widget form
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Views
  * @category   Front, Widgets
  * @since      1.0.0

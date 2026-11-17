@@ -2,15 +2,15 @@
 /**
  * Various utilities
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Includes
  * @category   Tools
  * @since      1.0.0
  */
 
-namespace SiteCore\Tools;
+namespace Totem\Tools;
 
-use SiteCore\{
+use Totem\{
 	Classes\Core      as Core_Class,
 	Classes\Tools     as Tools_Class,
 	Types_Taxes_Order as Types_Taxes_Order,
@@ -123,7 +123,7 @@ function is_tools_screen() {
  */
 function dev_settings_page() {
 
-	if ( class_exists( 'SiteCore\Classes\Admin\Developer_Settings_Page', ) ) {
+	if ( class_exists( 'Totem\Classes\Admin\Developer_Settings_Page', ) ) {
 		return true;
 	}
 	return false;

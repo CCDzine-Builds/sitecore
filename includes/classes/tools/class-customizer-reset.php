@@ -4,15 +4,15 @@
  *
  * Resets customizations to the active theme.
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Classes
  * @category   Tools
  * @since      1.0.0
  */
 
-namespace SiteCore\Classes\Tools;
+namespace Totem\Classes\Tools;
 
-use function SiteCore\Core\can_fse;
+use function Totem\Core\can_fse;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -84,10 +84,10 @@ final class Customizer_Reset {
 		}
 
 		// Enqueue the script for button and AJAX.
-		wp_enqueue_script( 'scp-customizer-reset', SCP_URL . 'assets/js/customizer-reset' . $suffix . '.js', [ 'jquery' ], '20150120' );
+		wp_enqueue_script( 'tmg-customizer-reset', TMG_URL . 'assets/js/customizer-reset' . $suffix . '.js', [ 'jquery' ], '20150120' );
 
 		// Localize the above script.
-		wp_localize_script( 'scp-customizer-reset', 'SCP_CustomizerReset', [
+		wp_localize_script( 'tmg-customizer-reset', 'TMG_CustomizerReset', [
 			'reset'   => __( 'Reset', 'sitecore' ),
 			'confirm' => __( 'Warning! This will remove all changes made to this theme via the Customizer. This action is irreversible.', 'sitecore' ),
 			'nonce'   => [

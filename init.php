@@ -2,16 +2,16 @@
 /**
  * Initialize plugin functionality
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Init
  * @category   Core
  * @since      1.0.0
  */
 
-namespace SiteCore;
+namespace Totem;
 
 // Alias namespaces.
-use SiteCore\Classes\Autoload as Autoload;
+use Totem\Classes\Autoload as Autoload;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -19,38 +19,38 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Autoload classes.
-require_once SCP_PATH . 'includes/classes/autoload.php';
+require_once TMG_PATH . 'includes/classes/autoload.php';
 Autoload\classes();
 
 // Load required files.
-foreach ( glob( SCP_PATH . 'includes/core/*.php' ) as $filename ) {
+foreach ( glob( TMG_PATH . 'includes/core/*.php' ) as $filename ) {
 	require $filename;
 }
-foreach ( glob( SCP_PATH . 'includes/settings/*.php' ) as $filename ) {
+foreach ( glob( TMG_PATH . 'includes/settings/*.php' ) as $filename ) {
 	require $filename;
 }
-foreach ( glob( SCP_PATH . 'includes/media/*.php' ) as $filename ) {
+foreach ( glob( TMG_PATH . 'includes/media/*.php' ) as $filename ) {
 	require $filename;
 }
-foreach ( glob( SCP_PATH . 'includes/network/*.php' ) as $filename ) {
+foreach ( glob( TMG_PATH . 'includes/network/*.php' ) as $filename ) {
 	require $filename;
 }
-foreach ( glob( SCP_PATH . 'includes/backend/*.php' ) as $filename ) {
+foreach ( glob( TMG_PATH . 'includes/backend/*.php' ) as $filename ) {
 	require $filename;
 }
-foreach ( glob( SCP_PATH . 'includes/frontend/*.php' ) as $filename ) {
+foreach ( glob( TMG_PATH . 'includes/frontend/*.php' ) as $filename ) {
 	require $filename;
 }
-foreach ( glob( SCP_PATH . 'includes/widgets/*.php' ) as $filename ) {
+foreach ( glob( TMG_PATH . 'includes/widgets/*.php' ) as $filename ) {
 	require $filename;
 }
-foreach ( glob( SCP_PATH . 'includes/users/*.php' ) as $filename ) {
+foreach ( glob( TMG_PATH . 'includes/users/*.php' ) as $filename ) {
 	require $filename;
 }
-foreach ( glob( SCP_PATH . 'includes/tools/*.php' ) as $filename ) {
+foreach ( glob( TMG_PATH . 'includes/tools/*.php' ) as $filename ) {
 	require $filename;
 }
-foreach ( glob( SCP_PATH . 'includes/vendor/*.php' ) as $filename ) {
+foreach ( glob( TMG_PATH . 'includes/vendor/*.php' ) as $filename ) {
 	require $filename;
 }
 

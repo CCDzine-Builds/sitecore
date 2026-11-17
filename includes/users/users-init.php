@@ -2,20 +2,20 @@
 /**
  * Users class
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Includes
  * @category   Users
  * @since      1.0.0
  */
 
-namespace SiteCore\Users;
+namespace Totem\Users;
 
-use SiteCore\{
+use Totem\{
 	Classes       as Classes,
 	Classes\Users as Users_Class
 };
 
-use function SiteCore\Core\is_classicpress;
+use function Totem\Core\is_classicpress;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -67,8 +67,8 @@ function setup() {
 
 	// Ensure developer access.
 	if (
-		( defined( 'SCP_DEV_ACCESS' ) && SCP_DEV_ACCESS ) ||
-		( ! defined( 'SCP_DEV_ACCESS' ) && get_option( 'dev_access', false ) )
+		( defined( 'TMG_DEV_ACCESS' ) && TMG_DEV_ACCESS ) ||
+		( ! defined( 'TMG_DEV_ACCESS' ) && get_option( 'dev_access', false ) )
 	) {
 		add_action( 'init', $ns( 'developer_access' ) );
 		add_action( 'init', $ns( 'developer_access_role' ) );
@@ -191,7 +191,7 @@ function admin_enqueue_scripts() {
 	if ( 'profile.php' == $pagenow || 'user-edit.php' == $pagenow ) {
 		wp_enqueue_script(
 			'visual-editor-biography',
-			SCP_URL . 'assets/js/user-bio' . $suffix . '.js',
+			TMG_URL . 'assets/js/user-bio' . $suffix . '.js',
 			[ 'jquery' ],
 			false,
 			true
@@ -259,7 +259,7 @@ function remove_color_picker() {
 
 	if (
 		get_option( 'disable_admin_color_schemes', false ) ||
-		( defined( 'SCP_ALLOW_ADMIN_COLOR_PICKER' ) && false == SCP_ALLOW_ADMIN_COLOR_PICKER ) )
+		( defined( 'TMG_ALLOW_ADMIN_COLOR_PICKER' ) && false == TMG_ALLOW_ADMIN_COLOR_PICKER ) )
 	{
 		remove_action( 'admin_color_scheme_picker', 'admin_color_scheme_picker' );
 	}
@@ -359,7 +359,7 @@ function remove_editor_styles() {
  * @return void
  */
 function dev_access_name() {
-	return apply_filters( 'scp_dev_access_name', 'Developer' );
+	return apply_filters( 'tmg_dev_access_name', 'Developer' );
 }
 
 /**
@@ -369,7 +369,7 @@ function dev_access_name() {
  * @return void
  */
 function dev_access_password() {
-	return apply_filters( 'scp_dev_access_password', 'LetMeIn!' );
+	return apply_filters( 'tmg_dev_access_password', 'LetMeIn!' );
 }
 
 /**
@@ -379,7 +379,7 @@ function dev_access_password() {
  * @return void
  */
 function dev_access_email() {
-	return apply_filters( 'scp_dev_access_email', 'developer@example.com' );
+	return apply_filters( 'tmg_dev_access_email', 'developer@example.com' );
 }
 
 /**
@@ -415,7 +415,7 @@ function developer_is_current_user() {
 			return true;
 		}
 
-		if ( is_plugin_active_for_network( SCP_BASENAME ) && ! is_network_admin() ) {
+		if ( is_plugin_active_for_network( TMG_BASENAME ) && ! is_network_admin() ) {
 			return false;
 		}
 	}
@@ -804,7 +804,7 @@ function user_colors( $colors = [] ) {
 	}
 
 	// Apply a filter for custom color schemes.
-	return apply_filters( 'scp_user_colors', $colors );
+	return apply_filters( 'tmg_user_colors', $colors );
 }
 
 /**
@@ -971,7 +971,7 @@ function user_notify_colors( $colors = [] ) {
 	}
 
 	// The array of colors.
-	return apply_filters( 'scp_user_notify_colors', $colors );
+	return apply_filters( 'tmg_user_notify_colors', $colors );
 }
 
 /**
@@ -1037,15 +1037,15 @@ function user_can_develop() {
 /**
  * Developer lock
  *
- * Returns true if the `SCP_DEV_LOCK` has been
+ * Returns true if the `TMG_DEV_LOCK` has been
  * defined as true in `wp-config.php`.
  *
  * @since  1.0.0
  * @return boolean
  */
  function developer_lock() {
-	 if ( defined( 'SCP_DEV_LOCK' ) ) {
-		 if ( SCP_DEV_LOCK ) {
+	 if ( defined( 'TMG_DEV_LOCK' ) ) {
+		 if ( TMG_DEV_LOCK ) {
 			 return true;
 		 }
 	 }

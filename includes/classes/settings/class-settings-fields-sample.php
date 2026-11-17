@@ -2,13 +2,13 @@
 /**
  * Sample settings fields
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Classes
  * @category   Settings
  * @since      1.0.0
  */
 
-namespace SiteCore\Classes\Settings;
+namespace Totem\Classes\Settings;
 
 class Settings_Fields_Sample extends Settings_Fields {
 
@@ -22,7 +22,7 @@ class Settings_Fields_Sample extends Settings_Fields {
 	public function __construct() {
 
 		$array = [
-			'section'    => 'scp-settings-section-sample',
+			'section'    => 'tmg-settings-section-sample',
 			'add_fields' => false
 		];
 
@@ -32,7 +32,7 @@ class Settings_Fields_Sample extends Settings_Fields {
 				'title'    => __( 'Sample Field #1', 'sitecore' ),
 				'callback' => [ $this, 'sample_field_one_callback' ],
 				'page'     => 'general',
-				'section'  => 'scp-settings-section-sample',
+				'section'  => 'tmg-settings-section-sample',
 				'type'     => 'checkbox',
 				'args'     => [
 					'description' => __( 'Sample field one description.', 'sitecore' ),
@@ -44,7 +44,7 @@ class Settings_Fields_Sample extends Settings_Fields {
 				'title'    => __( 'Sample Field #2', 'sitecore' ),
 				'callback' => [ $this, 'sample_field_two_callback' ],
 				'page'     => 'general',
-				'section'  => 'scp-settings-section-sample',
+				'section'  => 'tmg-settings-section-sample',
 				'type'     => 'radio',
 				'args'     => [
 					'description' => __( 'Sample field two description.', 'sitecore' ),
@@ -56,7 +56,7 @@ class Settings_Fields_Sample extends Settings_Fields {
 				'title'    => __( 'Sample Field #3', 'sitecore' ),
 				'callback' => [ $this, 'sample_field_three_callback' ],
 				'page'     => 'general',
-				'section'  => 'scp-settings-section-sample',
+				'section'  => 'tmg-settings-section-sample',
 				'type'     => 'select',
 				'args'     => [
 					'description' => __( 'Sample field three description.', 'sitecore' ),
@@ -69,7 +69,7 @@ class Settings_Fields_Sample extends Settings_Fields {
 				'title'    => __( 'Sample Field #4', 'sitecore' ),
 				'callback' => [ $this, 'sample_field_four_callback' ],
 				'page'     => 'general',
-				'section'  => 'scp-settings-section-sample',
+				'section'  => 'tmg-settings-section-sample',
 				'type'     => 'text',
 				'args'     => [
 					'description' => __( 'Sample field four description.', 'sitecore' ),
@@ -82,7 +82,7 @@ class Settings_Fields_Sample extends Settings_Fields {
 				'title'    => __( 'Sample Field #5', 'sitecore' ),
 				'callback' => [ $this, 'sample_field_five_callback' ],
 				'page'     => 'general',
-				'section'  => 'scp-settings-section-sample',
+				'section'  => 'tmg-settings-section-sample',
 				'type'     => 'textarea',
 				'args'     => [
 					'description' => __( 'Sample field five description.', 'sitecore' ),
@@ -113,7 +113,7 @@ class Settings_Fields_Sample extends Settings_Fields {
 		} else {
 			$option = false;
 		}
-		return apply_filters( 'scp_sample_field_one', $option );
+		return apply_filters( 'tmg_sample_field_one', $option );
 	}
 
 	/**
@@ -133,7 +133,7 @@ class Settings_Fields_Sample extends Settings_Fields {
 		} else {
 			$option = 'b';
 		}
-		return apply_filters( 'scp_sample_field_two', $option );
+		return apply_filters( 'tmg_sample_field_two', $option );
 	}
 
 	/**
@@ -153,7 +153,7 @@ class Settings_Fields_Sample extends Settings_Fields {
 		} else {
 			$option = '';
 		}
-		return apply_filters( 'scp_sample_field_three', $option );
+		return apply_filters( 'tmg_sample_field_three', $option );
 	}
 
 	/**
@@ -165,7 +165,7 @@ class Settings_Fields_Sample extends Settings_Fields {
 	 */
 	public function sample_field_four_sanitize() {
 		$option = wp_strip_all_tags( get_option( 'sample_field_four' ), false );
-		return apply_filters( 'scp_sample_field_four', $option );
+		return apply_filters( 'tmg_sample_field_four', $option );
 	}
 
 	/**
@@ -177,7 +177,7 @@ class Settings_Fields_Sample extends Settings_Fields {
 	 */
 	public function sample_field_five_sanitize() {
 		$option = wp_strip_all_tags( get_option( 'sample_field_five' ), false );
-		return apply_filters( 'scp_sample_field_five', $option );
+		return apply_filters( 'tmg_sample_field_five', $option );
 	}
 
 	/**

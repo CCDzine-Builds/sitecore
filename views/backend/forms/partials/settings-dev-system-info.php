@@ -2,16 +2,16 @@
 /**
  * Form fields for developer user settings tab
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Views
  * @category   Forms
  * @since      1.0.0
  */
 
-namespace SiteCore\Views\Admin;
+namespace Totem\Views\Admin;
 
-use SiteCore\Core as Core,
-	SiteCore\System_Summary as Summary;
+use Totem\Core as Core,
+	Totem\System_Summary as Summary;
 
 /**
  * Tab description
@@ -25,7 +25,7 @@ if ( is_multisite() && is_network_admin() ) {
 	$system_type = __( 'website', 'sitecore' );
 }
 $tab_description = apply_filters(
-	'scp_system_info_description',
+	'tmg_system_info_description',
 	sprintf(
 		__( '<p class="description">Some technical details about the <a href="%s">%s</a> %s.</p>', 'sitecore' ),
 		esc_url( get_site_url( get_current_blog_id() ) ),
@@ -55,11 +55,11 @@ if ( Core\is_classicpress() ) {
 
 ?>
 <div>
-	<?php do_action( 'scp_before_dev_system_info' ); ?>
+	<?php do_action( 'tmg_before_dev_system_info' ); ?>
 
 	<p class="description"><?php echo $tab_description; ?></p>
 
-	<ul class="scp-widget-details-list scp-widget-system-list">
+	<ul class="tmg-widget-details-list tmg-widget-system-list">
 		<li><icon class="dashicons dashicons-editor-code"></icon> <?php echo Summary\php_version(); ?></li>
 		<li><icon class="dashicons <?php echo $database_icon; ?>"></icon> <?php echo Summary\database_version(); ?></li>
 		<li><icon class="dashicons dashicons-dashboard"></icon> <?php echo Summary\system_notice(); ?></li>
@@ -76,5 +76,5 @@ if ( Core\is_classicpress() ) {
 		} ?>
 	</ul>
 
-	<?php do_action( 'scp_after_dev_system_info' ); ?>
+	<?php do_action( 'tmg_after_dev_system_info' ); ?>
 </div>

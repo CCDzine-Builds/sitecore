@@ -5,13 +5,13 @@
  * Use to add settings sections for the
  * ClassicPress/WordPress settings API.
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Classes
  * @category   Settings
  * @since      1.0.0
  */
 
-namespace SiteCore\Classes\Settings;
+namespace Totem\Classes\Settings;
 
 class Settings_Sections {
 

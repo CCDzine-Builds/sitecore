@@ -2,22 +2,22 @@
 /**
  * Form fields for developer user settings tab
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Views
  * @category   Forms
  * @since      1.0.0
  */
 
-namespace SiteCore\Views\Admin;
+namespace Totem\Views\Admin;
 
 ?>
 <div>
-	<?php do_action( 'scp_before_dev_user_tools_settings' ); ?>
+	<?php do_action( 'tmg_before_dev_user_tools_settings' ); ?>
 	<table class="form-table" role="presentation">
 		<?php
 		settings_fields( 'developer-tools' );
-		do_settings_fields( 'developer-tools', 'scp-options-developer-users' );
+		do_settings_fields( 'developer-tools', 'tmg-options-developer-users' );
 		?>
 	</table>
-	<?php do_action( 'scp_after_dev_user_tools_settings' ); ?>
+	<?php do_action( 'tmg_after_dev_user_tools_settings' ); ?>
 </div>

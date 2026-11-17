@@ -7,16 +7,16 @@
  * to bundle third-party plugins with
  * this plugin.
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Classes
  * @category   Vendor
  * @since      1.0.0
  */
 
-namespace SiteCore\Classes\Vendor;
+namespace Totem\Classes\Vendor;
 
 // Alias namespaces.
-use SiteCore as SiteCore;
+use Totem as Totem;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Plugin {
 
 	// Define path to the vendor directory for bundled plugins.
-	CONST SCP_VENDOR_PATH = SCP_PATH . 'includes/vendor/';
+	CONST TMG_VENDOR_PATH = TMG_PATH . 'includes/vendor/';
 
 	/**
 	 * Plugin paths
@@ -132,7 +132,7 @@ class Plugin {
 		 * method will return true by default.
 		 * Define a unique constant in a child class.
 		 */
-		if ( defined( 'SCP_USE_THIS_PLUGIN' ) && false == SCP_USE_THIS_PLUGIN ) {
+		if ( defined( 'TMG_USE_THIS_PLUGIN' ) && false == TMG_USE_THIS_PLUGIN ) {
 			return false;
 		}
 		return true;
@@ -154,7 +154,7 @@ class Plugin {
 		$file = $this->plugin_paths['bundled_file'];
 
 		// Return the path to the core plugin file.
-		return self :: SCP_VENDOR_PATH . $dir . '/' . $file;
+		return self :: TMG_VENDOR_PATH . $dir . '/' . $file;
 	}
 
 	/**
@@ -186,7 +186,7 @@ class Plugin {
 		) {
 			$path = WP_PLUGIN_DIR . '/' . $dir . '/' . $file;
 		}
-		return apply_filters( 'scp_plugin_upgrade_path', $path );
+		return apply_filters( 'tmg_plugin_upgrade_path', $path );
 	}
 
 	/**
@@ -211,7 +211,7 @@ class Plugin {
 		) {
 			$basename = $dir . '/' . $file;
 		}
-		return apply_filters( 'scp_plugin_basic_basename', $basename );
+		return apply_filters( 'tmg_plugin_basic_basename', $basename );
 	}
 
 	/**
@@ -236,7 +236,7 @@ class Plugin {
 		) {
 			$basename = $dir . '/' . $file;
 		}
-		return apply_filters( 'scp_plugin_upgrade_basename', $basename );
+		return apply_filters( 'tmg_plugin_upgrade_basename', $basename );
 	}
 
 	/**
@@ -302,7 +302,7 @@ class Plugin {
 		if ( false == $this->allow_installed ) {
 			$allow = false;
 		}
-		return apply_filters( 'scp_plugin_allow_installed', $allow );
+		return apply_filters( 'tmg_plugin_allow_installed', $allow );
 	}
 
 	/**
@@ -321,7 +321,7 @@ class Plugin {
 		if ( false == $this->allow_upgrade ) {
 			$allow = false;
 		}
-		return apply_filters( 'scp_plugin_allow_upgrade', $allow );
+		return apply_filters( 'tmg_plugin_allow_upgrade', $allow );
 	}
 
 	/**
@@ -432,7 +432,7 @@ class Plugin {
 					<?php echo sprintf(
 						'<p>%s %s %s</p>',
 						__( 'This plugin is not allowed by the', 'sitecore' ),
-						SCP_NAME,
+						TMG_NAME,
 						__( 'plugin to be activated.', 'sitecore' )
 					); ?>
 				</div>

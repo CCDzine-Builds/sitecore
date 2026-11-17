@@ -4,14 +4,14 @@
  *
  * A general use example.
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Views
  * @category   Front
  * @since      1.0.0
  */
 
 // Alias namespaces.
-use SiteCore\Meta_Tags as Meta;
+use Totem\Meta_Tags as Meta;
 
 ?>
 <?php echo "\r"; ?>

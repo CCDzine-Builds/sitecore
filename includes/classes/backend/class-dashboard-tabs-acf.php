@@ -5,13 +5,13 @@
  * Used to replace the tabbed content on
  * the custom user dashboard.
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Classes
  * @category   Admin
  * @since      1.0.0
  */
 
-namespace SiteCore\Classes\Admin;
+namespace Totem\Classes\Admin;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -69,7 +69,7 @@ class Dashboard_Tabs_ACF extends Add_Page {
 	 * @return void
 	 */
 	public function acf_field_groups() {
-		include_once SCP_PATH . '/includes/fields/acf-dashboard-tabs.php';
+		include_once TMG_PATH . '/includes/fields/acf-dashboard-tabs.php';
 	}
 
 	/**

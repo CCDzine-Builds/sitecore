@@ -2,13 +2,13 @@
 /**
  * Developer content tools settings fields
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Classes
  * @category   Settings
  * @since      1.0.0
  */
 
-namespace SiteCore\Classes\Settings;
+namespace Totem\Classes\Settings;
 
 class Settings_Fields_Developer_Content extends Settings_Fields {
 
@@ -27,7 +27,7 @@ class Settings_Fields_Developer_Content extends Settings_Fields {
 				'title'    => __( 'Enable Translations', 'sitecore' ),
 				'callback' => [ $this, 'enable_text_domain_callback' ],
 				'page'     => 'developer-tools',
-				'section'  => 'scp-options-developer-content',
+				'section'  => 'tmg-options-developer-content',
 				'type'     => 'checkbox',
 				'args'     => [
 					'description' => __( 'Fetch translation files if provided. Otherwise loads only US English.', 'sitecore' ),
@@ -39,7 +39,7 @@ class Settings_Fields_Developer_Content extends Settings_Fields {
 				'title'    => __( 'Enable Meta Tags', 'sitecore' ),
 				'callback' => [ $this, 'enable_meta_tags_callback' ],
 				'page'     => 'developer-tools',
-				'section'  => 'scp-options-developer-content',
+				'section'  => 'tmg-options-developer-content',
 				'type'     => 'checkbox',
 				'args'     => [
 					'description' => __( 'Add frontend meta data tags for SEO and embed display.', 'sitecore' ),
@@ -51,7 +51,7 @@ class Settings_Fields_Developer_Content extends Settings_Fields {
 				'title'    => __( 'Enable Structured Data', 'sitecore' ),
 				'callback' => [ $this, 'enable_structured_data_callback' ],
 				'page'     => 'developer-tools',
-				'section'  => 'scp-options-developer-content',
+				'section'  => 'tmg-options-developer-content',
 				'type'     => 'checkbox',
 				'args'     => [
 					'description' => __( 'Add frontend structured data to the head.', 'sitecore' ),

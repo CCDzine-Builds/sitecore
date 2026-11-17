@@ -2,15 +2,15 @@
 /**
  * Admin footer settings fields
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Classes
  * @category   Settings
  * @since      1.0.0
  */
 
-namespace SiteCore\Classes\Settings;
+namespace Totem\Classes\Settings;
 
-use function SiteCore\Core\platform_name;
+use function Totem\Core\platform_name;
 
 class Settings_Fields_Admin_Footer extends Settings_Fields {
 
@@ -29,7 +29,7 @@ class Settings_Fields_Admin_Footer extends Settings_Fields {
 				'title'    => __( 'Enable Custom Footer', 'sitecore' ),
 				'callback' => [ $this, 'enable_custom_admin_footer_callback' ],
 				'page'     => 'options-admin',
-				'section'  => 'scp-settings-section-admin-footer',
+				'section'  => 'tmg-settings-section-admin-footer',
 				'type'     => 'checkbox',
 				'args'     => [
 					'description' => sprintf(
@@ -62,7 +62,7 @@ class Settings_Fields_Admin_Footer extends Settings_Fields {
 		} else {
 			$option = false;
 		}
-		return apply_filters( 'scp_enable_custom_admin_footer', $option );
+		return apply_filters( 'tmg_enable_custom_admin_footer', $option );
 	}
 
 	/**

@@ -2,7 +2,7 @@
 /**
  * Settings for drag & drop custom post and taxonomy orders.
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Views
  * @category   Forms
  * @since      1.0.0
@@ -50,14 +50,14 @@ if ( isset( $options['tags'] ) ) {
         </div>
     <?php endif; ?>
     <form method="post">
-        <?php if ( function_exists( 'wp_nonce_field' ) ) { wp_nonce_field( 'scp_posts_order_nonce' ); } ?>
+        <?php if ( function_exists( 'wp_nonce_field' ) ) { wp_nonce_field( 'tmg_posts_order_nonce' ); } ?>
         <div id="posts_order_select">
             <table class="form-table">
                 <tbody>
                     <tr valign="top">
                         <th scope="row"><?php _e( 'Check to Sort Post Types', 'sitecore' ) ?></th>
                         <td>
-                            <label><input type="checkbox" id="scp_order_check_all_post_types"> <?php _e( 'Check All', 'sitecore' ) ?></label><br>
+                            <label><input type="checkbox" id="tmg_order_check_all_post_types"> <?php _e( 'Check All', 'sitecore' ) ?></label><br>
                             <?php
                             // Get all registered public post types.
                             $post_types = get_post_types(
@@ -94,7 +94,7 @@ if ( isset( $options['tags'] ) ) {
                     <tr valign="top">
                         <th scope="row"><?php _e( 'Check to Sort Taxonomies', 'sitecore' ) ?></th>
                         <td>
-                            <label><input type="checkbox" id="scp_order_check_all_taxonomies"> <?php _e( 'Check All', 'sitecore' ) ?></label><br>
+                            <label><input type="checkbox" id="tmg_order_check_all_taxonomies"> <?php _e( 'Check All', 'sitecore' ) ?></label><br>
                             <?php
                             // Get all registered public taxonomies.
                             $taxonomies = get_taxonomies(
@@ -124,7 +124,7 @@ if ( isset( $options['tags'] ) ) {
             </table>
         </div>
         <p class="submit">
-            <input type="submit" class="button-primary" name="scp_posts_order_submit" value="<?php _e( 'Save Changes', 'sitecore' ); ?>">
+            <input type="submit" class="button-primary" name="tmg_posts_order_submit" value="<?php _e( 'Save Changes', 'sitecore' ); ?>">
         </p>
     </form>
 </div>
@@ -132,7 +132,7 @@ if ( isset( $options['tags'] ) ) {
 ( function ($) {
 
     // Handle the Check All input for post types.
-    $( '#scp_order_check_all_post_types' ).on( 'click', function () {
+    $( '#tmg_order_check_all_post_types' ).on( 'click', function () {
         var items = $( '#posts_order_select input' );
         if ( $(this).is( ':checked' ) ) {
             $(items).prop( 'checked', true );
@@ -142,7 +142,7 @@ if ( isset( $options['tags'] ) ) {
     });
 
     // Handle the Check All input for taxonomies.
-    $( '#scp_order_check_all_taxonomies' ).on( 'click', function () {
+    $( '#tmg_order_check_all_taxonomies' ).on( 'click', function () {
         var items = $( '#terms_order_select input' );
         if ( $(this).is( ':checked' ) ) {
             $(items).prop( 'checked', true );

@@ -2,7 +2,7 @@
 /**
  * ACF content for singular sample post type
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Views
  * @category   Front
  * @since      1.0.0
@@ -30,13 +30,13 @@ printf(
 
 printf(
 	__( '<p>This template is being displayed because the sample content filter class in the %s plugin has been instantiated. This template is also being displayed because the Advanced Custom Fields plugin is active or the bundled Applied Content Forms files in the %s plugin are included.</p>', 'sitecore' ),
-	SCP_NAME,
-	SCP_NAME
+	TMG_NAME,
+	TMG_NAME
 );
 
 printf(
 	__( '<p>The template for this notice is in the %s plugin.</p>', 'sitecore' ),
-	SCP_NAME
+	TMG_NAME
 );
 
 // Append content with shortcode.

@@ -7,16 +7,16 @@
  * more elegant than the native `die()` screen
  * provided by the management system.
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Includes
  * @category   Activate
  * @since      1.0.0
  */
 
-namespace SiteCore\Activate;
+namespace Totem\Activate;
 
 // Alias namespaces.
-use SiteCore\Classes as Classes;
+use Totem\Classes as Classes;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -48,8 +48,8 @@ function options() {
 	];
 
 	// Local avatars for option update.
-	$mystery = esc_url( SCP_URL . 'assets/images/mystery.png' );
-	$blank   = esc_url( SCP_URL . 'assets/images/blank.png' );
+	$mystery = esc_url( TMG_URL . 'assets/images/mystery.png' );
+	$blank   = esc_url( TMG_URL . 'assets/images/blank.png' );
 
 	/**
 	 * If this is a fresh site, if no default is set, or if mystery Gravatar
@@ -75,7 +75,7 @@ function options() {
  * @return void
  */
 function get_row_notice() {
-	add_action( 'after_plugin_row_' . SCP_BASENAME, __NAMESPACE__ . '\row_notice', 5, 3 );
+	add_action( 'after_plugin_row_' . TMG_BASENAME, __NAMESPACE__ . '\row_notice', 5, 3 );
 }
 
 /**
@@ -95,8 +95,8 @@ function row_notice( $plugin_file, $plugin_data, $status ) {
 
 	?>
 	<style>
-		.plugins tr[data-plugin='<?php echo SCP_BASENAME; ?>'] th,
-		.plugins tr[data-plugin='<?php echo SCP_BASENAME; ?>'] td {
+		.plugins tr[data-plugin='<?php echo TMG_BASENAME; ?>'] th,
+		.plugins tr[data-plugin='<?php echo TMG_BASENAME; ?>'] td {
 			box-shadow: none;
 		}
 
@@ -119,9 +119,9 @@ function row_notice( $plugin_file, $plugin_data, $status ) {
 				<?php echo sprintf(
 					'<p>%s %s %s %s %s %s</p>',
 					__( 'Functionality of the', 'sitecore' ),
-					SCP_NAME,
+					TMG_NAME,
 					__( 'plugin has been disabled because it requires PHP version', 'sitecore' ),
-					SCP_MIN_PHP_VERSION,
+					TMG_MIN_PHP_VERSION,
 					__( 'or greater. Your system is running PHP version', 'sitecore' ),
 					phpversion()
 				); ?>
@@ -154,9 +154,9 @@ function php_notice() {
 		<?php echo sprintf(
 			'<p>%s %s %s %s %s %s</p>',
 			__( 'Functionality of the', 'sitecore' ),
-			SCP_NAME,
+			TMG_NAME,
 			__( 'plugin has been disabled because it requires PHP version', 'sitecore' ),
-			SCP_MIN_PHP_VERSION,
+			TMG_MIN_PHP_VERSION,
 			__( 'or greater. Your system is running PHP version', 'sitecore' ),
 			phpversion()
 		); ?>
@@ -177,19 +177,19 @@ function megalomattic_notice() {
 	global $page, $s, $status;
 
 	// Deactivation link.
-	$deactivate = 'plugins.php?action=deactivate&amp;plugin=' . urlencode( SCP_BASENAME ) . '&amp;plugin_status=' . $status . '&amp;paged=' . $page . '&amp;s=' . $s;
+	$deactivate = 'plugins.php?action=deactivate&amp;plugin=' . urlencode( TMG_BASENAME ) . '&amp;plugin_status=' . $status . '&amp;paged=' . $page . '&amp;s=' . $s;
 
 	$notice = sprintf(
 		'%s %s %s',
 		__( 'The', 'sitecore' ),
-		SCP_NAME,
+		TMG_NAME,
 		__( 'plugin is not allowed to be used for websites hosted by WordPress[dot]com.', 'sitecore' )
 	);
 
-	if ( current_user_can( 'deactivate_plugin', SCP_BASENAME ) ) {
+	if ( current_user_can( 'deactivate_plugin', TMG_BASENAME ) ) {
 		$notice .= sprintf(
 			' <a href="%s">%s</a>',
-			wp_nonce_url( $deactivate, 'deactivate-plugin_' . SCP_BASENAME ),
+			wp_nonce_url( $deactivate, 'deactivate-plugin_' . TMG_BASENAME ),
 			__( 'Deactivate', 'sitecore' )
 		);
 	}

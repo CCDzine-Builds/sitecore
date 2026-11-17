@@ -2,15 +2,15 @@
 /**
  * Meta tags settings fields
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Classes
  * @category   Settings
  * @since      1.0.0
  */
 
-namespace SiteCore\Classes\Settings;
+namespace Totem\Classes\Settings;
 
-use function SiteCore\Meta_Tags\copyright_default;
+use function Totem\Meta_Tags\copyright_default;
 
 class Settings_Fields_Meta_Tags extends Settings_Fields {
 
@@ -29,7 +29,7 @@ class Settings_Fields_Meta_Tags extends Settings_Fields {
 				'title'    => __( 'Site Keywords', 'sitecore' ),
 				'callback' => [ $this, 'meta_site_keywords_callback' ],
 				'page'     => 'custom-content',
-				'section'  => 'scp-options-meta-tags',
+				'section'  => 'tmg-options-meta-tags',
 				'type'     => 'textarea',
 				'args'     => [
 					'description' => null,
@@ -45,7 +45,7 @@ class Settings_Fields_Meta_Tags extends Settings_Fields {
 				'title'    => __( 'Front Page Description', 'sitecore' ),
 				'callback' => [ $this, 'meta_description_front_page_callback' ],
 				'page'     => 'custom-content',
-				'section'  => 'scp-options-meta-tags',
+				'section'  => 'tmg-options-meta-tags',
 				'type'     => 'radio',
 				'args'     => [
 					'description' => null,
@@ -67,7 +67,7 @@ class Settings_Fields_Meta_Tags extends Settings_Fields {
 				),
 				'callback' => [ $this, 'meta_description_blog_index_callback' ],
 				'page'     => 'custom-content',
-				'section'  => 'scp-options-meta-tags',
+				'section'  => 'tmg-options-meta-tags',
 				'type'     => 'text',
 				'args'     => [
 					'description' => null,
@@ -83,7 +83,7 @@ class Settings_Fields_Meta_Tags extends Settings_Fields {
 				),
 				'callback' => [ $this, 'meta_image_blog_index_callback' ],
 				'page'     => 'custom-content',
-				'section'  => 'scp-options-meta-tags',
+				'section'  => 'tmg-options-meta-tags',
 				'type'     => 'text',
 				'args'     => [
 					'description' => null,
@@ -106,7 +106,7 @@ class Settings_Fields_Meta_Tags extends Settings_Fields {
 				'title'    => __( 'Archive Image', 'sitecore' ),
 				'callback' => [ $this, 'meta_image_archive_callback' ],
 				'page'     => 'custom-content',
-				'section'  => 'scp-options-meta-tags',
+				'section'  => 'tmg-options-meta-tags',
 				'type'     => 'text',
 				'args'     => [
 					'description' => null,
@@ -119,7 +119,7 @@ class Settings_Fields_Meta_Tags extends Settings_Fields {
 				'title'    => __( 'Site Copyright', 'sitecore' ),
 				'callback' => [ $this, 'meta_site_copyright_callback' ],
 				'page'     => 'custom-content',
-				'section'  => 'scp-options-meta-tags',
+				'section'  => 'tmg-options-meta-tags',
 				'type'     => 'text',
 				'args'     => [
 					'description' => null,
@@ -164,7 +164,7 @@ class Settings_Fields_Meta_Tags extends Settings_Fields {
 	 */
 	public function meta_site_keywords_sanitize() {
 		$option = wp_strip_all_tags( get_option( 'meta_site_keywords' ), false );
-		return apply_filters( 'scp_meta_site_keywords', $option );
+		return apply_filters( 'tmg_meta_site_keywords', $option );
 	}
 
 	/**
@@ -184,7 +184,7 @@ class Settings_Fields_Meta_Tags extends Settings_Fields {
 		} else {
 			$option = 'tagline';
 		}
-		return apply_filters( 'scp_meta_description_front_page', $option );
+		return apply_filters( 'tmg_meta_description_front_page', $option );
 	}
 
 	/**
@@ -197,7 +197,7 @@ class Settings_Fields_Meta_Tags extends Settings_Fields {
 	public function meta_description_blog_index_sanitize() {
 
 		$option = wp_strip_all_tags( get_option( 'meta_description_blog_index' ), false );
-		return apply_filters( 'scp_meta_description_blog_index', $option );
+		return apply_filters( 'tmg_meta_description_blog_index', $option );
 	}
 
 	/**
@@ -243,7 +243,7 @@ class Settings_Fields_Meta_Tags extends Settings_Fields {
 		} else {
 			$option = $default;
 		}
-		return apply_filters( 'scp_meta_site_copyright', $option );
+		return apply_filters( 'tmg_meta_site_copyright', $option );
 	}
 
 	/**
@@ -482,9 +482,9 @@ class Settings_Fields_Meta_Tags extends Settings_Fields {
 	public function image_preview_src( $id = '' ) {
 
 		if ( empty( $id ) ) {
-			$src = apply_filters( 'scp_default_meta_image_src', '' );
+			$src = apply_filters( 'tmg_default_meta_image_src', '' );
 
-			if ( ! has_filter( 'scp_default_meta_image_src', false ) ) {
+			if ( ! has_filter( 'tmg_default_meta_image_src', false ) ) {
 				return '';
 			}
 		}

@@ -4,13 +4,13 @@
  *
  *  Changes the default posts to "news".
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Includes
  * @category   Tools
  * @since      1.0.0
  */
 
-namespace SiteCore\Posts_to_News;
+namespace Totem\Posts_to_News;
 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
@@ -114,7 +114,7 @@ function news_posts_labels() {
 		'items_list'            => __( ucwords( plural() ) . ' List', 'sitecore' ),
 		'attributes'            => __( ucwords( singular() ) . ' Attributes', 'sitecore' )
 	];
-	return apply_filters( 'scp_news_posts_labels', $labels );
+	return apply_filters( 'tmg_news_posts_labels', $labels );
 }
 
 /**
@@ -188,7 +188,7 @@ function rewrite_taxonomy_labels() {
  */
 function menu_name() {
 	$menu_name = __( 'News', 'sitecore' );
-	return apply_filters( 'scp_news_posts_menu_name', $menu_name );
+	return apply_filters( 'tmg_news_posts_menu_name', $menu_name );
 }
 
 /**
@@ -199,7 +199,7 @@ function menu_name() {
  */
 function singular() {
 	$singular = __( 'news post', 'sitecore' );
-	return apply_filters( 'scp_news_posts_singular_name', $singular );
+	return apply_filters( 'tmg_news_posts_singular_name', $singular );
 }
 
 /**
@@ -210,7 +210,7 @@ function singular() {
  */
 function plural() {
 	$plural = __( 'news posts', 'sitecore' );
-	return apply_filters( 'scp_news_posts_plural_name', $plural );
+	return apply_filters( 'tmg_news_posts_plural_name', $plural );
 }
 
 /**
@@ -222,7 +222,7 @@ function plural() {
  */
 function get_news_icon() {
 	$icon = 'dashicons-megaphone';
-	return apply_filters( 'scp_news_posts_icon', $icon );
+	return apply_filters( 'tmg_news_posts_icon', $icon );
 }
 
 /**
@@ -241,7 +241,7 @@ function get_news_icon_font() {
 	} else {
 		$content = '\f109';
 	}
-	return apply_filters( 'scp_news_posts_icon_font', $content );
+	return apply_filters( 'tmg_news_posts_icon_font', $content );
 }
 
 /**
@@ -378,7 +378,7 @@ function icon_css() {
 	);
 
 	// Print the style block.
-	echo apply_filters( 'scp_news_posts_icon_css', $style );
+	echo apply_filters( 'tmg_news_posts_icon_css', $style );
 }
 
 /**

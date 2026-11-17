@@ -2,13 +2,13 @@
 /**
  * Content settings fields
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Classes
  * @category   Settings
  * @since      1.0.0
  */
 
-namespace SiteCore\Classes\Settings;
+namespace Totem\Classes\Settings;
 
 class Settings_Fields_Content extends Settings_Fields {
 
@@ -27,7 +27,7 @@ class Settings_Fields_Content extends Settings_Fields {
 				'title'    => __( 'Remove Blog', 'sitecore' ),
 				'callback' => [ $this, 'remove_blog_callback' ],
 				'page'     => 'custom-content',
-				'section'  => 'scp-settings-content-posts',
+				'section'  => 'tmg-settings-content-posts',
 				'type'     => 'checkbox',
 				'args'     => [
 					'description' => __( 'Check to entirely remove the blogging feature and associated content or widgets.', 'sitecore' ),
@@ -39,7 +39,7 @@ class Settings_Fields_Content extends Settings_Fields {
 				'title'    => __( 'Post Types & Taxonomies Sort Order', 'sitecore' ),
 				'callback' => [ $this, 'type_tax_sort_order_callback' ],
 				'page'     => 'custom-content',
-				'section'  => 'scp-settings-content-posts',
+				'section'  => 'tmg-settings-content-posts',
 				'type'     => 'checkbox',
 				'args'     => [
 					'description' => __( 'Check to enable drag & drop sort order of post types and taxonomies.', 'sitecore' ),
@@ -51,7 +51,7 @@ class Settings_Fields_Content extends Settings_Fields {
 				'title'    => __( 'Disable Block Widgets', 'sitecore' ),
 				'callback' => [ $this, 'disable_block_widgets_callback' ],
 				'page'     => 'custom-content',
-				'section'  => 'scp-settings-content-posts',
+				'section'  => 'tmg-settings-content-posts',
 				'type'     => 'checkbox',
 				'args'     => [
 					'description' => __( 'Check to disable block widgets in favor of classic widgets.', 'sitecore' ),
@@ -63,7 +63,7 @@ class Settings_Fields_Content extends Settings_Fields {
 				'title'    => __( 'Enable Classic Links', 'sitecore' ),
 				'callback' => [ $this, 'enable_link_manager_callback' ],
 				'page'     => 'custom-content',
-				'section'  => 'scp-settings-content-posts',
+				'section'  => 'tmg-settings-content-posts',
 				'type'     => 'checkbox',
 				'args'     => [
 					'description' => __( 'Check to enable the link manager and links widget.', 'sitecore' ),
@@ -78,7 +78,7 @@ class Settings_Fields_Content extends Settings_Fields {
 				'title'    => __( 'Change Posts to News', 'sitecore' ),
 				'callback' => [ $this, 'posts_to_news_callback' ],
 				'page'     => 'custom-content',
-				'section'  => 'scp-settings-content-posts',
+				'section'  => 'tmg-settings-content-posts',
 				'type'     => 'checkbox',
 				'args'     => [
 					'description' => __( 'Check to change blog posts to news posts.', 'sitecore' ),
@@ -112,7 +112,7 @@ class Settings_Fields_Content extends Settings_Fields {
 		} else {
 			$option = false;
 		}
-		return apply_filters( 'scp_remove_blog', $option );
+		return apply_filters( 'tmg_remove_blog', $option );
 	}
 
 	/**
@@ -130,7 +130,7 @@ class Settings_Fields_Content extends Settings_Fields {
 		} else {
 			$option = false;
 		}
-		return apply_filters( 'scp_type_tax_sort_order', $option );
+		return apply_filters( 'tmg_type_tax_sort_order', $option );
 	}
 
 	/**
@@ -148,7 +148,7 @@ class Settings_Fields_Content extends Settings_Fields {
 		} else {
 			$option = false;
 		}
-		return apply_filters( 'scp_disable_block_widgets', $option );
+		return apply_filters( 'tmg_disable_block_widgets', $option );
 	}
 
 	/**
@@ -166,7 +166,7 @@ class Settings_Fields_Content extends Settings_Fields {
 		} else {
 			$option = false;
 		}
-		return apply_filters( 'scp_enable_link_manager', $option );
+		return apply_filters( 'tmg_enable_link_manager', $option );
 	}
 
 	/**
@@ -184,7 +184,7 @@ class Settings_Fields_Content extends Settings_Fields {
 		} else {
 			$option = false;
 		}
-		return apply_filters( 'scp_posts_to_news', $option );
+		return apply_filters( 'tmg_posts_to_news', $option );
 	}
 
 	/**

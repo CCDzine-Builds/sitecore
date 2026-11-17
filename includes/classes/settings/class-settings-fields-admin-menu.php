@@ -2,15 +2,15 @@
 /**
  * Admin menu settings fields
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Classes
  * @category   Settings
  * @since      1.0.0
  */
 
-namespace SiteCore\Classes\Settings;
+namespace Totem\Classes\Settings;
 
-use function SiteCore\Core\platform_name;
+use function Totem\Core\platform_name;
 
 class Settings_Fields_Admin_Menu extends Settings_Fields {
 
@@ -28,7 +28,7 @@ class Settings_Fields_Admin_Menu extends Settings_Fields {
 				'id'       => 'admin_menu_menus_top',
 				'title'    => __( 'Navigation Link', 'sitecore' ),
 				'page'     => 'options-admin',
-				'section'  => 'scp-settings-section-admin-menu',
+				'section'  => 'tmg-settings-section-admin-menu',
 				'type'     => 'checkbox',
 				'args'     => [
 					'description' => __( 'Check to make the link to the navigation menus screen a top-level menu entry.', 'sitecore' ),
@@ -40,7 +40,7 @@ class Settings_Fields_Admin_Menu extends Settings_Fields {
 				'id'       => 'admin_menu_widgets_top',
 				'title'    => __( 'Widgets Link', 'sitecore' ),
 				'page'     => 'options-admin',
-				'section'  => 'scp-settings-section-admin-menu',
+				'section'  => 'tmg-settings-section-admin-menu',
 				'type'     => 'checkbox',
 				'args'     => [
 					'description' => __( 'Check to make the link to the widgets screen a top-level menu entry.', 'sitecore' ),
@@ -52,7 +52,7 @@ class Settings_Fields_Admin_Menu extends Settings_Fields {
 				'id'       => 'admin_menu_nav_blocks',
 				'title'    => __( 'Navigation Blocks', 'sitecore' ),
 				'page'     => 'options-admin',
-				'section'  => 'scp-settings-section-admin-menu',
+				'section'  => 'tmg-settings-section-admin-menu',
 				'type'     => 'checkbox',
 				'args'     => [
 					'description' => __( 'Check to show navigation blocks in the menu.', 'sitecore' ),
@@ -64,7 +64,7 @@ class Settings_Fields_Admin_Menu extends Settings_Fields {
 				'id'       => 'admin_menu_reuse_blocks',
 				'title'    => __( 'Reusable Blocks', 'sitecore' ),
 				'page'     => 'options-admin',
-				'section'  => 'scp-settings-section-admin-menu',
+				'section'  => 'tmg-settings-section-admin-menu',
 				'type'     => 'checkbox',
 				'args'     => [
 					'description' => __( 'Check to show reusable blocks in the menu.', 'sitecore' ),
@@ -76,7 +76,7 @@ class Settings_Fields_Admin_Menu extends Settings_Fields {
 				'id'       => 'admin_menu_custom_order',
 				'title'    => __( 'Custom Order', 'sitecore' ),
 				'page'     => 'options-admin',
-				'section'  => 'scp-settings-section-admin-menu',
+				'section'  => 'tmg-settings-section-admin-menu',
 				'type'     => 'checkbox',
 				'args'     => [
 					'description' => __( 'Check to use the custom menu order.', 'sitecore' ),
@@ -107,7 +107,7 @@ class Settings_Fields_Admin_Menu extends Settings_Fields {
 		} else {
 			$option = false;
 		}
-		return apply_filters( 'scp_admin_menu_menus_top', $option );
+		return apply_filters( 'tmg_admin_menu_menus_top', $option );
 	}
 
 	/**
@@ -125,7 +125,7 @@ class Settings_Fields_Admin_Menu extends Settings_Fields {
 		} else {
 			$option = false;
 		}
-		return apply_filters( 'scp_admin_menu_widgets_top', $option );
+		return apply_filters( 'tmg_admin_menu_widgets_top', $option );
 	}
 
 	/**
@@ -143,7 +143,7 @@ class Settings_Fields_Admin_Menu extends Settings_Fields {
 		} else {
 			$option = false;
 		}
-		return apply_filters( 'scp_admin_menu_nav_blocks', $option );
+		return apply_filters( 'tmg_admin_menu_nav_blocks', $option );
 	}
 
 	/**
@@ -161,7 +161,7 @@ class Settings_Fields_Admin_Menu extends Settings_Fields {
 		} else {
 			$option = false;
 		}
-		return apply_filters( 'scp_admin_menu_reuse_blocks', $option );
+		return apply_filters( 'tmg_admin_menu_reuse_blocks', $option );
 	}
 
 	/**
@@ -179,7 +179,7 @@ class Settings_Fields_Admin_Menu extends Settings_Fields {
 		} else {
 			$option = false;
 		}
-		return apply_filters( 'scp_admin_menu_custom_order', $option );
+		return apply_filters( 'tmg_admin_menu_custom_order', $option );
 	}
 
 	/**

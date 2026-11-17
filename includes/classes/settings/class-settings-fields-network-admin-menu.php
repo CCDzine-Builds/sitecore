@@ -2,15 +2,15 @@
 /**
  * Network admin menu settings fields
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Classes
  * @category   Settings
  * @since      1.0.0
  */
 
-namespace SiteCore\Classes\Settings;
+namespace Totem\Classes\Settings;
 
-use function SiteCore\Core\platform_name;
+use function Totem\Core\platform_name;
 
 class Settings_Fields_Network_Admin_Menu extends Settings_Fields {
 

@@ -4,14 +4,14 @@
  *
  * @link http://dublincore.org/documents/dcmi-terms/
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Views
  * @category   Front
  * @since      1.0.0
  */
 
 // Alias namespaces.
-use SiteCore\Meta_Tags as Meta;
+use Totem\Meta_Tags as Meta;
 
 ?>
 <!-- Dublin Core meta tags -->

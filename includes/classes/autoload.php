@@ -6,13 +6,13 @@
  *
  * @see Demo function at end of this file.
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Includes
  * @category   Classes
  * @since      1.0.0
  */
 
-namespace SiteCore\Classes\Autoload;
+namespace Totem\Classes\Autoload;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -44,16 +44,16 @@ function classes() {
  *
  * Class namespaces must contain `Classes` and a
  * category following the plugin namespace.
- * Example: `SiteCore\Classes\Category\My_Class`
+ * Example: `Totem\Classes\Category\My_Class`
  *
  * @since  1.0.0
  * @param  string $cat
  * @param  string $class
  * @return string Returns the namespace with category and class name.
- *                Example: SiteCore\Classes\Admin\My_Class.
+ *                Example: Totem\Classes\Admin\My_Class.
  */
 function ns( $cat, $class ) {
-	return 'SiteCore\Classes\\' . $cat . '\\' . $class;
+	return 'Totem\Classes\\' . $cat . '\\' . $class;
 };
 
 /**
@@ -68,7 +68,7 @@ function ns( $cat, $class ) {
  * @return string Returns the file path in classes subdirectory.
  */
 function f( $dir, $file ) {
-	return SCP_PATH . 'includes/classes/' . $dir .'/class-' . $file;
+	return TMG_PATH . 'includes/classes/' . $dir .'/class-' . $file;
 };
 
 /**
@@ -327,13 +327,13 @@ function demo() {
 		ns( 'Demo', 'Demo_One' ) => f( 'demo', 'demo-one.php' ),
 
 		// Full namespace & class name, path function.
-		'SiteCore\Classes\Demo\Demo_Two' => f( 'demo', 'demo-two.php' ),
+		'Totem\Classes\Demo\Demo_Two' => f( 'demo', 'demo-two.php' ),
 
 		// Namespace function, full path.
-		ns( 'Demo', 'Demo_Three' ) => SCP_PATH . 'includes/classes/demo/class-demo-three.php',
+		ns( 'Demo', 'Demo_Three' ) => TMG_PATH . 'includes/classes/demo/class-demo-three.php',
 
 		// Fully custom.
-		'SiteCore\Custom\Namespace\Demo_Four' => SCP_PATH . 'includes/custom/directory/class-demo-four.php'
+		'Totem\Custom\Namespace\Demo_Four' => TMG_PATH . 'includes/custom/directory/class-demo-four.php'
 	];
 
 	// Autoload when in use.

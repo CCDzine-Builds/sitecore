@@ -2,13 +2,13 @@
 /**
  * Sample post title filter
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Classes
  * @category   Front
  * @since      1.0.0
  */
 
-namespace SiteCore\Classes\Front;
+namespace Totem\Classes\Front;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {

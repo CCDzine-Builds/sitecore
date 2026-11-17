@@ -2,13 +2,13 @@
 /**
  * Custom dashboard panel output
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Views
  * @category   Widgets
  * @since      1.0.0
  */
 
-use function SiteCore\Core\{
+use function Totem\Core\{
 	is_classicpress,
 	can_fse
 };
@@ -53,7 +53,7 @@ $content = sprintf(
    __( 'Content', 'sitecore' )
 );
 
-$tabs = apply_filters( 'scp_dashboard_panel_tabs', [
+$tabs = apply_filters( 'tmg_dashboard_panel_tabs', [
 
     // Welcome tab, initially active.
     sprintf(
@@ -76,24 +76,24 @@ $tabs = apply_filters( 'scp_dashboard_panel_tabs', [
 		<?php
 
 		// Welcome tab.
-		include_once( SCP_PATH . 'views/backend/widgets/dashboard-tabs/welcome-dashboard-tab' . $acf->suffix() . '.php' );
+		include_once( TMG_PATH . 'views/backend/widgets/dashboard-tabs/welcome-dashboard-tab' . $acf->suffix() . '.php' );
 
 		// Customize tab.
 		if ( current_user_can( 'customize' ) || current_user_can( 'edit_theme_options' ) ) {
 
 			if ( can_fse() ) {
-				include_once( SCP_PATH . 'views/backend/widgets/dashboard-tabs/fse-dashboard-tab' . $acf->suffix() . '.php' );
+				include_once( TMG_PATH . 'views/backend/widgets/dashboard-tabs/fse-dashboard-tab' . $acf->suffix() . '.php' );
 			} else {
-				include_once( SCP_PATH . 'views/backend/widgets/dashboard-tabs/customize-dashboard-tab' . $acf->suffix() . '.php' );
+				include_once( TMG_PATH . 'views/backend/widgets/dashboard-tabs/customize-dashboard-tab' . $acf->suffix() . '.php' );
 			}
 		}
 
 		// Content tab.
-		include_once( SCP_PATH . 'views/backend/widgets/dashboard-tabs/content-dashboard-tab' . $acf->suffix() . '.php' );
+		include_once( TMG_PATH . 'views/backend/widgets/dashboard-tabs/content-dashboard-tab' . $acf->suffix() . '.php' );
 
 		// System tab.
 		if ( current_user_can( 'manage_options' ) ) {
-			include_once( SCP_PATH . 'views/backend/widgets/dashboard-tabs/system-dashboard-tab' . $acf->suffix() . '.php' );
+			include_once( TMG_PATH . 'views/backend/widgets/dashboard-tabs/system-dashboard-tab' . $acf->suffix() . '.php' );
 		}
 		?>
 	</div>

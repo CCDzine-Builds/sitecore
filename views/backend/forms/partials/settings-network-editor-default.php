@@ -2,7 +2,7 @@
 /**
  * Form fields for network default editor option
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Views
  * @category   Forms
  * @since      1.0.0

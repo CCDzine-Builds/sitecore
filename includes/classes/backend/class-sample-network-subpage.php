@@ -6,13 +6,13 @@
  * its new class name. Add to the autoloader
  * and instantiate where appropriate.
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Classes
  * @category   Admin
  * @since      1.0.0
  */
 
-namespace SiteCore\Classes\Admin;
+namespace Totem\Classes\Admin;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -89,6 +89,6 @@ class Sample_Network_Subpage extends Add_Page {
 	 * @return mixed Returns the tab content.
 	 */
 	public function sample_tab() {
-		include SCP_PATH . 'views/backend/pages/sample-page-content.php';
+		include TMG_PATH . 'views/backend/pages/sample-page-content.php';
 	}
 }

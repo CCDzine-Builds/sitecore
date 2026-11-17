@@ -2,14 +2,14 @@
 /**
  * Content dashboard tab
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Views
  * @category   Widgets
  * @since      1.0.0
  */
 
-use function SiteCore\Admin\Dashboard\post_types_list;
-use function SiteCore\Admin\Dashboard\taxonomies_list;
+use function Totem\Admin\Dashboard\post_types_list;
+use function Totem\Admin\Dashboard\taxonomies_list;
 
 $images = get_posts( [
 	'post_type'      => 'attachment',
@@ -71,7 +71,7 @@ $images = get_posts( [
 
 			<form role="search" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get" target="_blank" rel="nofollow noreferrer noopener">
 				<?php $content_id = 'site-' . get_current_blog_id() . '-dashboard-search-content'; ?>
-				<p class="scp-dashboard-search-fields">
+				<p class="tmg-dashboard-search-fields">
 					<label class="screen-reader-text" for="<?php echo $content_id; ?>" aria-label="<?php _e( 'Search Content', 'sitecore' ); ?>"><?php _e( 'Search Content', 'sitecore' ); ?></label>
 
 					<input type="search" name="s" id="<?php echo $content_id; ?>" aria-labelledby="<?php _e( 'Search Content', 'sitecore' ); ?>" value="<?php echo get_search_query(); ?>" autocomplete="off" placeholder="<?php _e( 'Search Content', 'sitecore' ); ?>" aria-placeholder="<?php _e( 'Enter content search terms', 'sitecore' ); ?>" />

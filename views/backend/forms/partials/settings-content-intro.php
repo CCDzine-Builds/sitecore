@@ -2,15 +2,15 @@
 /**
  * Content settings intro tab
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Views
  * @category   Forms
  * @since      1.0.0
  */
 
-namespace SiteCore\Views\Admin\Content_Settings_Intro;
+namespace Totem\Views\Admin\Content_Settings_Intro;
 
-use SiteCore\Users as Users;
+use Totem\Users as Users;
 
 function content_settings_intro( $content = '' ) {
 
@@ -39,14 +39,14 @@ function content_settings_intro( $content = '' ) {
 		$content = $role_message;
 	}
 
-	echo apply_filters( 'scp_content_settings_intro_text', $content );
+	echo apply_filters( 'tmg_content_settings_intro_text', $content );
 }
-add_action( 'scp_content_settings_intro', __NAMESPACE__ . '\content_settings_intro' );
+add_action( 'tmg_content_settings_intro', __NAMESPACE__ . '\content_settings_intro' );
 
 ?>
 <div>
-	<?php do_action( 'scp_before_content_settings_intro' ); ?>
+	<?php do_action( 'tmg_before_content_settings_intro' ); ?>
 	<p class="description"><?php _e( 'Change this intro as needed for your project.', 'sitecore' ); ?></p>
-	<?php do_action( 'scp_content_settings_intro' ); ?>
-	<?php do_action( 'scp_after_content_settings_intro' ); ?>
+	<?php do_action( 'tmg_content_settings_intro' ); ?>
+	<?php do_action( 'tmg_after_content_settings_intro' ); ?>
 </div>

@@ -5,13 +5,13 @@
  * Used to replace the tabbed content on
  * the custom user dashboard.
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Classes
  * @category   Core
  * @since      1.0.0
  */
 
-namespace SiteCore\Classes\Core;
+namespace Totem\Classes\Core;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {

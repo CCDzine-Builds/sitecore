@@ -2,24 +2,24 @@
 /**
  * ACF system dashboard tab
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Views
  * @category   Widgets
  * @since      1.0.0
  */
 
-use function SiteCore\Core\{
+use function Totem\Core\{
 	is_classicpress,
 	platform_name,
 	platform_version,
 };
-use SiteCore\System_Summary as Summary;
+use Totem\System_Summary as Summary;
 
 // Platform avatar.
 if ( is_classicpress() ) {
-	$avatar = SCP_PATH . 'assets/images/classicpress-avatar.svg';
+	$avatar = TMG_PATH . 'assets/images/classicpress-avatar.svg';
 } else {
-	$avatar = SCP_PATH . 'assets/images/wordpress-avatar.svg';
+	$avatar = TMG_PATH . 'assets/images/wordpress-avatar.svg';
 }
 
 // Database icon.
@@ -84,7 +84,7 @@ $edit_options  = 'options.php';
 
 			<h3><?php _e( 'System Overview', 'sitecore' ); ?></h3>
 
-			<ul class="scp-widget-details-list scp-widget-system-list">
+			<ul class="tmg-widget-details-list tmg-widget-system-list">
 				<li><icon class="dashicons dashicons-editor-code"></icon> <?php echo Summary\php_version(); ?></li>
 
 				<li><icon class="dashicons <?php echo $database_icon; ?>"></icon> <?php echo Summary\database_version(); ?></li>

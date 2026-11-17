@@ -4,13 +4,13 @@
  *
  * Adds a metabox to the ACF content tools screen.
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Classes
  * @category   Tools
  * @since      1.0.0
  */
 
-namespace SiteCore\Classes\Tools;
+namespace Totem\Classes\Tools;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {

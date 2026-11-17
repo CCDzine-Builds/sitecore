@@ -2,15 +2,15 @@
 /**
  * Admin users settings fields
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Classes
  * @category   Settings
  * @since      1.0.0
  */
 
-namespace SiteCore\Classes\Settings;
+namespace Totem\Classes\Settings;
 
-use function SiteCore\Core\platform_name;
+use function Totem\Core\platform_name;
 
 class Settings_Fields_Admin_Users extends Settings_Fields {
 
@@ -29,7 +29,7 @@ class Settings_Fields_Admin_Users extends Settings_Fields {
 				'title'    => __( 'Multiple User Roles', 'sitecore' ),
 				'callback' => [ $this, 'enable_multi_user_roles_callback' ],
 				'page'     => 'options-admin',
-				'section'  => 'scp-settings-section-admin-users',
+				'section'  => 'tmg-settings-section-admin-users',
 				'type'     => 'checkbox',
 				'args'     => [
 					'description' => __( 'Check to enable multiple user roles on profile edit screens.', 'sitecore' ),
@@ -41,7 +41,7 @@ class Settings_Fields_Admin_Users extends Settings_Fields {
 				'title'    => __( 'Custom User Avatars', 'sitecore' ),
 				'callback' => [ $this, 'enable_user_avatars_callback' ],
 				'page'     => 'options-admin',
-				'section'  => 'scp-settings-section-admin-users',
+				'section'  => 'tmg-settings-section-admin-users',
 				'type'     => 'checkbox',
 				'args'     => [
 					'description' => __( 'Check to enable user avatar uploads and extended, local options for the default avatar.', 'sitecore' ),
@@ -53,7 +53,7 @@ class Settings_Fields_Admin_Users extends Settings_Fields {
 				'title'    => __( 'Disable Admin Color Schemes', 'sitecore' ),
 				'callback' => [ $this, 'disable_admin_color_schemes_callback' ],
 				'page'     => 'options-admin',
-				'section'  => 'scp-settings-section-admin-users',
+				'section'  => 'tmg-settings-section-admin-users',
 				'type'     => 'checkbox',
 				'args'     => [
 					'description' => __( 'Check to disable the user admin color scheme picker.', 'sitecore' ),
@@ -83,7 +83,7 @@ class Settings_Fields_Admin_Users extends Settings_Fields {
 		} else {
 			$option = false;
 		}
-		return apply_filters( 'scp_enable_multi_user_roles', $option );
+		return apply_filters( 'tmg_enable_multi_user_roles', $option );
 	}
 
 	/**
@@ -101,7 +101,7 @@ class Settings_Fields_Admin_Users extends Settings_Fields {
 		} else {
 			$option = false;
 		}
-		return apply_filters( 'scp_enable_user_avatars', $option );
+		return apply_filters( 'tmg_enable_user_avatars', $option );
 	}
 
 	/**
@@ -119,7 +119,7 @@ class Settings_Fields_Admin_Users extends Settings_Fields {
 		} else {
 			$option = false;
 		}
-		return apply_filters( 'scp_disable_admin_color_schemes', $option );
+		return apply_filters( 'tmg_disable_admin_color_schemes', $option );
 	}
 
 	/**
@@ -208,7 +208,7 @@ class Settings_Fields_Admin_Users extends Settings_Fields {
 		$field_id = $fields[$order]['id'];
 		$option   = $this->disable_admin_color_schemes_sanitize();
 
-		if ( defined( 'SCP_ALLOW_ADMIN_COLOR_PICKER' ) && false == SCP_ALLOW_ADMIN_COLOR_PICKER ) {
+		if ( defined( 'TMG_ALLOW_ADMIN_COLOR_PICKER' ) && false == TMG_ALLOW_ADMIN_COLOR_PICKER ) {
 			$html = sprintf(
 				'<p>%s</p>',
 				__( 'This option has been disabled in the wp-config file.', 'sitecore' )

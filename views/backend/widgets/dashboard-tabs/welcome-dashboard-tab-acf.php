@@ -2,13 +2,13 @@
 /**
  * ACF welcome dashboard tab
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Views
  * @category   Widgets
  * @since      1.0.0
  */
 
-use SiteCore\Users as Users;
+use Totem\Users as Users;
 
 // Current user avatar.
 $avatar = get_avatar(

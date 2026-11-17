@@ -2,13 +2,13 @@
 /**
  * Third-party code compatibility
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Includes
  * @category   Vendor
  * @since      1.0.0
  */
 
-namespace SiteCore\Compatibility;
+namespace Totem\Compatibility;
 
 /**
  * Execute functions

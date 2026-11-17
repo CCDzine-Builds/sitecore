@@ -2,16 +2,16 @@
 /**
  * Form fields for network admin settings menu tab
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Views
  * @category   Forms
  * @since      1.0.0
  */
 
-namespace SiteCore\Views\Admin;
+namespace Totem\Views\Admin;
 
-use SiteCore\Classes\Settings as Settings;
-use function SiteCore\Core\is_classicpress;
+use Totem\Classes\Settings as Settings;
+use function Totem\Core\is_classicpress;
 
 $settings = new Settings\Settings_Fields_Admin_Menu;
 
@@ -28,13 +28,13 @@ settings_fields( 'options-admin' );
 
 ?>
 <div>
-	<?php do_action( 'scp_before_network_admin_menu_settings' ); ?>
+	<?php do_action( 'tmg_before_network_admin_menu_settings' ); ?>
 	<table class="form-table" role="presentation">
 		<?php
 		settings_fields( 'options-admin' );
-		do_settings_fields( 'options-admin', 'scp-settings-section-network-admin-menu' );
+		do_settings_fields( 'options-admin', 'tmg-settings-section-network-admin-menu' );
 		?>
 	</table>
-	<?php do_action( 'scp_after_network_admin_menu_settings' ); ?>
+	<?php do_action( 'tmg_after_network_admin_menu_settings' ); ?>
 </div>
 

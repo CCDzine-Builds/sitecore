@@ -2,13 +2,13 @@
 /**
  * Network admin settings sections
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Classes
  * @category   Settings
  * @since      1.0.0
  */
 
-namespace SiteCore\Classes\Settings;
+namespace Totem\Classes\Settings;
 
 class Settings_Sections_Network_Admin extends Settings_Sections {
 
@@ -23,7 +23,7 @@ class Settings_Sections_Network_Admin extends Settings_Sections {
 
 		$sections = [
 			[
-				'id'       => 'scp-settings-section-network-admin-menu',
+				'id'       => 'tmg-settings-section-network-admin-menu',
 				'title'    => __( 'Menu Settings', 'sitecore' ),
 				'callback' => '',
 				'page'     => 'options-admin',
@@ -34,7 +34,7 @@ class Settings_Sections_Network_Admin extends Settings_Sections {
 				]
 			],
 			[
-				'id'       => 'scp-settings-section-network-admin-dashboard',
+				'id'       => 'tmg-settings-section-network-admin-dashboard',
 				'title'    => __( 'Dashboard Settings', 'sitecore' ),
 				'callback' => '',
 				'page'     => 'options-admin',

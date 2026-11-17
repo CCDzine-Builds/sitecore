@@ -2,20 +2,20 @@
 /**
  * Sample plugin
  *
- * Included for demonstration of bundling a plugin in the Site Core plugin.
+ * Included for demonstration of bundling a plugin in the Totem plugin.
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Includes
  * @category   Vendor
  * @since      1.0.0
  *
  * Plugin Name:  Sample Plugin
- * Description:  Included for demonstration of bundling a plugin in the Site Core plugin.
+ * Description:  Included for demonstration of bundling a plugin in the Totem plugin.
  * Version:      0.0.1
  * Text Domain:  sample
  */
 
-function scp_sample_plugin_admin_notice() {
+function tmg_sample_plugin_admin_notice() {
 
 	?>
 		<div id="sample-plugin-notice" class="notice notice-error">
@@ -26,4 +26,4 @@ function scp_sample_plugin_admin_notice() {
 		</div>
 	<?php
 }
-add_action( 'admin_notices', 'scp_sample_plugin_admin_notice' );
+add_action( 'admin_notices', 'tmg_sample_plugin_admin_notice' );

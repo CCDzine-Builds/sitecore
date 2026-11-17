@@ -2,15 +2,15 @@
 /**
  * Admin screens
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Includes
  * @category   Admin
  * @since      1.0.0
  */
 
-namespace SiteCore\Admin;
+namespace Totem\Admin;
 
-use SiteCore\{
+use Totem\{
 	Classes        as Classes,
 	Compatibility  as Compat,
 	Classes\Vendor as Vendor,
@@ -75,7 +75,7 @@ function setup() {
 	if ( get_option( 'disable_site_health', false ) ) {
 		add_action( 'admin_menu', $ns( 'menu_remove_site_health' ) );
 	}
-	if ( defined( 'SCP_DISABLE_SITE_HEALTH' ) && SCP_DISABLE_SITE_HEALTH ) {
+	if ( defined( 'TMG_DISABLE_SITE_HEALTH' ) && TMG_DISABLE_SITE_HEALTH ) {
 		add_action( 'admin_menu', $ns( 'menu_remove_site_health' ) );
 	}
 
@@ -247,7 +247,7 @@ function admin_only_updates() {
 /**
  * Custom admin menu order
  *
- * Hook `scp_menu_order_after_index`
+ * Hook `tmg_menu_order_after_index`
  * filter to the `admin_menu` action
  * to add items in the top section.
  *
@@ -260,7 +260,7 @@ function menu_order( $order ) {
 	// Variables.
 	$order = [];
 	$index = [ 'index.php' ];
-	$after = apply_filters( 'scp_menu_order_after_index', [] );
+	$after = apply_filters( 'tmg_menu_order_after_index', [] );
 	$top   = array_merge( $index, $after );
 	$links = '';
 
@@ -282,7 +282,7 @@ function menu_order( $order ) {
 		];
 		$order = array_merge( $top, $custom );
 	}
-	return apply_filters( 'scp_admin_menu_order', $order );
+	return apply_filters( 'tmg_admin_menu_order', $order );
 }
 
 /**
@@ -524,11 +524,11 @@ function admin_header() {
 	 *
 	 * Delete this condition as needed.
 	 */
-	if ( get_theme_mod( SCP_THEME_PREFIX . 'admin_header' ) ) {
+	if ( get_theme_mod( TMG_THEME_PREFIX . 'admin_header' ) ) {
 		return;
 	}
 
-	include_once SCP_PATH . 'views/backend/header/admin-header.php';
+	include_once TMG_PATH . 'views/backend/header/admin-header.php';
 }
 
 /**
@@ -545,7 +545,7 @@ function admin_header_styles() {
 	 *
 	 * Delete this condition as needed.
 	 */
-	if ( get_theme_mod( SCP_THEME_PREFIX . 'admin_header' ) ) {
+	if ( get_theme_mod( TMG_THEME_PREFIX . 'admin_header' ) ) {
 		return false;
 	}
 
@@ -648,7 +648,7 @@ function admin_enqueue_scripts() {
 	 * child classes of the `Add_Page` class. This creates tabbed
 	 * content on admin pages, settings pages, & the dashboard.
 	 */
-	wp_enqueue_script( 'scp-tabs', SCP_URL . 'assets/js/admin-tabs' . $suffix . '.js', [ 'jquery' ], '', true );
+	wp_enqueue_script( 'tmg-tabs', TMG_URL . 'assets/js/admin-tabs' . $suffix . '.js', [ 'jquery' ], '', true );
 }
 
 /**
@@ -676,7 +676,7 @@ function admin_enqueue_styles() {
 	 *
 	 * @since 1.0.0
 	 */
-	wp_enqueue_style( 'scp-admin', SCP_URL . 'assets/css/admin' . $suffix . '.css', [], '', 'all' );
+	wp_enqueue_style( 'tmg-admin', TMG_URL . 'assets/css/admin' . $suffix . '.css', [], '', 'all' );
 
 	/**
 	 * Enqueue admin tabs styles
@@ -685,5 +685,5 @@ function admin_enqueue_styles() {
 	 * child classes of the `Add_Page` class. This creates tabbed
 	 * content on admin pages, settings pages, & the dashboard.
 	 */
-	wp_enqueue_style( 'scp-tabs', SCP_URL . 'assets/css/admin-tabs' . $suffix . '.css', [], '', 'all' );
+	wp_enqueue_style( 'tmg-tabs', TMG_URL . 'assets/css/admin-tabs' . $suffix . '.css', [], '', 'all' );
 }

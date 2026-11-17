@@ -4,14 +4,14 @@
  *
  * @link https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/markup.html
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Views
  * @category   Front
  * @since      1.0.0
  */
 
 // Alias namespaces.
-use SiteCore\Meta_Tags as Meta;
+use Totem\Meta_Tags as Meta;
 
 ?>
 <!-- Twitter Card meta -->

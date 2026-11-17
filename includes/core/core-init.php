@@ -2,15 +2,15 @@
 /**
  * Core classes & functions
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Includes
  * @category   Core
  * @since      1.0.0
  */
 
-namespace SiteCore\Core;
+namespace Totem\Core;
 
-use SiteCore\{
+use Totem\{
 	Classes\Core as Core_Class,
 	Remove_Blog  as Remove_Blog
 };
@@ -54,7 +54,7 @@ function setup() {
 	if ( get_option( 'disable_site_health', false ) ) {
 		add_filter( 'wp_fatal_error_handler_enabled', '__return_false' );
 	}
-	if ( defined( 'SCP_DISABLE_SITE_HEALTH' ) && SCP_DISABLE_SITE_HEALTH ) {
+	if ( defined( 'TMG_DISABLE_SITE_HEALTH' ) && TMG_DISABLE_SITE_HEALTH ) {
 		add_filter( 'wp_fatal_error_handler_enabled', '__return_false' );
 	}
 
@@ -63,7 +63,7 @@ function setup() {
 		add_filter( 'gutenberg_use_widgets_block_editor', '__return_false' );
 		add_filter( 'use_widgets_block_editor', '__return_false' );
 	}
-	if ( defined( 'SCP_DISABLE_BLOCK_WIDGETS' ) && SCP_DISABLE_BLOCK_WIDGETS ) {
+	if ( defined( 'TMG_DISABLE_BLOCK_WIDGETS' ) && TMG_DISABLE_BLOCK_WIDGETS ) {
 		add_filter( 'gutenberg_use_widgets_block_editor', '__return_false' );
 		add_filter( 'use_widgets_block_editor', '__return_false' );
 	}
@@ -188,7 +188,7 @@ function platform_name() {
 		$name = 'ClassicPress';
 	}
 
-	return apply_filters( 'scp_platform_name', $name );
+	return apply_filters( 'tmg_platform_name', $name );
 }
 
 /**

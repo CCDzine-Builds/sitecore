@@ -6,7 +6,7 @@
  *
  * Must not be namespaced!
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Core
  * @category   Uninstall
  * @since      1.0.0
@@ -18,7 +18,7 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 }
 
 // Register uninstall hook.
-register_uninstall_hook( __FILE__, 'scp_sample_uninstall' );
+register_uninstall_hook( __FILE__, 'tmg_sample_uninstall' );
 
 /**
  * Sample uninstall function
@@ -29,7 +29,7 @@ register_uninstall_hook( __FILE__, 'scp_sample_uninstall' );
  * @access public
  * @return void
  */
-function scp_sample_uninstall() {
+function tmg_sample_uninstall() {
 
 	// Add uninstall operations here.
 }

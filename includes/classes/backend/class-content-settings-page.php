@@ -2,13 +2,13 @@
 /**
  * Content settings class
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Classes
  * @category   Admin
  * @since      1.0.0
  */
 
-namespace SiteCore\Classes\Admin;
+namespace Totem\Classes\Admin;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -152,7 +152,7 @@ class Content_Settings_Page extends Add_Page {
 	 * @return mixed Returns the tab content.
 	 */
 	public function intro_tab() {
-		include SCP_PATH . 'views/backend/forms/partials/settings-content-intro.php';
+		include TMG_PATH . 'views/backend/forms/partials/settings-content-intro.php';
 	}
 
 	/**
@@ -163,7 +163,7 @@ class Content_Settings_Page extends Add_Page {
 	 * @return mixed Returns the tab content.
 	 */
 	public function features_tab() {
-		include SCP_PATH . 'views/backend/forms/partials/settings-features.php';
+		include TMG_PATH . 'views/backend/forms/partials/settings-features.php';
 	}
 
 	/**
@@ -174,7 +174,7 @@ class Content_Settings_Page extends Add_Page {
 	 * @return mixed Returns the tab content.
 	 */
 	public function settings_tab() {
-		include SCP_PATH . 'views/backend/forms/partials/settings-content.php';
+		include TMG_PATH . 'views/backend/forms/partials/settings-content.php';
 	}
 
 	/**
@@ -185,7 +185,7 @@ class Content_Settings_Page extends Add_Page {
 	 * @return mixed Returns the tab content.
 	 */
 	public function meta_tags_tab() {
-		include SCP_PATH . 'views/backend/forms/partials/settings-content-meta-tags.php';
+		include TMG_PATH . 'views/backend/forms/partials/settings-content-meta-tags.php';
 	}
 
 	/**

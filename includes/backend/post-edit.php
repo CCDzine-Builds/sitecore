@@ -2,13 +2,13 @@
 /**
  * Post edit screens
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Includes
  * @category   Admin
  * @since      1.0.0
  */
 
-namespace SiteCore\Admin\Post_Edit;
+namespace Totem\Admin\Post_Edit;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -68,7 +68,7 @@ function title_placeholders( $title ) {
 	}
 
 	// Apply a filter conditional modification.
-	$title = apply_filters( 'scp_post_title_placeholders', $post_title );
+	$title = apply_filters( 'tmg_post_title_placeholders', $post_title );
 
 	// Return the new placeholder.
 	return $title;

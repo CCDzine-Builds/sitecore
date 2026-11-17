@@ -2,15 +2,15 @@
 /**
  * Initiate vendor classes
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Includes
  * @category   Vendor
  * @since      1.0.0
  */
 
-namespace SiteCore\Vendor;
+namespace Totem\Vendor;
 
-use SiteCore\{
+use Totem\{
 	Classes\Vendor as Vendor_Class,
 	Compatibility  as Compat
 };
@@ -44,6 +44,6 @@ function setup() {
  */
 function acf() {
 
-	$scp_acf = new Vendor_Class\Plugin_ACF;
-	$scp_acf->include();
+	$tmg_acf = new Vendor_Class\Plugin_ACF;
+	$tmg_acf->include();
 }

@@ -1,4 +1,4 @@
-/* global jQuery, SCP_CustomizerReset, ajaxurl, wp */
+/* global jQuery, TMG_CustomizerReset, ajaxurl, wp */
 
 jQuery(function ($) {
 
@@ -6,7 +6,7 @@ jQuery(function ($) {
 
 
     var $button = $( '<input type="submit" name="ccp-reset" id="ccp-reset" class="button-secondary button">' )
-        .attr( 'value', SCP_CustomizerReset.reset )
+        .attr( 'value', TMG_CustomizerReset.reset )
         .css({
             'float'        : 'right',
             'margin-right' : '10px',
@@ -19,10 +19,10 @@ jQuery(function ($) {
         var data = {
             wp_customize : 'on',
             action       : 'customizer_reset',
-            nonce        : SCP_CustomizerReset.nonce.reset
+            nonce        : TMG_CustomizerReset.nonce.reset
         };
 
-        var r = confirm( SCP_CustomizerReset.confirm );
+        var r = confirm( TMG_CustomizerReset.confirm );
 
         if ( ! r ) return;
 

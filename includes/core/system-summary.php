@@ -2,15 +2,15 @@
 /**
  * System summary
  *
- * @package    SiteCore
+ * @package    Totem
  * @subpackage Includes
  * @category   Core
  * @since      1.0.0
  */
 
-namespace SiteCore\System_Summary;
+namespace Totem\System_Summary;
 
-use SiteCore\Core as Core;
+use Totem\Core as Core;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -52,7 +52,7 @@ function php_version() {
 	);
 
 	// Return the notice. Apply filter for customization.
-	return apply_filters( 'scp_php_version_notice', $output );
+	return apply_filters( 'tmg_php_version_notice', $output );
 }
 
 /**
@@ -125,7 +125,7 @@ function database_reference() {
 	$url = esc_url( 'https://en.wikipedia.org/wiki/List_of_relational_database_management_systems' );
 
 	// Return the URL.
-	return apply_filters( 'scp_database_reference', $url );
+	return apply_filters( 'tmg_database_reference', $url );
 }
 
 /**
@@ -145,7 +145,7 @@ function database_version() {
 	);
 
 	// Return the notice. Apply filter for customization.
-	return apply_filters( 'scp_database_version_notice', $output );
+	return apply_filters( 'tmg_database_version_notice', $output );
 }
 
 /**
@@ -192,7 +192,7 @@ function system_notice() {
 	}
 
 	// Return the notice. Apply filter for customization.
-	return apply_filters( 'scp_system_notice', $output );
+	return apply_filters( 'tmg_system_notice', $output );
 }
 
 /**
@@ -221,7 +221,7 @@ function search_engines() {
 	) {
 		// Markup of the notice.
 		$output = sprintf(
-			'<a class="scp-search-engines" href="%s">%s</a>',
+			'<a class="tmg-search-engines" href="%s">%s</a>',
 			esc_url( admin_url( 'options-reading.php' ) ),
 			$text
 		);
@@ -232,7 +232,7 @@ function search_engines() {
 	}
 
 	// Return the notice. Apply filter for customization.
-	return apply_filters( 'scp_search_engines', $output );
+	return apply_filters( 'tmg_search_engines', $output );
 }
 
 /**
@@ -431,5 +431,5 @@ function active_theme() {
 	}
 
 	// Return the notice. Apply filter for customization.
-	return apply_filters( 'scp_active_theme', $theme_name );
+	return apply_filters( 'tmg_active_theme', $theme_name );
 }

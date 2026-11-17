@@ -4,7 +4,7 @@
  *
  * Outputs a list of roles belonging to the current user.
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Views
  * @category   Forms
  * @since      1.0.0

@@ -2,15 +2,15 @@
 /**
  * Media class
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Includes
  * @category   Media
  * @since      1.0.0
  */
 
-namespace SiteCore\Media;
+namespace Totem\Media;
 
-use SiteCore\{
+use Totem\{
 	Classes\Core     as Core_Class,
 	Classes\Settings as Settings_Class
 };
@@ -261,7 +261,7 @@ function rss_featured_images( $content ) {
 	global $post;
 
 	// Apply a filter for conditional image sizes.
-	$size = apply_filters( 'scp_rss_featured_image_size', 'medium' );
+	$size = apply_filters( 'tmg_rss_featured_image_size', 'medium' );
 
 	/**
 	 * Use this layout only if the post has a featured image.

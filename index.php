@@ -1,10 +1,10 @@
 <?php
 /**
- * Site Core plugin
+ * Totem plugin
  *
  * Develop site-specific plugins for ClassicPress and WordPress.
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Init
  * @category   Core
  * @since      1.0.0

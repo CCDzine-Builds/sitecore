@@ -2,16 +2,16 @@
 /**
  * Admin dashboard
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Includes
  * @category   Admin
  * @since      1.0.0
  */
 
-namespace SiteCore\Admin\Dashboard;
+namespace Totem\Admin\Dashboard;
 
 // Alias namespaces.
-use SiteCore\{
+use Totem\{
 	Classes        as Classes,
 	Classes\Users  as Users,
 	Classes\Vendor as Vendor,
@@ -120,7 +120,7 @@ function remove_help_items() {
  */
 function use_custom() {
 
-	if ( defined( 'SCP_USE_CUSTOM_DASHBOARD' ) && ! SCP_USE_CUSTOM_DASHBOARD ) {
+	if ( defined( 'TMG_USE_CUSTOM_DASHBOARD' ) && ! TMG_USE_CUSTOM_DASHBOARD ) {
 		return false;
 	} elseif ( get_option( 'enable_custom_dashboard', false ) ) {
 		return true;
@@ -171,7 +171,7 @@ function remove_widgets() {
 	if ( get_option( 'disable_site_health', false ) ) {
 		remove_meta_box( 'dashboard_site_health', 'dashboard', 'normal' );
 	}
-	if ( defined( 'SCP_DISABLE_SITE_HEALTH' ) && SCP_DISABLE_SITE_HEALTH ) {
+	if ( defined( 'TMG_DISABLE_SITE_HEALTH' ) && TMG_DISABLE_SITE_HEALTH ) {
 		remove_meta_box( 'dashboard_site_health', 'dashboard', 'normal' );
 	}
 
@@ -213,10 +213,10 @@ function dashboard_panel_styles() {
 
 	// Enqueue only on the Dashboard screen.
 	if ( $screen->id == 'dashboard' ) {
-		wp_enqueue_style( 'scp-dashboard', SCP_URL .  'assets/css/dashboard-panel' . $suffix . '.css', [], null, 'screen' );
+		wp_enqueue_style( 'tmg-dashboard', TMG_URL .  'assets/css/dashboard-panel' . $suffix . '.css', [], null, 'screen' );
 
 		if ( is_rtl() ) {
-			wp_enqueue_style( 'scp-dashboard-rtl', SCP_URL .  'assets/css/dashboard-panel-rtl' . $suffix . '.css', [], null, 'screen' );
+			wp_enqueue_style( 'tmg-dashboard-rtl', TMG_URL .  'assets/css/dashboard-panel-rtl' . $suffix . '.css', [], null, 'screen' );
 		}
 	}
 }
@@ -247,7 +247,7 @@ function widget_order() {
 
 	$id = get_current_user_id();
 	$meta_value = [
-		'normal'  => 'scp-dashboard',
+		'normal'  => 'tmg-dashboard',
 		'side'    => '',
 		'column3' => '',
 		'column4' => '',
@@ -285,7 +285,7 @@ function dashboard_panel() {
 	);
 
 	wp_add_dashboard_widget(
-		'scp-dashboard',
+		'tmg-dashboard',
 		$heading,
 		__NAMESPACE__ . '\dashboard_template',
 		null,
@@ -312,7 +312,7 @@ function dashboard_template() {
 	if ( ! empty( $dashboard ) ) {
 		get_template_part( 'template-parts/admin/dashboard-panel' . $acf->suffix() );
 	} else {
-		include_once SCP_PATH . 'views/backend/widgets/dashboard-panel' . $acf->suffix() . '.php';
+		include_once TMG_PATH . 'views/backend/widgets/dashboard-panel' . $acf->suffix() . '.php';
 	}
 }
 
@@ -387,7 +387,7 @@ function custom_post_types_query() {
 	$query = get_post_types( $query, 'names', 'and' );
 
 	// Return the custom post types.
-	return apply_filters( 'scp_custom_post_types_query', $query );
+	return apply_filters( 'tmg_custom_post_types_query', $query );
 }
 
 /**
@@ -410,7 +410,7 @@ function public_post_types_query() {
 	$query = array_merge( $builtin, $custom );
 
 	// Return the public post types.
-	return apply_filters( 'scp_public_post_types_query', $query );
+	return apply_filters( 'tmg_public_post_types_query', $query );
 }
 
 /**
@@ -431,7 +431,7 @@ function taxonomies_query() {
 	$query = get_taxonomies( $query, 'object', 'and' );
 
 	// Return the array of taxonomies. Apply filter for customization.
-	return apply_filters( 'scp_taxonomies_query', $query );
+	return apply_filters( 'tmg_taxonomies_query', $query );
 }
 
 /**
@@ -446,7 +446,7 @@ function post_types_list() {
 	$post_types = public_post_types_query();
 
 	// Begin the post types list.
-	$html = '<ul class="scp-content-list scp-post-types-list">';
+	$html = '<ul class="tmg-content-list tmg-post-types-list">';
 
 	// Conditional list items.
 	foreach ( $post_types as $post_type ) {
@@ -470,7 +470,7 @@ function post_types_list() {
 		// If the icon is data:image/svg+xml.
 		if ( 0 === strpos( $type->menu_icon, 'data:image/svg+xml;base64,' ) ) {
 			$menu_icon = sprintf(
-				'<icon class="scp-cpt-icons" style="%s"></icon>',
+				'<icon class="tmg-cpt-icons" style="%s"></icon>',
 				esc_attr( 'background-image: url( "' . esc_html( $type->menu_icon ) . '" );' )
 			);
 
@@ -480,7 +480,7 @@ function post_types_list() {
 
 		// If the icon is a URL.
 		} elseif ( 0 === strpos( $type->menu_icon, 'http' ) ) {
-			$menu_icon = '<icon class="scp-cpt-icons"><img src="' . esc_url( $type->menu_icon ) . '" /></icon>';
+			$menu_icon = '<icon class="tmg-cpt-icons"><img src="' . esc_url( $type->menu_icon ) . '" /></icon>';
 
 		// Fall back to the default post icon.
 		} else {
@@ -546,7 +546,7 @@ function taxonomies_list() {
 	if ( $taxonomies ) {
 
 		// Begin the taxonomies icons list.
-		$html = '<ul class="scp-content-list scp-taxonomies-list">';
+		$html = '<ul class="tmg-content-list tmg-taxonomies-list">';
 
 		foreach ( $taxonomies as $taxonomy ) {
 
@@ -576,17 +576,17 @@ function taxonomies_list() {
 			$icon = '';
 			if ( 'post_tag' == $taxonomy->name ) {
 				$icon = sprintf(
-					'<icon class="dashicons dashicons-tag scp-icon-%s"></icon>',
+					'<icon class="dashicons dashicons-tag tmg-icon-%s"></icon>',
 					$taxonomy->name
 				);
 			} elseif ( 'media_type' == $taxonomy->name ) {
 				$icon = sprintf(
-					'<icon class="dashicons dashicons-portfolio scp-icon-%s"></icon>',
+					'<icon class="dashicons dashicons-portfolio tmg-icon-%s"></icon>',
 					$taxonomy->name
 				);
 			} else {
 				$icon = sprintf(
-					'<icon class="dashicons dashicons-category scp-icon-%s"></icon>',
+					'<icon class="dashicons dashicons-category tmg-icon-%s"></icon>',
 					$taxonomy->name
 				);
 			}
@@ -664,18 +664,18 @@ function print_content_summary_styles( $style = '' ) {
 	$style .= '#dashboard_right_now .post-count.attachment-count a::before, #dashboard_right_now .post-count.attachment-count span::before { display: none; }';
 	$style .= '#dashboard_right_now li.at-glance-user-count a:before, #dashboard_right_now li.at-glance-user-count span:before { content: "\f110"; }';
 	$style .= '#dashboard_right_now li.at-glance-users-count a:before, #dashboard_right_now li.at-glance-users-count span:before { content: "\f307"; }';
-	$style .= '#dashboard_right_now .scp-widget-divided-section { margin-top: 1em; padding-top: 0.5em; border-top: solid 1px #ccd0d4; }';
+	$style .= '#dashboard_right_now .tmg-widget-divided-section { margin-top: 1em; padding-top: 0.5em; border-top: solid 1px #ccd0d4; }';
 	$style .= '#dashboard_right_now #wp-version-message { display: none; }';
-	$style .= '#dashboard-widgets #dashboard_right_now .scp-widget-divided-section h4 { margin: 0.75em 0 0; font-size: 1em; font-weight: bold; font-weight: 600; }';
-	$style .= '#dashboard-widgets #dashboard_right_now .scp-widget-divided-section p.description { margin: 0.75em 0 0; font-style: italic; line-height: 1.3; }';
-	$style .= '#dashboard-widgets #dashboard_right_now .scp-widget-divided-section a:not(.scp-search-engines) { text-decoration: none; }';
-	$style .= '#dashboard_right_now ul.scp-widget-system-list { display: block; margin: 0.75em 0 0; }';
-	$style .= '#dashboard_right_now .scp-widget-system-list li { margin: 0.325em 0 0; }';
-	$style .= '#dashboard_right_now .scp-widget-system-list li a:before { display: none; }';
-	$style .= '#dashboard_right_now .main p.scp-widget-link-button { margin-top: 1.5em; }';
-	$style .= '.scp-dashboard-search-fields { display: flex; flex-wrap: wrap; gap: 0.25em; }';
+	$style .= '#dashboard-widgets #dashboard_right_now .tmg-widget-divided-section h4 { margin: 0.75em 0 0; font-size: 1em; font-weight: bold; font-weight: 600; }';
+	$style .= '#dashboard-widgets #dashboard_right_now .tmg-widget-divided-section p.description { margin: 0.75em 0 0; font-style: italic; line-height: 1.3; }';
+	$style .= '#dashboard-widgets #dashboard_right_now .tmg-widget-divided-section a:not(.tmg-search-engines) { text-decoration: none; }';
+	$style .= '#dashboard_right_now ul.tmg-widget-system-list { display: block; margin: 0.75em 0 0; }';
+	$style .= '#dashboard_right_now .tmg-widget-system-list li { margin: 0.325em 0 0; }';
+	$style .= '#dashboard_right_now .tmg-widget-system-list li a:before { display: none; }';
+	$style .= '#dashboard_right_now .main p.tmg-widget-link-button { margin-top: 1.5em; }';
+	$style .= '.tmg-dashboard-search-fields { display: flex; flex-wrap: wrap; gap: 0.25em; }';
 	$style .= '</style>';
 
 	// Apply filter and print the style block.
-	echo apply_filters( 'scp_website_default_print_styles', $style );
+	echo apply_filters( 'tmg_website_default_print_styles', $style );
 }

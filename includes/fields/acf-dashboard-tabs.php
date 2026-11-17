@@ -5,13 +5,13 @@
  * Used to replace the tabbed content on
  * the custom user dashboard.
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Includes
  * @category   Fields
  * @since      1.0.0
  */
 
-namespace SiteCore\Fields\ACF;
+namespace Totem\Fields\ACF;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {

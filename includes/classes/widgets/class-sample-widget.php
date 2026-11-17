@@ -2,13 +2,13 @@
 /**
  * Sample widget type
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Classes
  * @category   Widgets
  * @since      1.0.0
  */
 
-namespace SiteCore\Classes\Widgets;
+namespace Totem\Classes\Widgets;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {

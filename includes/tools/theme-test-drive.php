@@ -4,13 +4,13 @@
  *
  * Safely test any theme while visitors view the active theme.
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Includes
  * @category   Tools
  * @since      1.0.0
  */
 
-namespace SiteCore\Theme_Test_Drive;
+namespace Totem\Theme_Test_Drive;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -174,7 +174,7 @@ function admin_print_styles() {
 	$style .= '}';
 	$style .= '</style>';
 
-	echo apply_filters( 'scp_test_drive_styles', $style );
+	echo apply_filters( 'tmg_test_drive_styles', $style );
 }
 
 /**

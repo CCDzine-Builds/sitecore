@@ -2,13 +2,13 @@
 /**
  * Network admin dashboard settings fields
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Classes
  * @category   Settings
  * @since      1.0.0
  */
 
-namespace SiteCore\Classes\Settings;
+namespace Totem\Classes\Settings;
 
 class Settings_Fields_Network_Admin_Dashboard extends Settings_Fields {
 
@@ -26,7 +26,7 @@ class Settings_Fields_Network_Admin_Dashboard extends Settings_Fields {
 				'id'       => 'enable_custom_network_dashboard',
 				'title'    => __( 'Custom Dashboard', 'sitecore' ),
 				'page'     => 'options-admin',
-				'section'  => 'scp-settings-section-network-admin-dashboard',
+				'section'  => 'tmg-settings-section-network-admin-dashboard',
 				'type'     => 'checkbox',
 				'args'     => [
 					'description' => __( 'Check to replace the default dashboard with a custom dashboard for this network.', 'sitecore' ),
@@ -56,7 +56,7 @@ class Settings_Fields_Network_Admin_Dashboard extends Settings_Fields {
 		} else {
 			$option = false;
 		}
-		return apply_filters( 'scp_enable_custom_network_dashboard', $option );
+		return apply_filters( 'tmg_enable_custom_network_dashboard', $option );
 	}
 
 	/**

@@ -2,22 +2,22 @@
 /**
  * Form fields for admin settings users tab
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Views
  * @category   Forms
  * @since      1.0.0
  */
 
-namespace SiteCore\Views\Admin;
+namespace Totem\Views\Admin;
 
 ?>
 <div>
-	<?php do_action( 'scp_before_admin_users_settings' ); ?>
+	<?php do_action( 'tmg_before_admin_users_settings' ); ?>
 	<table class="form-table" role="presentation">
 		<?php
 		settings_fields( 'options-admin' );
-		do_settings_fields( 'options-admin', 'scp-settings-section-admin-users' );
+		do_settings_fields( 'options-admin', 'tmg-settings-section-admin-users' );
 		?>
 	</table>
-	<?php do_action( 'scp_after_admin_users_settings' ); ?>
+	<?php do_action( 'tmg_after_admin_users_settings' ); ?>
 </div>

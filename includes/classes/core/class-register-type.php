@@ -2,13 +2,13 @@
 /**
  * Base class to register a post type
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Classes
  * @category   Core
  * @since      1.0.0
  */
 
-namespace SiteCore\Classes\Core;
+namespace Totem\Classes\Core;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -446,7 +446,7 @@ class Register_Type {
 				__( 'Summary', 'sitecore' )
 			);
 		}
-		return apply_filters( 'scp_excerpt_metabox_title', $title );
+		return apply_filters( 'tmg_excerpt_metabox_title', $title );
 	}
 
 	/**
@@ -463,7 +463,7 @@ class Register_Type {
 		} else {
 			$description = __( 'Add a brief summary of this content to be used in archive pages, depending upon the active theme, and to be used in search engine metadata and for display in social media embeds.', 'sitecore' );
 		}
-		return apply_filters( 'scp_excerpt_metabox_description', $description );
+		return apply_filters( 'tmg_excerpt_metabox_description', $description );
 	}
 
 	/**

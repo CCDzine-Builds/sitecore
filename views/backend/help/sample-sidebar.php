@@ -2,7 +2,7 @@
 /**
  * Output of the sample help sidebar
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Views
  * @category   Admin
  * @since      1.0.0

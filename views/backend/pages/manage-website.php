@@ -2,13 +2,13 @@
 /**
  * Output of the Manage Website page
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Views
  * @category   Admin
  * @since      1.0.0
  */
 
-use SiteCore\Classes\Admin as Admin;
+use Totem\Classes\Admin as Admin;
 
 // Instance of the Manage_Website_Page class.
 $page = new Admin\Manage_Website_Page;

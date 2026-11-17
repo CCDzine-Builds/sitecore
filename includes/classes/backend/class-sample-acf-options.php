@@ -6,15 +6,15 @@
  * its new class name. Add to the autoloader
  * and instantiate where appropriate.
  *
- * @package    Site_Core
+ * @package    Totem
  * @subpackage Classes
  * @category   Admin
  * @since      1.0.0
  */
 
-namespace SiteCore\Classes\Admin;
+namespace Totem\Classes\Admin;
 
-use SiteCore\Compatibility as Compat;
+use Totem\Compatibility as Compat;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) {
